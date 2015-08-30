@@ -16,7 +16,9 @@ var UserSchema = new Schema({
   provider: String,
   salt: String,
   google: {},
-  github: {}
+  github: {},
+  github_accessToken: String,
+  github_refreshToken: String
 });
 
 /**
@@ -81,7 +83,7 @@ UserSchema
     this.constructor.findOne({email: value}, function(err, user) {
       if(err) throw err;
       if(user) {
-        if(self.id === user.id) return respond(true);
+        if(self.github.id === user.github.id) return respond(true);
         return respond(false);
       }
       respond(true);
