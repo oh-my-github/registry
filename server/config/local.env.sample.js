@@ -12,6 +12,9 @@ module.exports = {
   GOOGLE_ID:        'app-id',
   GOOGLE_SECRET:    'secret',
 
+  clientID: '',
+  clientSecret: '',
+
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''
 };
