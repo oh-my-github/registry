@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/ohmygithub-dev'
+    uri: 'mongodb://nescafe:ohmygithub@52.3.181.23:27017/ohmygithub-dev/'
   },
 
   seedDB: true

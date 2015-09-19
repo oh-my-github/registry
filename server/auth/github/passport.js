@@ -18,9 +18,7 @@ exports.setup = function (User, config) {
             role: 'user',
             username: profile.username,
             provider: 'github',
-            github: profile._json,
-            github_accessToken: accessToken,
-            github_refreshTocken: refreshToken
+            github: profile._json
           });
           user.save(function(err) {
             if (err) return done(err);
