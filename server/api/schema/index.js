@@ -7,9 +7,11 @@ var controller = require('./schema.controller')
 
 var router = express.Router();
 
-//router.get('/', controller.index);
 router.get('/select/languages', controller.languages);
 router.get('/select/repository', controller.repository);
-router.get('/insert', controller.insert);
+router.get('/insert', controller.insertTest);
+
+
+
 
 module.exports = router;

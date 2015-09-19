@@ -29,45 +29,82 @@ exports.repository = function(req, res) {
 };
 
 // insert db for test
-exports.insert = function(req, res){
+exports.insertTest = function(req, res){
   var insertRepository = new Repository({
-    owner : 'hyungtak',
-    repositoryName : 'HT_repository',
+    owner : 'njir',
+    repositoryName : 'ohmytest2',
     url : 'http://123.4.56.53.34',
     isPrivate : true,
     isForked : false,
     createdAt : '2015-09-06',
     updatedAt : '2015-10-23',
     pushedAt : '2015-12-32',
-    stargazersCount : 134,
-    watchersCount : 245,
-    forksCount : 469
+    stargazersCount : 1324,
+    watchersCount : 25,
+    forksCount : 49
   });
 
-  insertRepository.save(function(err){
-    if(err){
-      console.error(err);
-      throw err;
-    }
+  var insertRepository2 = new Repository({
+    owner : 'njir',
+    repositoryName : 'ohmytest3',
+    url : 'ohmytest2',
+    isPrivate : true,
+    isForked : false,
+    createdAt : '2015-09-06',
+    updatedAt : '2015-10-23',
+    pushedAt : '2015-12-32',
+    stargazersCount : 1134,
+    watchersCount : 2454,
+    forksCount : 4269
   });
+
+
+  //insertRepository.save(function(err){
+  //  if(err){ throw err; }
+  //});
+  //insertRepository2.save(function(err){
+  //  if(err){ throw err; }
+  //});
 
   var insertLanguages = new Languages({
-    owner : 'JHT',
-    repositoryName : 'ohmytest',
+    owner : 'njir',
+    repositoryName : 'ohmytest2',
     languages : [
-      {name : 'C', line : 1204},
-      {name : 'Java', line : 2222},
-      {name : 'Python', line : 345}
+      {name : 'C', line : 12},
+      {name : 'Java', line : 22},
+      {name : 'CSharp', line : 2300},
     ]
   });
-  insertLanguages.save(function(err){
-    if(err){
-      console.error(err);
-      throw err;
-    }
+
+  var insertLanguages2 = new Languages({
+    owner : 'njir',
+    repositoryName : 'ohmytest3',
+    languages : [
+      {name : 'Java', line : 22},
+      {name : 'JavaScript', line : 20000},
+    ]
   });
+
+
+  //insertLanguages.save(function(err){
+  //  if(err){ throw err; }
+  //});
+
+  insertLanguages2.save(function(err){
+    if(err){ throw err; }
+  });
+
   res.send('success');
 };
+
+
+
+
+
+
+
+
+
 
 
 function handleError(res, err) {
