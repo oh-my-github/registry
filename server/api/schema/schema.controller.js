@@ -31,7 +31,7 @@ exports.repository = function(req, res) {
 // insert db for test
 exports.insertTest = function(req, res){
   var insertRepository = new Repository({
-    owner : 'njir',
+    owner : 'njir123',
     repositoryName : 'ohmytest2',
     url : 'http://123.4.56.53.34',
     isPrivate : true,
