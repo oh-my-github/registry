@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var LanguagesSchema = new Schema({
+  collectedAt : Date,
   owner : String,
   repositoryName : String,
   languages : [
@@ -14,4 +15,4 @@ var LanguagesSchema = new Schema({
   ]
 });
 
-module.exports = mongoose.model('Languages', LanguagesSchema);
+module.exports = mongoose.model('Language', LanguagesSchema, 'language');
