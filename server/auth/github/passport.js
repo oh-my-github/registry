@@ -8,26 +8,24 @@ exports.setup = function (User, config) {
       callbackURL: config.github.callbackURL
     },
     function(accessToken, refreshToken, profile, done) {
+      console.log(profile);
       User.findOne({
-        'github.id': profile.id
+        'githubProfile.id': profile._json.id
       }, function(err, user) {
         if (!user) {
           user = new User({
+            id:  profile._json.id.toString(),
             name: profile.displayName,
-            email: profile.emails[0].value,
-            role: 'user',
-            username: profile.username,
-            provider: 'github',
-            github: {
-              id: profile._json.id,
+            githubProfile: {
+              id: profile._json.id.toString(),
               login: profile._json.login,
               email: profile.emails[0].value,
               accessToken: accessToken,
               refreshToken: refreshToken,
               following: profile._json.following,
               followers: profile._json.followers,
-              createdAt: profile._json.created_at,
-              updatedAt: profile._json.updated_at,
+              createdAt: new Date(profile._json.created_at),
+              updatedAt: new Date(profile._json.updated_at),
               blog: profile._json.blog,
               company: profile._json.company,
               location: profile._json.location
@@ -38,9 +36,32 @@ exports.setup = function (User, config) {
             done(err, user);
           });
         } else {
+          updateProfile(User, accessToken, refreshToken, profile);
           return done(err, user);
         }
       });
     }
   ));
 };
+
+exports.updateProfile = updateProfile;
+
+function updateProfile(User, accessToken, refreshToken, profile, callback){
+  User.update({'githubProfile.id': profile._json.id},
+    {$set: {'githubProfile.login': profile._json.login,
+      'githubProfile.email': profile.emails[0].value,
+      'githubProfile.accessToken': accessToken,
+      'githubProfile.refreshToken': refreshToken,
+      'githubProfile.following': profile._json.following,
+      'githubProfile.followers': profile._json.followers,
+      'githubProfile.createdAt': new Date(profile._json.created_at),
+      'githubProfile.updatedAt': new Date(profile._json.updated_at),
+      'githubProfile.blog': profile._json.blog,
+      'githubProfile.company': profile._json.company,
+      'githubProfile.location': profile._json.location}}, function(err){
+      console.log(err);
+      if(callback){
+        callback();
+      }
+    });
+}

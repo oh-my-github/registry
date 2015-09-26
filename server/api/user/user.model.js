@@ -18,7 +18,7 @@ var UserSchema = new Schema({
   salt: String,
   google: {},
   facebook: {},
-  github: {}
+  githubProfile: {}
 });
 
 /**
@@ -77,7 +77,7 @@ UserSchema
 
 // Validate github id is already in use
 UserSchema
-  .path('github')
+  .path('githubProfile')
   .validate(function(value, respond) {
     var self = this;
     this.constructor.findOne({github: value}, function(err, user) {
@@ -97,15 +97,15 @@ var validatePresenceOf = function(value) {
 /**
  * Pre-save hook
  */
-UserSchema
-  .pre('save', function(next) {
-    if (!this.isNew) return next();
-
-    if (!validatePresenceOf(this.hashedPassword) && authTypes.indexOf(this.provider) === -1)
-      next(new Error('Invalid password'));
-    else
-      next();
-  });
+//UserSchema
+//  .pre('save', function(next) {
+//    if (!this.isNew) return next();
+//
+//    if (!validatePresenceOf(this.hashedPassword) && authTypes.indexOf(this.provider) === -1)
+//      next(new Error('Invalid password'));
+//    else
+//      next();
+//  });
 
 /**
  * Methods
