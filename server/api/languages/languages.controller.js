@@ -13,7 +13,7 @@ exports.index = function(req, res) {
 };
 
 // Get a single thing
-//findById 는 db안에 _id를 찾
+//findById 는 db안에 _id를 찾음
 exports.show = function(req, res) {
   Languages.findOne({ owner: req.params.owner }, function (err, thing) {
     if(err) { return handleError(res, err); }
