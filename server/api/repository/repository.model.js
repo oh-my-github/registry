@@ -4,17 +4,18 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var RepositorySchema = new Schema({
-  owner : String,
-  repositoryName : String,
-  url : String,
-  isPrivate : Boolean,
+  collectedAt: Date,
+  createdAt : Date,
+  forksCount : Number,
   isForked : Boolean,
-  createdAt : String,
-  updatedAt : String,
-  pushedAt : String,
+  isPrivate : Boolean,
+  name : String,
+  owner : String,
+  pushedAt : Date,
   stargazersCount : Number,
-  watchersCount : Number,
-  forksCount : Number
+  updatedAt : Date,
+  url : String,
+  watchersCount : Number
 });
 
-module.exports = mongoose.model('Repository', RepositorySchema);
+module.exports = mongoose.model('Repository', RepositorySchema, 'repository');

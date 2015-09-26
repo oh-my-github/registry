@@ -9,15 +9,13 @@ var path = require('path');
 
 module.exports = function(app) {
   // Insert routes below
-  app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 
   app.use('/auth', require('./auth'));
 
   // Add routes for schema by TAK
-  //app.use('/schema', require('./api/schema'));
-  app.use('/api/languages', require('./api/languages'));
   app.use('/api/repository', require('./api/repository'));
+  app.use('/api/language', require('./api/language'));
 
 
 

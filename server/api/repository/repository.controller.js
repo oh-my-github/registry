@@ -2,15 +2,40 @@
 'use strict';
 
 var _ = require('lodash');
-var Repository = require('./repository.model');
+var Repository = require('./repository.model.js');
 
-// Get list of things
+//// Get list of things
+//exports.index2 = function(req, res) {
+//  Repository.find(function (err, repos) {
+//    if(err) {
+//      console.log("asdsa");
+//      return handleError(res, err);
+//    }
+//    //console.error(repos typeof Array);
+//
+//    var arr = [];
+//
+//    for(var i = 0; i < 46; i++) {
+//      console.log(JSON.stringify(repos[i]));
+//      arr.push(repos[i]);
+//    }
+//    res.contentType('application/json');
+//    res.send(JSON.stringify(arr));
+//
+//    //return res.status(200).json(arr);
+//    //return res.status(200).json(repos);
+//  });
+//};
+
+
 exports.index = function(req, res) {
   Repository.find(function (err, things) {
     if(err) { return handleError(res, err); }
     return res.status(200).json(things);
+    //return res.send('200');
   });
 };
+
 
 // Get a single thing
 exports.show = function(req, res) {
