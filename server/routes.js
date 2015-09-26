@@ -14,8 +14,10 @@ module.exports = function(app) {
 
   app.use('/auth', require('./auth'));
 
-  // Add routes for mongoose test by tak
-  app.use('/schema', require('./api/schema'));
+  // Add routes for schema by TAK
+  //app.use('/schema', require('./api/schema'));
+  app.use('/api/languages', require('./api/languages'));
+  app.use('/api/repository', require('./api/repository'));
 
 
 
