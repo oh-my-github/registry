@@ -4,29 +4,29 @@
 var _ = require('lodash');
 var Languages = require('./language.model.js');
 
-// Get list of things
+// Get list of language
 exports.index = function(req, res) {
-  Languages.find(function (err, things) {
+  Languages.find(function (err, languageList) {
     if(err) { return handleError(res, err); }
-    return res.status(200).json(things);
+    return res.status(200).json(languageList);
   });
 };
 
-// Get a single thing
+// Get a single language
 //findById 는 db안에 _id를 찾음
 exports.show = function(req, res) {
-  Languages.findOne({ owner: req.params.owner }, function (err, thing) {
+  Languages.findOne({ owner: req.params.owner }, function (err, language) {
     if(err) { return handleError(res, err); }
-    if(!thing) { return res.status(404).send('Not Found'); }
-    return res.json(thing);
+    if(!language) { return res.status(404).send('Not Found'); }
+    return res.json(language);
   });
 };
 
 // Creates a new thing in the DB.
 exports.create = function(req, res) {
-  Languages.create(req.body, function(err, thing) {
+  Languages.create(req.body, function(err, language) {
     if(err) { return handleError(res, err); }
-    return res.status(201).json(thing);
+    return res.status(201).json(language);
   });
 };
 
@@ -34,23 +34,23 @@ exports.create = function(req, res) {
 // Updates an existing thing in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }
-  Languages.findOne({ owner : req.params.owner }, function (err, thing) {
+  Languages.findOne({ owner : req.params.owner }, function (err, language) {
     if (err) { return handleError(res, err); }
-    if(!thing) { return res.status(404).send('Not Found'); }
-    var updated = _.merge(thing, req.body);
+    if(!language) { return res.status(404).send('Not Found'); }
+    var updated = _.merge(language, req.body);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
-      return res.status(200).json(thing);
+      return res.status(200).json(language);
     });
   });
 };
 
 // Deletes a thing from the DB.
 exports.destroy = function(req, res) {
-  Languages.findOne({ owner : req.params.owner } , function (err, thing) {
+  Languages.findOne({ owner : req.params.owner } , function (err, language) {
     if(err) { return handleError(res, err); }
-    if(!thing) { return res.status(404).send('Not Found'); }
-    thing.remove(function(err) {
+    if(!language) { return res.status(404).send('Not Found'); }
+    language.remove(function(err) {
       if(err) { return handleError(res, err); }
       return res.status(204).send('No Content');
     });

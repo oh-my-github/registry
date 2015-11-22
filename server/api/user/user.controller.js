@@ -5,6 +5,20 @@ var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
 
+var Repository = require('../repository/repository.model.js');
+
+// Added by Tak on 2015-09-28 to show user list
+// Get a User list
+exports.list = function(req, res) {
+  Repository.distinct("owner", function (err, users) {
+    if(err) { return handleError(res, err); }
+    return res.status(200).json(users);
+  });
+};
+
+
+
+
 var validationError = function(res, err) {
   return res.status(422).json(err);
 };
