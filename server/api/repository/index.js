@@ -6,6 +6,10 @@ var controller = require('./repository.controller.js');
 
 var router = express.Router();
 
+
+
+router.get('/star/:owner', controller.usersStarCount);
+
 router.get('/', controller.index);
 router.get('/:owner', controller.show);
 router.post('/', controller.create);

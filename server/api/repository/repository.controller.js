@@ -3,78 +3,111 @@
 
 var _ = require('lodash');
 var Repository = require('./repository.model.js');
+var Moment = require('moment');
 
-//// Get list of things
-//exports.index2 = function(req, res) {
-//  Repository.find(function (err, repos) {
-//    if(err) {
-//      console.log("asdsa");
-//      return handleError(res, err);
-//    }
-//    //console.error(repos typeof Array);
-//
-//    var arr = [];
-//
-//    for(var i = 0; i < 46; i++) {
-//      console.log(JSON.stringify(repos[i]));
-//      arr.push(repos[i]);
-//    }
-//    res.contentType('application/json');
-//    res.send(JSON.stringify(arr));
-//
-//    //return res.status(200).json(arr);
-//    //return res.status(200).json(repos);
-//  });
-//};
+exports.usersStarCount = function(req, res) {
+  var prevName;
+  var output = new Array();
+  var forkSum=0 , starSum=0, watchSum=0;
+  var today = Moment().startOf('day'),
+    tomorrow = Moment(today).add(100, 'days'),
+  yesterday = Moment(today).subtract(100, 'days');
+
+  Repository.find({
+    collectedAt: {$gte: yesterday.toDate(), $lt: tomorrow.toDate() }
+  }).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+    console.log(repositories);
+    repositories.forEach(function(currRepo){
+      if(prevName == currRepo.name){
+        return ;
+      }
+
+      prevName = currRepo.name;
+      forkSum += currRepo.forksCount;
+      starSum += currRepo.stargazersCount;
+      watchSum += currRepo.watchersCount;
+      output.push(currRepo);
+    });
+
+    var result = {
+      "owner" : req.params.owner,
+      "forksCount" : forkSum,
+      "stargazersCount" : starSum,
+      "watchersCount": watchSum,
+      //"date" : Moment().format()
+    };
+
+    if(err) { return handleError(res, err); }
+    return res.status(200).json(result);
+  });
+};
+
 
 
 exports.index = function(req, res) {
-  Repository.find(function (err, things) {
+  var prevName;
+  var output = new Array();
+  Repository.find({}).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+    repositories.forEach(function(currRepo){
+      if(prevName == currRepo.name){
+        return ;
+      }
+      prevName = currRepo.name;
+      output.push(currRepo);
+    });
+
     if(err) { return handleError(res, err); }
-    return res.status(200).json(things);
-    //return res.send('200');
+    return res.status(200).json(output);
   });
 };
 
 
-// Get a single thing
+// Get a single repository
 exports.show = function(req, res) {
-  Repository.findOne({ owner: req.params.owner }, function (err, thing) {
+  var prevName;
+  var output = new Array();
+  Repository.find({owner: req.params.owner}).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+    repositories.forEach(function(currRepo){
+      if(prevName == currRepo.name){
+        return ;
+      }
+      prevName = currRepo.name;
+      output.push(currRepo);
+    });
+
     if(err) { return handleError(res, err); }
-    if(!thing) { return res.status(404).send('Not Found'); }
-    return res.json(thing);
+    return res.status(200).json(output);
   });
 };
 
-// Creates a new thing in the DB.
+// Creates a new repository in the DB.
 exports.create = function(req, res) {
-  Repository.create(req.body, function(err, thing) {
+  Repository.create(req.body, function(err, repository) {
     if(err) { return handleError(res, err); }
-    return res.status(201).json(thing);
+    return res.status(201).json(repository);
   });
 };
 
-
-// Updates an existing thing in the DB.
+// Updates an existing repository in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }
-  Repository.findOne({ owner : req.params.owner }, function (err, thing) {
+  Repository.findOne({ owner : req.params.owner }, function (err, repository) {
     if (err) { return handleError(res, err); }
-    if(!thing) { return res.status(404).send('Not Found'); }
+    if(!repository) { return res.status(404).send('Not Found'); }
     var updated = _.merge(thing, req.body);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
-      return res.status(200).json(thing);
+      return res.status(200).json(repository);
     });
   });
 };
 
 // Deletes a thing from the DB.
 exports.destroy = function(req, res) {
-  Repository.findOne({ owner : req.params.owner } , function (err, thing) {
+  Repository.findOne({ owner : req.params.owner } , function (err, repository) {
     if(err) { return handleError(res, err); }
-    if(!thing) { return res.status(404).send('Not Found'); }
-    thing.remove(function(err) {
+    if(!repository) { return res.status(404).send('Not Found'); }
+    repository.remove(function(err) {
       if(err) { return handleError(res, err); }
       return res.status(204).send('No Content');
     });
