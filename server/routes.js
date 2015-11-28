@@ -11,6 +11,7 @@ module.exports = function(app) {
   // Insert routes below
   app.use('/api/user', require('./api/user'));
 
+
   app.use('/auth', require('./auth'));
 
   // Add routes for schema by TAK

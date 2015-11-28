@@ -14,3 +14,5 @@
  - 자기 Top Repository -> Fork, Star, Watch (Stacked Bar Chart)
  - 자기 Top Language -> PIE (Line 수)
 - 날짜 최신순, repository unique만 뽑아오기 
+- repository마다 code line 수 뽑아주기
+
