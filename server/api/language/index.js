@@ -6,6 +6,8 @@ var controller = require('./language.controller.js');
 
 var router = express.Router();
 
+router.get('/:owner/:repositoryName', controller.languages);
+
 router.get('/', controller.index);
 router.get('/:owner', controller.show);
 router.post('/', controller.create);

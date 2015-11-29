@@ -5,30 +5,34 @@ var _ = require('lodash');
 var Repository = require('./repository.model.js');
 var Moment = require('moment');
 
+
+
+
 exports.usersStarCount = function(req, res) {
   var prevName;
   var output = new Array();
   var forkSum=0 , starSum=0, watchSum=0;
-  var today = Moment().startOf('day'),
-    tomorrow = Moment(today).add(100, 'days'),
-  yesterday = Moment(today).subtract(100, 'days');
+
+/*
+ var today = Moment().startOf('day'),
+ tomorrow = Moment(today).add(100, 'days'),
+ yesterday = Moment(today).subtract(100, 'days');
 
   Repository.find({
     collectedAt: {$gte: yesterday.toDate(), $lt: tomorrow.toDate() }
   }).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
-    console.log(repositories);
+*/
+
+  Repository.find({}).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
       if(prevName == currRepo.name){
         return ;
       }
-
       prevName = currRepo.name;
       forkSum += currRepo.forksCount;
       starSum += currRepo.stargazersCount;
       watchSum += currRepo.watchersCount;
-      output.push(currRepo);
     });
-
     var result = {
       "owner" : req.params.owner,
       "forksCount" : forkSum,
@@ -72,7 +76,9 @@ exports.show = function(req, res) {
         return ;
       }
       prevName = currRepo.name;
-      output.push(currRepo);
+      //output.push(currRepo);
+      output.push(prevName);
+
     });
 
     if(err) { return handleError(res, err); }
