@@ -4,6 +4,29 @@
 var _ = require('lodash');
 var Languages = require('./language.model.js');
 
+
+
+// Code line
+exports.languages = function(req, res){
+  Languages.findOne({ owner: req.params.owner, repositoryName: req.params.repositoryName}).sort({"collectedAt": -1}).exec(function (err, object) {
+    console.log(object);
+    if(err) { return handleError(res, err); }
+    if(!object) { return res.status(404).send('Not Found'); }
+    return res.json(object.languages);
+  });
+};
+
+// Get a single language
+exports.show = function(req, res) {
+  Languages.find({ owner: req.params.owner }, function (err, object) {
+    if(err) { return handleError(res, err); }
+    if(!object) { return res.status(404).send('Not Found'); }
+    return res.json(object);
+  });
+};
+
+
+
 // Get list of language
 exports.index = function(req, res) {
   Languages.find(function (err, languageList) {
@@ -12,15 +35,7 @@ exports.index = function(req, res) {
   });
 };
 
-// Get a single language
-//findById 는 db안에 _id를 찾음
-exports.show = function(req, res) {
-  Languages.findOne({ owner: req.params.owner }, function (err, language) {
-    if(err) { return handleError(res, err); }
-    if(!language) { return res.status(404).send('Not Found'); }
-    return res.json(language);
-  });
-};
+
 
 // Creates a new thing in the DB.
 exports.create = function(req, res) {
