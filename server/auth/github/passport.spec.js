@@ -4,7 +4,7 @@
 var passport = require("./passport.js");
 var assert = require("assert");
 var expect = require("chai").expect;
-var User = require('../../api/user/user.model');
+var User = require('../../api/v1/user/user.model');
 
 describe("passport", function(){
   describe("updateProfile", function(){

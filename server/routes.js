@@ -9,14 +9,19 @@ var path = require('path');
 
 module.exports = function(app) {
   // Insert routes below
-  app.use('/api/user', require('./api/user'));
-
+  app.use('/api/v1/user', require('./api/v1/user'));
+  // Add routes for schema by TAK
+  app.use('/api/v1/repository', require('./api/v1/repository'));
+  app.use('/api/v1/language', require('./api/v1/language'));
 
   app.use('/auth', require('./auth'));
 
-  // Add routes for schema by TAK
-  app.use('/api/repository', require('./api/repository'));
-  app.use('/api/language', require('./api/language'));
+
+  // Test Routes
+  app.use('/api/v1.1/user', require('./api/v1.1/user'));
+  app.use('/api/v1.1/:owner/repository', require('./api/v1.1/repository'));
+  app.use('/api/v1.1/:owner/language', require('./api/v1.1/language'));
+
 
 
 
