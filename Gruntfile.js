@@ -32,16 +32,18 @@ module.exports = function (grunt) {
         stderr: true,
         failOnError: true
       },
-      remove_data :{
-        command : 'mongo ohmygithub-dev --eval "db.dropDatabase()"'
+      drop_collection :{
+        command : 'mongo ohmygithub-dev --eval "db.repository.drop(); db.language.drop()"'
       },
-      add_init_data : {
-        command : 'mongorestore -d ohmygithub-dev resources/ohmygithub-dev'
+      import_repository:{
+        command : 'mongoimport --collection repository --db ohmygithub-dev resources/repository.json'
+      },
+      import_language:{
+        command : 'mongoimport --collection language --db ohmygithub-dev resources/language.json'
       }
     },
 
-
-    // Project settings
+  // Project settings
     pkg: grunt.file.readJSON('package.json'),
     yeoman: {
       // configurable paths
@@ -644,8 +646,10 @@ module.exports = function (grunt) {
     ]);
   });
 
-
-  grunt.registerTask('prepare-db', ['shell']);
+  grunt.registerTask('prepare-db', function(){
+    grunt.log.ok('prepare-db test');
+    grunt.task.run(['shell']);
+  });
 
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
