@@ -2,7 +2,7 @@
 
 angular.module('ohMyGithubApp')
   .factory('User', function ($resource) {
-    return $resource('/api/user/:id/:controller', {
+    return $resource('/api/v1.1/user/:id/:controller', {
       id: '@_id'
     },
     {

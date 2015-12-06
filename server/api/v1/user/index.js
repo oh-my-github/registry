@@ -8,8 +8,9 @@ var auth = require('../../../auth/auth.service');
 var router = express.Router();
 
 // Added by Tak on 2015-09-28 to show user list
-router.get('/', controller.list);
+//router.get('/', controller.list);
 //router.get('/', auth.hasRole('admin'), controller.index);
+router.get('/', controller.index);
 router.delete('/:id', auth.hasRole('admin'), controller.destroy);
 router.get('/me', auth.isAuthenticated(), controller.me);
 router.put('/:id/password', auth.isAuthenticated(), controller.changePassword);
