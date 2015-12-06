@@ -6,6 +6,6 @@ angular.module('ohMyGithubApp')
       .state('main', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        controller: 'DrawCtrl'
       });
   });
