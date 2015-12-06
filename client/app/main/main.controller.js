@@ -32,7 +32,7 @@ angular.module('ohMyGithubApp')
     });
     $scope.login = Auth.getCurrentUser().githubProfile.login;
 
-    $http.get('/api/repository/star/'+ $scope.login).success(function(data){
+    $http.get('/api/v1.1/'+ $scope.login +'/repository/starcount').success(function(data){
       $scope.data = data;
     });
     //console.log(Auth.getCurrentUser());
