@@ -11,7 +11,7 @@ function getOwner(baseUrl){
 exports.index = function(req, res) {
   var prevName;
   var output = new Array();
-  Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+  Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
       if(prevName == currRepo.name){
         return ;
@@ -37,11 +37,11 @@ exports.usersStarCount = function(req, res) {
  yesterday = Moment(today).subtract(100, 'days');
 
   Repository.find({
-    collectedAt: {$gte: yesterday.toDate(), $lt: tomorrow.toDate() }
-  }).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+    collectAt: {$gte: yesterday.toDate(), $lt: tomorrow.toDate() }
+  }).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
 */
 
-  Repository.find({owner : reqOwner}).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+  Repository.find({owner : reqOwner}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
       if(prevName == currRepo.name){
         return ;
@@ -70,7 +70,7 @@ exports.repoStarCount = function(req, res) {
   var fork=0 , star=0, watch=0;
   var reqOwner = getOwner(req.baseUrl);
 
-  Repository.find({owner : reqOwner, name: req.params.repoName}).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+  Repository.find({owner : reqOwner, name: req.params.repoName}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
       if(prevName == currRepo.name){
         return ;
@@ -97,7 +97,7 @@ exports.repoStarCount = function(req, res) {
 exports.list = function(req, res) {
   var prevName;
   var output = new Array();
-  Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectedAt": -1}).exec(function (err, repositories) {
+  Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
       if(prevName == currRepo.name){
         return ;
@@ -112,7 +112,7 @@ exports.list = function(req, res) {
 };
 
 exports.showInfo = function(req, res) {
-  Repository.findOne({owner : getOwner(req.baseUrl), name : req.params.repoName}).sort({"collectedAt": -1}).exec(function (err, object) {
+  Repository.findOne({owner : getOwner(req.baseUrl), name : req.params.repoName}).sort({"collectAt": -1}).exec(function (err, object) {
     if(err) { return handleError(res, err); }
     if(!object) { return res.status(404).send('Not Found'); }
     return res.status(200).json(object);
@@ -127,7 +127,7 @@ exports.destroy = function(req, res) {
   Repository.find({
     owner: getOwner(req.baseUrl),
     name: req.params.repoName
-  }).sort({"collectedAt": -1}).exec(function (err, repositories) {
+  }).sort({"collectAt": -1}).exec(function (err, repositories) {
     if (err) {
       return handleError(res, err);
     }

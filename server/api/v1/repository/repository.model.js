@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var RepositorySchema = new Schema({
-  collectedAt: Date,
+  collectAt: Date,
   createdAt : Date,
   forksCount : Number,
   isForked : Boolean,

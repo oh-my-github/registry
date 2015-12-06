@@ -13,7 +13,7 @@ function getOwner(baseUrl){
 exports.index = function(req, res) {
   var prevName;
   var output = new Array();
-  Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectedAt": -1}).exec(function (err, languages) {
+  Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectAt": -1}).exec(function (err, languages) {
     languages.forEach(function(currLanguage){
       if(prevName == currLanguage.repositoryName){
         return ;
@@ -28,7 +28,7 @@ exports.index = function(req, res) {
 
 // Code line
 exports.languages = function(req, res){
-  Languages.findOne({ owner: getOwner(req.baseUrl), repositoryName: req.params.repositoryName}).sort({"collectedAt": -1}).exec(function (err, object) {
+  Languages.findOne({ owner: getOwner(req.baseUrl), repositoryName: req.params.repositoryName}).sort({"collectAt": -1}).exec(function (err, object) {
     if(err) { return handleError(res, err); }
     if(!object) { return res.status(404).send('Not Found'); }
     return res.json(object.languages);
@@ -42,7 +42,7 @@ exports.eachline = function(req, res) {
   var output = new Array();
   var languageMap = new HashMap();
 
-  Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectedAt": -1}).exec(function (err, languages) {
+  Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectAt": -1}).exec(function (err, languages) {
     languages.forEach(function(currLanguage){
       if(prevName == currLanguage.repositoryName){
         return ;
@@ -74,7 +74,7 @@ exports.eachline = function(req, res) {
 
 // Deletes a thing from the DB.
 exports.destroy = function(req, res) {
-   Languages.find({ owner: getOwner(req.baseUrl), repositoryName: req.params.repositoryName}).sort({"collectedAt": -1}).exec(function (err, languages) {
+   Languages.find({ owner: getOwner(req.baseUrl), repositoryName: req.params.repositoryName}).sort({"collectAt": -1}).exec(function (err, languages) {
     if(err) { return handleError(res, err); }
     if(!language) { return res.status(404).send('Not Found'); }
     languages.forEach(function(currLanguage){

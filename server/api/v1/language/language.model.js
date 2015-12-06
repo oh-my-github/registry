@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var LanguagesSchema = new Schema({
-  collectedAt : Date,
+  collectAt : Date,
   owner : String,
   repositoryName : String,
   languages : [
