@@ -23,6 +23,7 @@ angular.module('ohMyGithubApp', [
         if ($cookieStore.get('token')) {
           config.headers.Authorization = 'Bearer ' + $cookieStore.get('token');
         }
+        console.log(config);
         return config;
       },
 
@@ -48,6 +49,8 @@ angular.module('ohMyGithubApp', [
         if (next.authenticate && !loggedIn) {
           event.preventDefault();
           $location.path('/login');
+        } else {
+          $location.path('/');
         }
       });
     });
