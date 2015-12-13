@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12" ng-show="showGraph">
       <h1 class="page-header">Features:</h1>
       <!--
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
@@ -31,15 +31,14 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{ data.owner }}</td>
-                <td>{{ data.forksCount }}</td>
-                <td>{{ data.stargazersCount }}</td>
-                <td>{{ data.watchersCount }}</td>
+                <td>{{ repository.owner }}</td>
+                <td>{{ repository.forksCount }}</td>
+                <td>{{ repository.stargazersCount }}</td>
+                <td>{{ repository.watchersCount }}</td>
               </tr>
             </tbody>
           </table>
       </div>
-
       <div id="chart"></div>
     </div>
   </div>

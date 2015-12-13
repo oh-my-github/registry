@@ -21,21 +21,34 @@ angular.module('ohMyGithubApp')
   })
 
   .controller('DrawCtrl', function ($scope, $http, Auth){
-    $scope.chart = c3.generate({
-      bindto: '#chart',
-      data: {
-        columns: [
-          ['data1', 30, 200, 100, 400, 150, 250],
-          ['data2', 50, 20, 10, 40, 15, 25]
-        ]
-      }
-    });
+
+    $scope.showGraph = false;
+
     if(Auth.isLoggedIn()){
+
+      $scope.showGraph = true;
+
       $scope.login = Auth.getCurrentUser().githubProfile.login;
 
       $http.get('/api/v1.1/'+ $scope.login +'/repository/starcount').success(function(data){
-        $scope.data = data;
+        $scope.repository = data;
       });
+
+      $scope.userLanguageData = {columns: [], type: 'pie'};
+
+      $http.get('/api/v1.1/' + $scope.login + '/language/eachline').success(function(data){
+        if(data !== null) {
+          data.forEach(function (obj) {
+            $scope.userLanguageData.columns.push([obj.name, obj.line]);
+          })
+        }
+        $scope.userLanguageChart = c3.generate({
+          bindto: '#chart',
+          data: $scope.userLanguageData
+        });
+      });
+
+
+
     }
-    //console.log(Auth.getCurrentUser());
   });
