@@ -2,11 +2,101 @@
 
 var _ = require('lodash');
 var Repository = require('../../v1/repository/repository.model.js');
+var async = require('async');
 
 function getOwner(baseUrl){
   var res = baseUrl.split('/');
   return res[3];
 }
+
+var getCollectAtTime = function(owner, callback){
+  // Distinct + Sort Query
+  Repository.aggregate([
+    { $match : { owner : owner}},
+    { $sort : { collectAt : 1}},
+    { $group : { _id : "$collectAt"}}
+  ], function(err, results){
+    if(err){
+      console.log(err);
+      return;
+    }
+    callback(null, owner, results);
+  });
+};
+
+var distinctByDay = function(owner, dates, callback){
+  var prevDate, prevYear;
+  var output = new Array();
+  console.log('distinct dates : ', dates);
+  dates.forEach(function(date){
+    if((prevDate == date._id.getDate()) && (prevYear == date._id.getYear())){
+      return;
+    }
+    prevYear = date._id.getYear();
+    prevDate = date._id.getDate();
+    output.push(date._id);
+  });
+  callback(null, owner, output);
+};
+
+var getStarCount = function(owner, dates, callback){
+  var output = new Array();
+  var prevName;
+  var forkSum=0 , starSum=0, watchSum=0;
+  var result;
+
+  async.each(dates,
+    function(date, callbackNextEach){
+      Repository.find({owner : owner, collectAt : date}).sort({"name": 1}).exec(function (err, repositories) {
+        repositories.forEach(function(currRepo){
+          if(prevName == currRepo.name){
+            return ;
+          }
+          prevName = currRepo.name;
+          forkSum += currRepo.forksCount;
+          starSum += currRepo.stargazersCount;
+          watchSum += currRepo.watchersCount;
+        });
+        result = {
+          'owner' : owner,
+          'collectAt' : date,
+          'forksCount' : forkSum,
+          'stargazersCount' : starSum,
+          'watchersCount': watchSum
+        };
+        output.push(result);
+        forkSum = 0, starSum = 0, watchSum = 0, prevName = 0;
+        callbackNextEach();
+      });
+    },
+    function(err){
+      if(err) {
+        console.log(err);
+        callback(null, err);
+      }
+      callback(null, output);
+    }
+  );
+};
+
+exports.starCountByDay = function(req, res){
+  async.waterfall([
+      //get owner name func
+      function(callback){
+        var res = req.baseUrl.split('/');
+        callback(null, res[3]);
+      },
+      getCollectAtTime,
+      distinctByDay,
+      getStarCount
+    ],
+    function(err, results){
+      if(err) { return handleError(res, err); }
+      return res.status(200).json(results);
+    }
+  );
+};
+
 
 exports.index = function(req, res) {
   var prevName;
@@ -26,20 +116,9 @@ exports.index = function(req, res) {
 };
 
 exports.usersStarCount = function(req, res) {
-  var Moment = require('moment');
   var prevName;
   var forkSum=0 , starSum=0, watchSum=0;
   var reqOwner = getOwner(req.baseUrl);
-
-/*
- var today = Moment().startOf('day'),
- tomorrow = Moment(today).add(100, 'days'),
- yesterday = Moment(today).subtract(100, 'days');
-
-  Repository.find({
-    collectAt: {$gte: yesterday.toDate(), $lt: tomorrow.toDate() }
-  }).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
-*/
 
   Repository.find({owner : reqOwner}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
@@ -55,8 +134,7 @@ exports.usersStarCount = function(req, res) {
       'owner' : reqOwner,
       'forksCount' : forkSum,
       'stargazersCount' : starSum,
-      'watchersCount': watchSum,
-      //"date" : Moment().format()
+      'watchersCount': watchSum
     };
 
     if(err) { return handleError(res, err); }
@@ -80,14 +158,14 @@ exports.repoStarCount = function(req, res) {
       star += currRepo.stargazersCount;
       watch += currRepo.watchersCount;
     });
-     var result = {
+
+    var result = {
       'owner' : reqOwner,
       'repository' : req.params.repoName,
       'forksCount' : fork,
       'stargazersCount' : star,
       'watchersCount': watch,
     };
-
     if(err) { return handleError(res, err); }
     return res.status(200).json(result);
   });

@@ -15,10 +15,12 @@ exports.index = function(req, res) {
   var output = new Array();
   Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectAt": -1}).exec(function (err, languages) {
     languages.forEach(function(currLanguage){
+      /*
       if(prevName == currLanguage.repositoryName){
         return ;
       }
       prevName = currLanguage.repositoryName;
+      */
       output.push(currLanguage);
     });
     if(err) { return handleError(res, err); }
