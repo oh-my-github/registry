@@ -102,7 +102,6 @@ angular.module('ohMyGithubApp')
 
         if(data !== null) {
           data.forEach(function (obj) {
-            console.log(obj.collectAt);
             startCountByDayData.data.columns[0].push(new Date(obj.collectAt));
             startCountByDayData.data.columns[1].push(obj.forksCount);
             startCountByDayData.data.columns[2].push(obj.stargazersCount);
