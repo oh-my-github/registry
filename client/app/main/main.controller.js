@@ -34,16 +34,19 @@ angular.module('ohMyGithubApp')
         $scope.repository = data;
       });
 
-      $scope.userLanguageData = {columns: [], type: 'pie'};
+
 
       $http.get('/api/v1.1/' + $scope.login + '/language').success(function(data){
+
+        $scope.userLanguageData = {columns: [], type: 'pie'};
+
         if(data !== null) {
           data.forEach(function (obj) {
             $scope.userLanguageData.columns.push([obj.name, obj.line]);
           })
         }
         $scope.userLanguageChart = c3.generate({
-          bindto: '#chart',
+          bindto: '#userLanguageChart' ,
           data: $scope.userLanguageData,
           tooltip: {
             contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
@@ -76,6 +79,42 @@ angular.module('ohMyGithubApp')
         });
       });
 
+      $http.get('/api/v1.1/' + $scope.login + '/repository/starcount/timeline').success(function(data){
+
+       var startCountByDayData = {
+          data: {
+            x: 'x',
+            columns: [
+              ['x'],
+              ['forksCount'],
+              ['stargazersCount'],
+              ['watchersCount']
+            ]
+          },
+          axis: {
+            x: {
+              type: 'timeseries',
+              tick: {
+                format: '%Y-%m-%d'
+              }
+            }
+        }};
+
+        if(data !== null) {
+          data.forEach(function (obj) {
+            startCountByDayData.data.columns[0].push(obj.collectAt);
+            startCountByDayData.data.columns[1].push(obj.forksCount);
+            startCountByDayData.data.columns[2].push(obj.stargazersCount);
+            startCountByDayData.data.columns[3].push(obj.watchersCount);
+          });
+
+          console.log(startCountByDayData);
+
+          $scope.chart = c3.generate(
+            startCountByDayData
+          );
+        }
+      });
 
 
     }
