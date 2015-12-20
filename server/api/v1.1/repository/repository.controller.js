@@ -61,9 +61,8 @@ var getStarCount = function(owner, dates, callback){
           starSum += currRepo.stargazersCount;
           watchSum += currRepo.watchersCount;
         });
-        console.log(moment(date).format('YYYY-MM-DD h:mm'));
         result = {
-          'collectAt' : moment(date).format('YYYY-MM-DD h:mm'),
+          'collectAt' : moment(date).format('YYYY-MM-DD h:mm:ss'),
           'forksCount' : forkSum,
           'stargazersCount' : starSum,
           'watchersCount': watchSum
