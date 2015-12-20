@@ -95,14 +95,15 @@ angular.module('ohMyGithubApp')
             x: {
               type: 'timeseries',
               tick: {
-                format: '%Y-%m-%d'
+                format: '%Y-%m-%d %H:%M'
               }
             }
         }};
 
         if(data !== null) {
           data.forEach(function (obj) {
-            startCountByDayData.data.columns[0].push(obj.collectAt);
+            console.log(obj.collectAt);
+            startCountByDayData.data.columns[0].push(new Date(obj.collectAt));
             startCountByDayData.data.columns[1].push(obj.forksCount);
             startCountByDayData.data.columns[2].push(obj.stargazersCount);
             startCountByDayData.data.columns[3].push(obj.watchersCount);
@@ -118,4 +119,9 @@ angular.module('ohMyGithubApp')
 
 
     }
+
   });
+
+function drawStarCount(login){
+
+}
