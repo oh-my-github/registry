@@ -36,7 +36,7 @@ angular.module('ohMyGithubApp')
 
       $scope.userLanguageData = {columns: [], type: 'pie'};
 
-      $http.get('/api/v1.1/' + $scope.login + '/language/eachline').success(function(data){
+      $http.get('/api/v1.1/' + $scope.login + '/language').success(function(data){
         if(data !== null) {
           data.forEach(function (obj) {
             $scope.userLanguageData.columns.push([obj.name, obj.line]);
