@@ -6,7 +6,7 @@
 'use strict';
 
 var User = require('../api/v1/user/user.model');
-
+/*
 User.find({}).remove(function() {
   User.create({
     provider: 'local',
@@ -24,3 +24,4 @@ User.find({}).remove(function() {
     }
   );
 });
+*/

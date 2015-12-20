@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var Repository = require('../../v1/repository/repository.model.js');
 var async = require('async');
+var moment = require('moment');
 
 function getOwner(baseUrl){
   var res = baseUrl.split('/');
@@ -11,6 +12,8 @@ function getOwner(baseUrl){
 
 var getCollectAtTime = function(owner, callback){
   // Distinct + Sort Query
+  //Repository.find({owner : owner}).distinct('collectAt').exec(function(err, ))
+
   Repository.aggregate([
     { $match : { owner : owner}},
     { $sort : { collectAt : 1}},
@@ -20,6 +23,7 @@ var getCollectAtTime = function(owner, callback){
       console.log(err);
       return;
     }
+    console.log(results);
     callback(null, owner, results);
   });
 };
@@ -58,8 +62,7 @@ var getStarCount = function(owner, dates, callback){
           watchSum += currRepo.watchersCount;
         });
         result = {
-          'owner' : owner,
-          'collectAt' : date,
+          'collectAt' : moment(date).format('YYYY-MM-DD'),
           'forksCount' : forkSum,
           'stargazersCount' : starSum,
           'watchersCount': watchSum
@@ -79,7 +82,7 @@ var getStarCount = function(owner, dates, callback){
   );
 };
 
-exports.starCountByDay = function(req, res){
+exports.starCountTimeline = function(req, res){
   async.waterfall([
       //get owner name func
       function(callback){
@@ -142,7 +145,7 @@ exports.usersStarCount = function(req, res) {
   });
 };
 
-
+/*
 exports.repoStarCount = function(req, res) {
   var prevName;
   var fork=0 , star=0, watch=0;
@@ -170,7 +173,7 @@ exports.repoStarCount = function(req, res) {
     return res.status(200).json(result);
   });
 };
-
+*/
 
 exports.list = function(req, res) {
   var prevName;
