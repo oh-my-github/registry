@@ -106,7 +106,7 @@ exports.index = function(req, res) {
   var output = new Array();
   Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
-      if(prevName == currRepo.name){
+      if(prevName == currRepo.name ){
         return ;
       }
       prevName = currRepo.name;
@@ -180,7 +180,7 @@ exports.list = function(req, res) {
   var output = new Array();
   Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
     repositories.forEach(function(currRepo){
-      if(prevName == currRepo.name){
+      if(prevName == currRepo.name || (currRepo.name.indexOf('github.io') > -1)){
         return ;
       }
       prevName = currRepo.name;

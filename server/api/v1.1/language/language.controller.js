@@ -46,7 +46,7 @@ exports.eachline = function(req, res) {
 
   Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectAt": -1}).exec(function (err, languages) {
     languages.forEach(function(currLanguage){
-      if(prevName == currLanguage.repositoryName){
+      if(prevName == currLanguage.repositoryName || (currLanguage.repositoryName.indexOf('github.io') > -1)){
         return ;
       }
       prevName = currLanguage.repositoryName;
