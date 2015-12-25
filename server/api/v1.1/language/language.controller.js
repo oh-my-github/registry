@@ -1,55 +1,22 @@
 'use strict';
-
 var _ = require('lodash');
 var Languages = require('../../v1/language/language.model.js');
 var HashMap = require('hashmap');
 
-function getOwner(baseUrl){
-  var res = baseUrl.split('/');
-  return res[3];
-}
-
-// Owner's Language List
+//Sum each language lines
 exports.index = function(req, res) {
-  var prevName;
-  var output = new Array();
-  Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectAt": -1}).exec(function (err, languages) {
-    languages.forEach(function(currLanguage){
-      /*
-      if(prevName == currLanguage.repositoryName){
-        return ;
-      }
-      prevName = currLanguage.repositoryName;
-      */
-      output.push(currLanguage);
-    });
-    if(err) { return handleError(res, err); }
-    return res.status(200).json(output);
-  });
-};
-
-// Code line
-exports.languages = function(req, res){
-  Languages.findOne({ owner: getOwner(req.baseUrl), repositoryName: req.params.repositoryName}).sort({"collectAt": -1}).exec(function (err, object) {
-    if(err) { return handleError(res, err); }
-    if(!object) { return res.status(404).send('Not Found'); }
-    return res.json(object.languages);
-  });
-};
-
-
-//sum each language lines
-exports.eachline = function(req, res) {
+  var _owner = getOwner(req.baseUrl);
   var prevName;
   var output = new Array();
   var languageMap = new HashMap();
 
-  Languages.find({ owner : getOwner(req.baseUrl) }).sort({"repositoryName": 1, "collectAt": -1}).exec(function (err, languages) {
+  Languages.find({ owner : _owner }).sort({ "repositoryName" : 1, "collectAt" : -1}).exec(function (err, languages) {
     languages.forEach(function(currLanguage){
       if(prevName == currLanguage.repositoryName || (currLanguage.repositoryName.indexOf('github.io') > -1)){
         return ;
       }
       prevName = currLanguage.repositoryName;
+
       currLanguage.languages.forEach(function(language){
         if(languageMap.has(language.name)){
           languageMap.set(language.name, languageMap.get(language.name) + language.line);
@@ -72,7 +39,16 @@ exports.eachline = function(req, res) {
   });
 };
 
-
+// Code line
+exports.languages = function(req, res){
+  var _owner = getOwner(req.baseUrl);
+  var _repositoryName = req.params.repositoryName;
+  Languages.findOne({ owner: _owner, repositoryName: _repositoryName}).sort({ "collectAt": -1 }).exec(function (err, object) {
+    if(err) { return handleError(res, err); }
+    if(!object) { return res.status(404).send('Not Found'); }
+    return res.json(object.languages);
+  });
+};
 
 // Deletes a thing from the DB.
 exports.destroy = function(req, res) {
@@ -80,7 +56,7 @@ exports.destroy = function(req, res) {
     if(err) { return handleError(res, err); }
     if(!language) { return res.status(404).send('Not Found'); }
     languages.forEach(function(currLanguage){
-       language.remove(function(err) {
+       currLanguage.remove(function(err) {
          if(err) { return handleError(res, err); }
          return res.status(204).send('No Content');
        });
@@ -88,23 +64,10 @@ exports.destroy = function(req, res) {
   });
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function getOwner(baseUrl){
+  var res = baseUrl.split('/');
+  return res[3];
+}
 
 function handleError(res, err) {
   return res.status(500).send(err);

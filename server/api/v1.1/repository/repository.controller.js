@@ -1,49 +1,157 @@
 'use strict';
-
 var _ = require('lodash');
 var Repository = require('../../v1/repository/repository.model.js');
 var async = require('async');
 var moment = require('moment');
+
+///////////////////////////
+// Routes
+
+// Get owner's Repository Name List
+exports.index = function(req, res) {
+  var prevName;
+  var output = new Array();
+  var _owner = getOwner(req.baseUrl);
+
+  Repository.find({owner : _owner}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
+    repositories.forEach(function(currRepo){
+      if(prevName == currRepo.name || (currRepo.name.indexOf('github.io') > -1)){
+        return ;
+      }
+      prevName = currRepo.name;
+      output.push(prevName);
+    });
+
+    if(err) { return handleError(res, err); }
+    return res.status(200).json(output);
+  });
+};
+
+// Get owner's forks, stargazers, watchers count
+exports.starCount = function(req, res) {
+  var prevName;
+  var forkSum=0 , starSum=0, watchSum=0;
+  var _owner = getOwner(req.baseUrl);
+
+  Repository.find({owner : _owner}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
+    repositories.forEach(function(currRepo){
+      if(prevName == currRepo.name){
+        return ;
+      }
+      prevName = currRepo.name;
+      forkSum += currRepo.forksCount;
+      starSum += currRepo.stargazersCount;
+      watchSum += currRepo.watchersCount;
+    });
+
+    var result = {
+      'owner' : _owner,
+      'forksCount' : forkSum,
+      'stargazersCount' : starSum,
+      'watchersCount': watchSum
+    };
+    if(err) { return handleError(res, err); }
+    return res.status(200).json(result);
+  });
+};
+
+// Get owner's forks, stargazers, watchers count by time(hours)
+exports.starCountTimeline = function(req, res){
+  var _owner = getOwner(req.baseUrl);
+  async.waterfall([
+      function(callback){
+        callback(null, _owner)
+      },
+      getCollectAtTime,
+      distinctByDay,
+      getStarCount
+    ],
+    function(err, results){
+      if(err) { return handleError(res, err); }
+      return res.status(200).json(results);
+    }
+  );
+};
+
+// Get owner's a repository info
+exports.showRepoInfo = function(req, res) {
+  var _owner = getOwner(req.baseUrl);
+  var _name = req.params.repoName;
+
+  Repository.findOne({owner : _owner, name : _name}).sort({"collectAt": -1}).exec(function (err, object) {
+    if(err) { return handleError(res, err); }
+    if(!object) { return res.status(404).send('Not Found'); }
+    return res.status(200).json(object);
+  });
+};
+
+// Deletes a thing from the DB.
+exports.destroy = function(req, res) {
+  var _owner = getOwner(req.baseUrl);
+  var _name = req.params.repoName;
+
+  Repository.find({owner: _owner, name: _name}).sort({"collectAt": -1}).exec(function (err, repositories) {
+    if (err) {
+      return handleError(res, err);
+    }
+    if (!repositories) {
+      return res.status(404).send('Not Found');
+    }
+    repositories.forEach(function (currRepo) {
+      currRepo.remove(function (err) {
+        if (err) {
+          return handleError(res, err);
+        }
+        return res.status(204).send('No Content');
+      });
+    });
+  });
+};
+
+////////////////////////////
+// Functions
 
 function getOwner(baseUrl){
   var res = baseUrl.split('/');
   return res[3];
 }
 
-var getCollectAtTime = function(owner, callback){
-  // Distinct + Sort Query
-  //Repository.find({owner : owner}).distinct('collectAt').exec(function(err, ))
-
+function getCollectAtTime(_owner, callback){
   Repository.aggregate([
-    { $match : { owner : owner}},
-    { $sort : { collectAt : 1}},
-    { $group : { _id : "$collectAt"}}
+    { $match : { owner : _owner}},
+    { $group : { _id : '$collectAt'}},
+    { $sort : { _id : 1}} // _id equals collectAt
   ], function(err, results){
     if(err){
       console.log(err);
       return;
     }
-    console.log(results);
-    callback(null, owner, results);
+    callback(null, _owner, results);
   });
-};
+}
 
-var distinctByDay = function(owner, dates, callback){
-  var prevDate, prevYear;
+function distinctByDay(_owner, dates, callback){
+  var prevYear, prevMonth, prevDate, prevHours;
   var output = new Array();
-  console.log('distinct dates : ', dates);
+
   dates.forEach(function(date){
-    if((prevDate == date._id.getDate()) && (prevYear == date._id.getYear())){
+    if((prevYear == date._id.getYear())
+      && (prevMonth == date._id.getMonth())
+      && (prevDate == date._id.getDate())
+      && (prevHours == date._id.getHours())) {
       return;
     }
     prevYear = date._id.getYear();
+    prevMonth = date._id.getMonth();
     prevDate = date._id.getDate();
+    prevHours = date._id.getHours();
+
     output.push(date._id);
   });
-  callback(null, owner, output);
-};
+  callback(null, _owner, output);
+}
 
-var getStarCount = function(owner, dates, callback){
+function getStarCount(_owner, dates, callback){
   var output = new Array();
   var prevName;
   var forkSum=0 , starSum=0, watchSum=0;
@@ -51,7 +159,7 @@ var getStarCount = function(owner, dates, callback){
 
   async.each(dates,
     function(date, callbackNextEach){
-      Repository.find({owner : owner, collectAt : date}).sort({"name": 1}).exec(function (err, repositories) {
+      Repository.find({owner : _owner, collectAt : date}).sort({"name": 1}).exec(function (err, repositories) {
         repositories.forEach(function(currRepo){
           if(prevName == currRepo.name){
             return ;
@@ -80,152 +188,14 @@ var getStarCount = function(owner, dates, callback){
       callback(null, output);
     }
   );
-};
-
-exports.starCountTimeline = function(req, res){
-  async.waterfall([
-      //get owner name func
-      function(callback){
-        var res = req.baseUrl.split('/');
-        callback(null, res[3]);
-      },
-      getCollectAtTime,
-      distinctByDay,
-      getStarCount
-    ],
-    function(err, results){
-      if(err) { return handleError(res, err); }
-      return res.status(200).json(results);
-    }
-  );
-};
-
-
-exports.index = function(req, res) {
-  var prevName;
-  var output = new Array();
-  Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
-    repositories.forEach(function(currRepo){
-      if(prevName == currRepo.name ){
-        return ;
-      }
-      prevName = currRepo.name;
-      output.push(currRepo);
-    });
-
-    if(err) { return handleError(res, err); }
-    return res.status(200).json(output);
-  });
-};
-
-exports.usersStarCount = function(req, res) {
-  var prevName;
-  var forkSum=0 , starSum=0, watchSum=0;
-  var reqOwner = getOwner(req.baseUrl);
-
-  Repository.find({owner : reqOwner}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
-    repositories.forEach(function(currRepo){
-      if(prevName == currRepo.name){
-        return ;
-      }
-      prevName = currRepo.name;
-      forkSum += currRepo.forksCount;
-      starSum += currRepo.stargazersCount;
-      watchSum += currRepo.watchersCount;
-    });
-    var result = {
-      'owner' : reqOwner,
-      'forksCount' : forkSum,
-      'stargazersCount' : starSum,
-      'watchersCount': watchSum
-    };
-
-    if(err) { return handleError(res, err); }
-    return res.status(200).json(result);
-  });
-};
-
-/*
-exports.repoStarCount = function(req, res) {
-  var prevName;
-  var fork=0 , star=0, watch=0;
-  var reqOwner = getOwner(req.baseUrl);
-
-  Repository.find({owner : reqOwner, name: req.params.repoName}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
-    repositories.forEach(function(currRepo){
-      if(prevName == currRepo.name){
-        return ;
-      }
-      prevName = currRepo.name;
-      fork += currRepo.forksCount;
-      star += currRepo.stargazersCount;
-      watch += currRepo.watchersCount;
-    });
-
-    var result = {
-      'owner' : reqOwner,
-      'repository' : req.params.repoName,
-      'forksCount' : fork,
-      'stargazersCount' : star,
-      'watchersCount': watch,
-    };
-    if(err) { return handleError(res, err); }
-    return res.status(200).json(result);
-  });
-};
-*/
-
-exports.list = function(req, res) {
-  var prevName;
-  var output = new Array();
-  Repository.find({owner : getOwner(req.baseUrl)}).sort({"name": 1, "collectAt": -1}).exec(function (err, repositories) {
-    repositories.forEach(function(currRepo){
-      if(prevName == currRepo.name || (currRepo.name.indexOf('github.io') > -1)){
-        return ;
-      }
-      prevName = currRepo.name;
-      output.push(prevName);
-    });
-
-    if(err) { return handleError(res, err); }
-    return res.status(200).json(output);
-  });
-};
-
-exports.showInfo = function(req, res) {
-  Repository.findOne({owner : getOwner(req.baseUrl), name : req.params.repoName}).sort({"collectAt": -1}).exec(function (err, object) {
-    if(err) { return handleError(res, err); }
-    if(!object) { return res.status(404).send('Not Found'); }
-    return res.status(200).json(object);
-  });
-};
-
-
-
-
-// Deletes a thing from the DB.
-exports.destroy = function(req, res) {
-  Repository.find({
-    owner: getOwner(req.baseUrl),
-    name: req.params.repoName
-  }).sort({"collectAt": -1}).exec(function (err, repositories) {
-    if (err) {
-      return handleError(res, err);
-    }
-    if (!repositories) {
-      return res.status(404).send('Not Found');
-    }
-    repositories.forEach(function (currRepo) {
-      currRepo.remove(function (err) {
-        if (err) {
-          return handleError(res, err);
-        }
-        return res.status(204).send('No Content');
-      });
-    });
-  });
-};
+}
 
 function handleError(res, err) {
   return res.status(500).send(err);
-};
+}
+
+if (typeof exports !== 'undefined') {
+  exports.getCollectAtTime = getCollectAtTime;
+  exports.distinctByDay = distinctByDay;
+  exports.getStarCount = getStarCount;
+}
