@@ -84,7 +84,7 @@
     "run-sequence": "^1.0.2",
     "should": "~3.3.1",
     "streamqueue": "^1.1.1",
-    "supertest": "~0.11.0",
+    "supertest": "~0.11.0"
   },
   "engines": {
     "node": ">=0.10.0"
