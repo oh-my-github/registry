@@ -1,30 +1,36 @@
+/// <reference path="../../../../typings/node/node.d.ts" />
+
 'use strict';
 
 var passport = require('passport');
 var config = require('../../../config/environment');
 var jwt = require('jsonwebtoken');
+import Module = require('../Func');
 
 var Repository = require('../repository/repository.model.js');
-var User = require('./user.model.js');
 
 // Get a User list
 exports.list = function(req, res) {
   Repository.distinct("owner", function (err, users) {
-    if(err) { return handleError(res, err); }
+    if(err) { return Module.handleError(res, err); }
     return res.status(200).json(users);
   });
 };
-
-
 
 var validationError = function(res, err) {
   return res.status(422).json(err);
 };
 
 /**
- * Get list of users
- * restriction: 'admin'
+ * Authentication callback
  */
+exports.authCallback = function(req, res, next) {
+  res.redirect('/');
+};
+
+
+ var User = require('./user.model.js');
+
 exports.index = function(req, res) {
   User.find({}, '-salt -hashedPassword', function (err, users) {
     if(err) return res.status(500).send(err);
@@ -32,9 +38,6 @@ exports.index = function(req, res) {
   });
 };
 
-/**
- * Creates a new user
- */
 exports.create = function (req, res, next) {
   var newUser = new User(req.body);
   newUser.provider = 'local';
@@ -46,9 +49,6 @@ exports.create = function (req, res, next) {
   });
 };
 
-/**
- * Get a single user
- */
 exports.show = function (req, res, next) {
   var userId = req.params.id;
 
@@ -59,10 +59,6 @@ exports.show = function (req, res, next) {
   });
 };
 
-/**
- * Deletes a user
- * restriction: 'admin'
- */
 exports.destroy = function(req, res) {
   User.findByIdAndRemove(req.params.id, function(err, user) {
     if(err) return res.status(500).send(err);
@@ -70,9 +66,6 @@ exports.destroy = function(req, res) {
   });
 };
 
-/**
- * Change a users password
- */
 exports.changePassword = function(req, res, next) {
   var userId = req.user._id;
   var oldPass = String(req.body.oldPassword);
@@ -91,9 +84,6 @@ exports.changePassword = function(req, res, next) {
   });
 };
 
-/**
- * Get my info
- */
 exports.me = function(req, res, next) {
   var userId = req.user._id;
   User.findOne({
@@ -103,11 +93,4 @@ exports.me = function(req, res, next) {
     if (!user) return res.status(401).send('Unauthorized');
     res.json(user);
   });
-};
-
-/**
- * Authentication callback
- */
-exports.authCallback = function(req, res, next) {
-  res.redirect('/');
 };

@@ -1,3 +1,5 @@
+/// <reference path="../../../../typings/node/node.d.ts" />
+
 'use strict';
 var _ = require('lodash');
 var Repository = require('./repository.model.js');

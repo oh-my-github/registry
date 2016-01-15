@@ -1,9 +1,12 @@
+/// <reference path="../../../typings/node/node.d.ts" />
+/// <reference path="../../../typings/jasmine/jasmine.d.ts" />
+/// <reference path="../../../typings/chai/chai.d.ts" />
 /**
  * Created by JunHo on 2015. 9. 26..
  */
 var passport = require("./passport.js");
 var assert = require("assert");
-var expect = require("chai").expect;
+import chai = require("chai");
 var User = require('../../api/v1/user/user.model');
 
 describe("passport", function(){
@@ -55,7 +58,7 @@ describe("passport", function(){
           User.findOne({
             'githubProfile.id': "sampleID"
           }, function(err, user){
-            expect(user.githubProfile.login).to.equal("lambda");
+            chai.expect(user.githubProfile.login).to.equal("lambda");
           });
         });
       });

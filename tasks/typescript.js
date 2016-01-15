@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var ts = require('gulp-typescript');
 
 module.exports = function(){
-  return gulp.src(['server/**/*.ts', 'client/**/*.ts'], { base : "."})
+  return gulp.src(['server/**/*.ts'], { base : "."})
     .pipe(ts({
       target: 'ES6',
       module: 'commonjs',

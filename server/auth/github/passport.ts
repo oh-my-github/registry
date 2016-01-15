@@ -1,5 +1,29 @@
+/// <reference path="../../../typings/node/node.d.ts" />
+/// <reference path="../../../typings/jasmine/jasmine.d.ts" />
+
 var passport = require('passport');
 var GitHubStrategy = require('passport-github2').Strategy;
+
+
+function updateProfile(User?, accessToken?, refreshToken?, profile?, callback?){
+  User.update({'githubProfile.id': profile._json.id},
+    {$set: {'githubProfile.login': profile._json.login,
+      'githubProfile.email': profile.emails[0].value,
+      'githubProfile.accessToken': accessToken,
+      'githubProfile.refreshToken': refreshToken,
+      'githubProfile.following': profile._json.following,
+      'githubProfile.followers': profile._json.followers,
+      'githubProfile.createdAt': new Date(profile._json.created_at),
+      'githubProfile.updatedAt': new Date(profile._json.updated_at),
+      'githubProfile.blog': profile._json.blog,
+      'githubProfile.company': profile._json.company,
+      'githubProfile.location': profile._json.location}}, function(err){
+      console.log(err);
+      if(callback){
+        callback();
+      }
+    });
+}
 
 exports.setup = function (User, config) {
   passport.use(new GitHubStrategy({
@@ -45,23 +69,3 @@ exports.setup = function (User, config) {
 };
 
 exports.updateProfile = updateProfile;
-
-function updateProfile(User, accessToken, refreshToken, profile, callback){
-  User.update({'githubProfile.id': profile._json.id},
-    {$set: {'githubProfile.login': profile._json.login,
-      'githubProfile.email': profile.emails[0].value,
-      'githubProfile.accessToken': accessToken,
-      'githubProfile.refreshToken': refreshToken,
-      'githubProfile.following': profile._json.following,
-      'githubProfile.followers': profile._json.followers,
-      'githubProfile.createdAt': new Date(profile._json.created_at),
-      'githubProfile.updatedAt': new Date(profile._json.updated_at),
-      'githubProfile.blog': profile._json.blog,
-      'githubProfile.company': profile._json.company,
-      'githubProfile.location': profile._json.location}}, function(err){
-      console.log(err);
-      if(callback){
-        callback();
-      }
-    });
-}

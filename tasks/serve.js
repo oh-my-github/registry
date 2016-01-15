@@ -20,8 +20,8 @@ var openOpts = {
 module.exports = {
   nodemon: function () {
     return nodemon({
-        script: 'server/app.js',
-      //script: 'built/app.js',
+        //script: 'server/app.js',
+        script: 'built/server/app.js',
         ext: 'js',
         ignore: ['client', 'dist', 'node_modules', 'gulpfile.js']
       })

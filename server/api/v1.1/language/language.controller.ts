@@ -1,12 +1,15 @@
+/// <reference path="../../../../typings/node/node.d.ts" />
+
 'use strict';
 var _ = require('lodash');
 var Languages = require('./language.model.js');
 var HashMap = require('hashmap');
+import Module = require('../Func');
 
 //Sum each language lines
 exports.index = function(req, res) {
-  var _owner = getOwner(req.baseUrl);
   var prevName;
+  var _owner = Module.getOwner(req.baseUrl);
   var output = new Array();
   var languageMap = new HashMap();
 
@@ -34,17 +37,18 @@ exports.index = function(req, res) {
       return b.line - a.line;
     });
 
-    if(err) { return handleError(res, err); }
+    if(err) { return Module.handleError(res, err); }
     return res.status(200).json(output);
   });
 };
 
 // Code line
 exports.languages = function(req, res){
-  var _owner = getOwner(req.baseUrl);
+  var _owner = Module.getOwner(req.baseUrl);
   var _repositoryName = req.params.repositoryName;
+
   Languages.findOne({ owner: _owner, repositoryName: _repositoryName}).sort({ "collectAt": -1 }).exec(function (err, object) {
-    if(err) { return handleError(res, err); }
+    if(err) { return Module.handleError(res, err); }
     if(!object) { return res.status(404).send('Not Found'); }
     return res.json(object.languages);
   });
@@ -52,23 +56,18 @@ exports.languages = function(req, res){
 
 // Deletes a thing from the DB.
 exports.destroy = function(req, res) {
-   Languages.find({ owner: getOwner(req.baseUrl), repositoryName: req.params.repositoryName}).sort({"collectAt": -1}).exec(function (err, languages) {
-    if(err) { return handleError(res, err); }
-    if(!language) { return res.status(404).send('Not Found'); }
+   var _owner = Module.getOwner(req.baseUrl);
+   var _repositoryName = req.params.repositoryName;
+
+   Languages.find({ owner: _owner, repositoryName: _repositoryName}).sort({"collectAt": -1}).exec(function (err, languages) {
+    if(err) { return Module.handleError(res, err); }
+    if(!languages) { return res.status(404).send('Not Found'); }
     languages.forEach(function(currLanguage){
        currLanguage.remove(function(err) {
-         if(err) { return handleError(res, err); }
+         if(err) { return Module.handleError(res, err); }
          return res.status(204).send('No Content');
        });
      });
   });
 };
 
-function getOwner(baseUrl){
-  var res = baseUrl.split('/');
-  return res[3];
-}
-
-function handleError(res, err) {
-  return res.status(500).send(err);
-}

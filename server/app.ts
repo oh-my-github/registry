@@ -1,3 +1,4 @@
+/// <reference path="../typings/node/node.d.ts" />
 /**
  * Main application file
  */

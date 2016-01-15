@@ -1,8 +1,8 @@
-'use strict';
+/// <reference path="../../../../typings/node/node.d.ts" />
 
+'use strict';
 var express = require('express');
 var controller = require('./language.controller.js');
-
 var router = express.Router();
 
 router.get('/', controller.index);

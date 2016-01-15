@@ -1,9 +1,8 @@
-/**
- * Created by tak on 15. 12. 5.
- */
+/// <reference path="../../../../typings/node/node.d.ts" />
+/// <reference path="../../../../typings/jasmine/jasmine.d.ts" />
+
 'use strict';
 
-var should = require('should');
 var app = require('../../../app');
 var request = require('supertest');
 
