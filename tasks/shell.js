@@ -4,6 +4,7 @@ var shell = require('gulp-shell')
 module.exports = function () {
   return gulp.src('*.js', {read: false})
     .pipe(shell([
+      'rm -rf built/*',
       'mongo ohmygithub-dev --eval "db.repository.drop(); db.language.drop()"',
       'mongoimport --collection repository --db ohmygithub-dev resources/repository.json',
       'mongoimport --collection language --db ohmygithub-dev resources/language.json'
