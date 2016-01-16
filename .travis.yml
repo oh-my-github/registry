@@ -3,10 +3,10 @@ node_js:
 - '0.10'
 - '0.11'
 before_script:
-- npm install -g bower grunt-cli
+- npm install -g bower grunt-cli gulp
 - npm install
 - bower install
-script: grunt test
+script: gulp test
 services: mongodb
 notifications:
   slack:
