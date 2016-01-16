@@ -14,7 +14,6 @@ gulp.task('test',                     require('./tasks/test').test);
 gulp.task('watch',      ['inject'],   require('./tasks/watch'));
 gulp.task('inject',     ['sass'],     require('./tasks/inject'));
 gulp.task('sass',                     require('./tasks/sass'));
-gulp.task('preview',    ['build'],    require('./tasks/preview'));
 gulp.task('build',                    require('./tasks/build'));
 gulp.task('bump',       ['version'],  require('./tasks/chore').bump);
 gulp.task('version',                  require('./tasks/chore').version);

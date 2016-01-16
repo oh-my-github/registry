@@ -1,6 +1,6 @@
 {
   "name": "oh-my-github",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "main": "server/app.js",
   "dependencies": {
     "async": "^1.5.0",
@@ -80,7 +80,6 @@
     "open": "~0.0.4",
     "phantomjs": "^1.9.19",
     "requirejs": "~2.1.11",
-    "ripe": "^0.2.1",
     "run-sequence": "^1.0.2",
     "should": "~3.3.1",
     "streamqueue": "^1.1.1",

@@ -7,7 +7,7 @@
 var passport = require("./passport.js");
 var assert = require("assert");
 var chai = require("chai");
-var User = require('../../api/v1/user/user.model');
+var User = require('../../api/v1.1/user/user.model');
 describe("passport", function () {
     describe("updateProfile", function () {
         it("it should update profile of specific document", function () {
