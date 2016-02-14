@@ -1,9 +1,7 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+build
 node_modules
-public
-.tmp
-.idea
-client/bower_components
-dist
-/server/config/local.env.js
+ncp-debug.log
 npm-debug.log
-*.iml
