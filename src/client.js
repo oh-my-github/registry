@@ -1,105 +1,72 @@
 /**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
+ * THIS IS THE ENTRY POINT FOR THE CLIENT, JUST LIKE server.js IS THE ENTRY POINT FOR THE SERVER.
  */
-
-import 'babel-polyfill';
+import 'babel/polyfill';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import FastClick from 'fastclick';
-import Router from './routes';
-import Location from './core/Location';
-import { addEventListener, removeEventListener } from './core/DOMUtils';
+import createHistory from 'history/lib/createBrowserHistory';
+import useScroll from 'scroll-behavior/lib/useStandardScroll';
+import createStore from './redux/create';
+import ApiClient from './helpers/ApiClient';
+import io from 'socket.io-client';
+import {Provider} from 'react-redux';
+import {reduxReactRouter, ReduxRouter} from 'redux-router';
 
-let cssContainer = document.getElementById('css');
-const appContainer = document.getElementById('app');
-const context = {
-  insertCss: styles => styles._insertCss(),
-  onSetTitle: value => document.title = value,
-  onSetMeta: (name, content) => {
-    // Remove and create a new <meta /> tag in order to make it work
-    // with bookmarks in Safari
-    const elements = document.getElementsByTagName('meta');
-    [].slice.call(elements).forEach((element) => {
-      if (element.getAttribute('name') === name) {
-        element.parentNode.removeChild(element);
-      }
-    });
-    const meta = document.createElement('meta');
-    meta.setAttribute('name', name);
-    meta.setAttribute('content', content);
-    document.getElementsByTagName('head')[0].appendChild(meta);
-  },
-};
+import getRoutes from './routes';
+import makeRouteHooksSafe from './helpers/makeRouteHooksSafe';
 
-function render(state) {
-  Router.dispatch(state, (newState, component) => {
-    ReactDOM.render(component, appContainer, () => {
-      // Restore the scroll position if it was saved into the state
-      if (state.scrollY !== undefined) {
-        window.scrollTo(state.scrollX, state.scrollY);
-      } else {
-        window.scrollTo(0, 0);
-      }
+const client = new ApiClient();
 
-      // Remove the pre-rendered CSS because it's no longer used
-      // after the React app is launched
-      if (cssContainer) {
-        cssContainer.parentNode.removeChild(cssContainer);
-        cssContainer = null;
-      }
-    });
+// Three different types of scroll behavior available.
+// Documented here: https://github.com/rackt/scroll-behavior
+const scrollableHistory = useScroll(createHistory);
+
+const dest = document.getElementById('content');
+const store = createStore(reduxReactRouter, makeRouteHooksSafe(getRoutes), scrollableHistory, client, window.__data);
+
+function initSocket() {
+  const socket = io('', {path: '/ws'});
+  socket.on('news', (data) => {
+    console.log(data);
+    socket.emit('my other event', { my: 'data from client' });
   });
+  socket.on('msg', (data) => {
+    console.log(data);
+  });
+
+  return socket;
 }
 
-function run() {
-  let currentLocation = null;
-  let currentState = null;
+global.socket = initSocket();
 
-  // Make taps on links and buttons work fast on mobiles
-  FastClick.attach(document.body);
+const component = (
+  <ReduxRouter routes={getRoutes(store)} />
+);
 
-  // Re-render the app when window.location changes
-  const unlisten = Location.listen(location => {
-    currentLocation = location;
-    currentState = Object.assign({}, location.state, {
-      path: location.pathname,
-      query: location.query,
-      state: location.state,
-      context,
-    });
-    render(currentState);
-  });
+ReactDOM.render(
+  <Provider store={store} key="provider">
+    {component}
+  </Provider>,
+  dest
+);
 
-  // Save the page scroll position into the current location's state
-  const supportPageOffset = window.pageXOffset !== undefined;
-  const isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat');
-  const setPageOffset = () => {
-    currentLocation.state = currentLocation.state || Object.create(null);
-    if (supportPageOffset) {
-      currentLocation.state.scrollX = window.pageXOffset;
-      currentLocation.state.scrollY = window.pageYOffset;
-    } else {
-      currentLocation.state.scrollX = isCSS1Compat ?
-        document.documentElement.scrollLeft : document.body.scrollLeft;
-      currentLocation.state.scrollY = isCSS1Compat ?
-        document.documentElement.scrollTop : document.body.scrollTop;
-    }
-  };
+if (process.env.NODE_ENV !== 'production') {
+  window.React = React; // enable debugger
 
-  addEventListener(window, 'scroll', setPageOffset);
-  addEventListener(window, 'pagehide', () => {
-    removeEventListener(window, 'scroll', setPageOffset);
-    unlisten();
-  });
+  if (!dest || !dest.firstChild || !dest.firstChild.attributes || !dest.firstChild.attributes['data-react-checksum']) {
+    console.error('Server-side React render was discarded. Make sure that your initial render does not contain any client-side code.');
+  }
 }
 
-// Run the application when both DOM is ready and page content is loaded
-if (['complete', 'loaded', 'interactive'].includes(document.readyState) && document.body) {
-  run();
-} else {
-  document.addEventListener('DOMContentLoaded', run, false);
+if (__DEVTOOLS__ && !window.devToolsExtension) {
+  const DevTools = require('./containers/DevTools/DevTools');
+  ReactDOM.render(
+    <Provider store={store} key="provider">
+      <div>
+        {component}
+        <DevTools />
+      </div>
+    </Provider>,
+    dest
+  );
 }

@@ -1,8 +1,7 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-
-.idea
-build
-node_modules
-ncp-debug.log
+.idea/
+node_modules/
+dist/
+*.iml
+webpack-assets.json
+webpack-stats.json
 npm-debug.log
