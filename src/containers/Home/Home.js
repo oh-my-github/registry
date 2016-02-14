@@ -24,26 +24,26 @@ export default class Home extends Component {
             <h2>{config.app.description}</h2>
 
             <p>
-              <a className={styles.github} href="https://github.com/erikras/react-redux-universal-hot-example"
+              <a className={styles.github} href="https://github.com/oh-my-github/oh-my-github"
                  target="_blank">
                 <i className="fa fa-github"/> View on Github
               </a>
             </p>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
+            <GithubButton user="oh-my-github"
+                          repo="oh-my-github"
                           type="star"
                           width={160}
                           height={30}
                           count large/>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
+            <GithubButton user="oh-my-github"
+                          repo="oh-my-github"
                           type="fork"
                           width={160}
                           height={30}
                           count large/>
 
             <p className={styles.humility}>
-              Created and maintained by <a href="https://twitter.com/erikras" target="_blank">@erikras</a>.
+              Created and maintained by <a href="http://1ambda.github.io" target="_blank">@1ambda</a>, <a href="http://tocology.github.io" target="_blank">@tocology</a>, <a href="http://njir.github.io" target="_blank">@njir</a>.
             </p>
           </div>
         </div>
