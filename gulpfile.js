@@ -19,8 +19,9 @@ gulp.task('watch',      ['inject'],   require('./tasks/watch'));
 gulp.task('default',    ['serve']);
 gulp.task('shell',                    require('./tasks/shell'));
 gulp.task('test',                     require('./tasks/test').test);
-gulp.task('typescript',                  require('./tasks/typescript'));
-gulp.task('nodemon',                     require('./tasks/serve').nodemon);
+gulp.task('typescript',               require('./tasks/typescript'));
+gulp.task('nodemon',                  require('./tasks/serve').nodemon);
+gulp.task('less',                     require('./tasks/less'));
 gulp.task('serve', function(callback){
   runSequence('shell', 'typescript', 'nodemon', callback)
 });
