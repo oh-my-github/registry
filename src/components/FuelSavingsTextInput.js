@@ -1,27 +1,29 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes, } from 'react'
 
-const FuelSavingsTextInput = (props) => {
-  const handleChange = (e) => {
-    props.onChange(props.name, e.target.value);
-  };
+export default class FuelSavingsTextInput extends Component {
 
-  return (
-    <input className="small"
-      type="text"
-      placeholder={props.placeholder}
-      value={props.value}
-      onChange={handleChange} />
-	);
-};
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    placeholder: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
+  }
 
-FuelSavingsTextInput.propTypes = {
-	name: PropTypes.string.isRequired,
-	onChange: PropTypes.func.isRequired,
-	placeholder: PropTypes.string,
-	value: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.number
-	])
-};
+  handleChange(e) {
+    this.props.onChange(this.props.name, e.target.value)
+  }
 
-export default FuelSavingsTextInput;
+  render() {
+
+    return (
+      <input className="small"
+             type="text"
+             placeholder={this.props.placeholder}
+             value={this.props.value}
+             onChange={this.handleChange.bind(this)} />
+    )
+  }
+}

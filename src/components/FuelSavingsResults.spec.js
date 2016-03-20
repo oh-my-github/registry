@@ -1,8 +1,8 @@
-import chai from 'chai';
-import cheerio from 'cheerio';
-import FuelSavingsResults from './FuelSavingsResults';
-import React from 'react';
-import ReactDOMServer from 'react/lib/ReactDOMServer';
+import chai from 'chai'
+import cheerio from 'cheerio'
+import FuelSavingsResults from './FuelSavingsResults'
+import React from 'react'
+import ReactDOMServer from 'react/lib/ReactDOMServer'
 
 chai.should();
 
@@ -20,44 +20,44 @@ describe('Fuel Savings Calculator Results Component', () => {
 	describe('Savings label', () => {
 		it('displays as savings when savings exist', () => {
 			//arrange
-			var props = {
+			const props = {
 				savings: {
 					monthly: '10',
 					annual: '120',
-					threeYear: '360'
-				}
-			};
+					threeYear: '360',
+				},
+			}
 
-			var sut = React.createElement(FuelSavingsResults, props);
+			const sut = React.createElement(FuelSavingsResults, props)
 
 			//act
-			var html = ReactDOMServer.renderToStaticMarkup(sut);
-			let $ = cheerio.load(html);
-			var fuelSavingsLabel = $('.fuel-savings-label').html();
+			const html = ReactDOMServer.renderToStaticMarkup(sut)
+			const $ = cheerio.load(html)
+			const fuelSavingsLabel = $('.fuel-savings-label').html()
 
 			//assert
-			fuelSavingsLabel.should.equal('Savings');
+			fuelSavingsLabel.should.equal('Savings')
 		});
 
 		it('display as loss when savings don\'t exist', () => {
 			//arrange
-			var props = {
+			const props = {
 				savings: {
 					monthly: '-10',
 					annual: '-120',
-					threeYear: '-360'
-				}
-			};
+					threeYear: '-360',
+				},
+			}
 
-			var sut = React.createElement(FuelSavingsResults, props);
+			const sut = React.createElement(FuelSavingsResults, props)
 
 			//act
-			var html = ReactDOMServer.renderToStaticMarkup(sut);
-			let $ = cheerio.load(html);
-			var fuelSavingsLabel = $('.fuel-savings-label').html();
+			const html = ReactDOMServer.renderToStaticMarkup(sut)
+			const $ = cheerio.load(html)
+			const fuelSavingsLabel = $('.fuel-savings-label').html()
 
 			//assert
-			fuelSavingsLabel.should.equal('Loss');
-		});
-	});
-});
+			fuelSavingsLabel.should.equal('Loss')
+		})
+	})
+})

@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import React, { Component, PropTypes, } from 'react'
+import { Link, } from 'react-router'
 
-// Since this component is simple and static, there's no parent container for it.
-const AboutPage = () => {
+export default class AboutPage extends Component {
+
+  render() {
     return (
       <div>
         <h2>About</h2>
@@ -14,7 +15,7 @@ const AboutPage = () => {
           <Link to="/badlink">Click this bad link</Link> to see the 404 page.
         </p>
       </div>
-    );
-};
+    )
+  }
+}
 
-export default AboutPage;
