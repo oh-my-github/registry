@@ -1,3 +1,9 @@
+# Oh-My-Github WebService
+
+This webservice is for providing users' github profile list in a short time.
+
+### Under constructing....
+
 # React Slingshot!
 
 React Slingshot is a comprehensive starter kit for rapid application development using React. It offers a rich development experience including:
