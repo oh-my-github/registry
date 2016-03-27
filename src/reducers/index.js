@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import fuelSavingsAppState from './fuelSavings';
+import { combineReducers, } from 'redux'
+import TableReducer from './TableReducer'
 
 const rootReducer = combineReducers({
-  fuelSavingsAppState
-});
+  table: TableReducer,
+})
 
-export default rootReducer;
+export default rootReducer

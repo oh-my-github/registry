@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
-  "version": "1.2.0",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "oh-my-github:web-service",
+  "version": "0.0.1",
+  "description": "",
   "scripts": {
     "prestart": "npm run remove-dist",
     "start": "parallelshell \"npm run lint:tools\" \"npm run test:watch\" \"npm run open:src\"",
@@ -16,7 +16,7 @@
     "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel-core/register --recursive \"./src/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "Cory House",
+  "author": "oh-my-github",
   "license": "MIT",
   "dependencies": {
     "connect-history-api-fallback": "1.1.0",
@@ -63,22 +63,10 @@
     "yargs": "3.32.0"
   },
   "keywords:": [
-    "react",
-    "reactjs",
-    "react-router",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "redux",
-    "flux",
-    "boilerplate",
-    "starter"
+    "oh-my-github"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
+    "url": "https://github.com/oh-my-github/web-service"
   }
 }
