@@ -12,9 +12,8 @@ class SearchPage extends React.Component {
   render() {
     return (
       <div>
-        Search Page
+        <h2>Search Page</h2>
       </div>
-
     )
   }
 }
