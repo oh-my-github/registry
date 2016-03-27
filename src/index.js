@@ -5,6 +5,11 @@ import { Router, browserHistory, } from 'react-router'
 import routes from './routes'
 import configureStore from './store/configureStore'
 
+/** initialize */
+import injectTapEventPlugin from 'react-tap-event-plugin'
+injectTapEventPlugin()
+
+/** import global css */
 import './styles/styles.scss'
 
 const store = configureStore()

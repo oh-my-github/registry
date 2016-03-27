@@ -1,6 +1,8 @@
 import React, { PropTypes, } from 'react'
 import { Link, IndexLink, } from 'react-router'
 
+import NavBar from './NavBar'
+
 export default class App extends React.Component {
   static propTypes = {
     children: PropTypes.element,
@@ -9,7 +11,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <IndexLink to="/">Home</IndexLink> | <Link to="/About">About</Link>
+        <NavBar />
         <br/>
         {this.props.children}
       </div>
