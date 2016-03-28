@@ -1,6 +1,6 @@
 [
-  { "name": "1ambda", "link": "1ambda.github.io" },
-  { "name": "NohSeho", "link": "NohSeoh.github.io/oh-my-github" },
-  { "name": "njir", "link": "njir.github.io/oh-my-github" },
-  { "name": "tocology", "link": "tocology.github.io/oh-my-github" }
+  { "name": "1ambda", "json": "1ambda.github.io" },
+  { "name": "NohSeho", "json": "NohSeoh.github.io/oh-my-github" },
+  { "name": "njir", "json": "njir.github.io/oh-my-github" },
+  { "name": "tocology", "json": "tocology.github.io/oh-my-github" }
 ]

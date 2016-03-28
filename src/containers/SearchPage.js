@@ -1,7 +1,7 @@
 import React, { PropTypes, } from 'react'
 import { connect, } from 'react-redux'
 import { bindActionCreators, } from 'redux'
-import * as actions from '../actions/Action'
+import * as actions from '../actions/ProfileAction'
 
 class SearchPage extends React.Component {
   static propTypes = {
