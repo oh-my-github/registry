@@ -1,9 +1,10 @@
 import React, { PropTypes, } from 'react'
 import { connect, } from 'react-redux'
 import { bindActionCreators, } from 'redux'
-import * as actions from '../actions/ProfileAction'
+import * as actions from '../actions'
+import ProfileTable from '../components/ProfileTable'
 
-class SearchPage extends React.Component {
+class ProfilePage extends React.Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     appState: PropTypes.object.isRequired,
@@ -12,7 +13,8 @@ class SearchPage extends React.Component {
   render() {
     return (
       <div>
-        <h2>Search Page</h2>
+        <h4>Profile Page</h4>
+        <ProfileTable />
       </div>
     )
   }
@@ -33,4 +35,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchPage)
+)(ProfilePage)

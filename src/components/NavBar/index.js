@@ -27,12 +27,12 @@ export default class NavBar extends React.Component {
         <ToolbarGroup firstChild float="left">
           <ToolbarTitle text={<IndexLink to="/" style={style.text}>oh-my-github</IndexLink>}
                         style={style.title} />
-          <FlatButton disabled label={<Link to="/search" style={style.text}>Job</Link>}
-                      style={style.linkButton} />
-          <FlatButton disabled label={<Link to="/about" style={style.text}>About</Link>}
+          <FlatButton disabled label={<Link to="/search" style={style.text}>Search</Link>}
                       style={style.linkButton} />
         </ToolbarGroup>
         <ToolbarGroup float="right">
+          <FlatButton disabled label={<Link to="/about" style={style.text}>About</Link>}
+                      style={style.linkButton} />
           <IconMenu
             style={style.iconMenu}
             iconButtonElement={<IconButton iconStyle={style.icon} ><MoreVertIcon /></IconButton>} >
