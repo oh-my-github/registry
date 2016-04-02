@@ -23,5 +23,13 @@ export const tempTableData = [
     updated_at: '2016-03-19T15:11:56Z',
     url: 'https://github.com/tocology'
   },
+   {
+    login: 'NohSeho',
+    avatar_url: 'https://avatars.githubusercontent.com/u/1144643?v=3',
+    following: 29,
+    followers: 16,
+    updated_at: '2016-03-06T15:44:36',
+    url: 'https://github.com/NohSeho'
+  },
 ]
 

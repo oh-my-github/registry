@@ -26,24 +26,12 @@ export default class ProfileTable extends React.Component {
       displayRowCheckbox: false,
       adjustForCheckbox: false,
       displaySelectAll: false,
-      height: '300px',
     };
   }
-
-  handleToggle = (event, toggled) => {
-    this.setState({
-      [event.target.name]: toggled,
-    });
-  };
-
-  handleChange = (event) => {
-    this.setState({height: event.target.value});
-  };
 
   render() {
     return (
       <Table
-        height={this.state.height}
         fixedHeader={this.state.fixedHeader}
         fixedFooter={this.state.fixedFooter}
       >
