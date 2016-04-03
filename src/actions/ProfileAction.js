@@ -36,3 +36,4 @@ function sortBy (sortKey) {
 }
 
 export default { fetchData, filterBy, sortBy }
+

@@ -14,4 +14,3 @@ export default {
     RESET_ERROR_MESSAGE: null,
   })
 }
-
