@@ -12,5 +12,5 @@ export default {
 
     SET_ERROR_MESSAGE: null,
     RESET_ERROR_MESSAGE: null,
-  })
+  }),
 }
