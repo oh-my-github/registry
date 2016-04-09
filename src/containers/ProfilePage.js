@@ -3,6 +3,7 @@ import { connect, } from 'react-redux'
 import { bindActionCreators, } from 'redux'
 import * as actions from '../actions'
 import ProfileTable from '../components/ProfileTable'
+import ProfileSearch from '../components/ProfileSearch'
 
 class ProfilePage extends React.Component {
   static propTypes = {
@@ -13,7 +14,7 @@ class ProfilePage extends React.Component {
   render() {
     return (
       <div>
-        <h4>Profile Page</h4>
+        <ProfileSearch />
         <ProfileTable />
       </div>
     )

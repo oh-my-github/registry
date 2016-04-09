@@ -11,34 +11,53 @@ import IconButton from 'material-ui/lib/icon-button'
 import NavigationClose from 'material-ui/lib/svg-icons/navigation/close'
 import IconMenu from 'material-ui/lib/menus/icon-menu'
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert'
+import SearchIcon from 'material-ui/lib/svg-icons/action/search'
+import MenuIcon from 'material-ui/lib/svg-icons/navigation/menu'
 import MenuItem from 'material-ui/lib/menus/menu-item'
+import LeftNav from 'material-ui/lib/left-nav';
+
 
 import * as style from './style.js'
+import { tempTableData } from '../../constants/TempTableData'
 
 export default class NavBar extends React.Component {
-
-  static propTypes = {
-
+  constructor(props) {
+    super(props);
+    this.state = {open: false};
   }
+  handleToggle = () => this.setState({open: !this.state.open});
+  handleClose = () => this.setState({open: false});
 
   render() {
     return (
       <Toolbar style={style.navbar}>
         <ToolbarGroup firstChild float="left">
+          <IconButton
+            style={style.icon}
+            onClick={this.handleToggle}
+          >
+            <MenuIcon />
+          </IconButton>
+          <LeftNav
+            docked={false}
+            width={200}
+            open={this.state.open}
+            onRequestChange={(open) => this.setState({open})} >
+            <MenuItem onTouchTap={this.handleClose}>
+              <Link to="/" style={style.text}>oh-my-github</Link>
+            </MenuItem>
+            <MenuItem onTouchTap={this.handleClose}>
+              <Link to="/about" style={style.text}>About</Link>
+            </MenuItem>
+          </LeftNav>
+
           <ToolbarTitle text={<IndexLink to="/" style={style.text}>oh-my-github</IndexLink>}
                         style={style.title} />
-          <FlatButton disabled label={<Link to="/search" style={style.text}>Search</Link>}
-                      style={style.linkButton} />
         </ToolbarGroup>
+
         <ToolbarGroup float="right">
           <FlatButton disabled label={<Link to="/about" style={style.text}>About</Link>}
                       style={style.linkButton} />
-          <IconMenu
-            style={style.iconMenu}
-            iconButtonElement={<IconButton iconStyle={style.icon} ><MoreVertIcon /></IconButton>} >
-            <MenuItem style={style.iconMenuItem} primaryText="Settings" />
-            <MenuItem style={style.iconMenuItem} primaryText="Sign out" />
-          </IconMenu>
         </ToolbarGroup>
       </Toolbar>
     )
