@@ -10,7 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
 /** import global css */
-import './styles/styles.scss'
+import './index.css'
 
 const store = configureStore()
 
