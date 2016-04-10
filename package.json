@@ -1,7 +1,7 @@
 {
-  "name": "oh-my-github-web-service",
+  "name": "registry",
   "version": "0.0.1",
-  "description": "",
+  "description": "Registry for oh-my-github",
   "scripts": {
     "prestart": "npm run remove-dist",
     "start": "parallelshell \"npm run lint:tools\" \"npm run test:watch\" \"npm run open:src\"",
@@ -19,7 +19,7 @@
     "coverage:coverall": "cross-env NODE_ENV=test  istanbul cover node_modules/.bin/_mocha -- -u exports --compilers js:babel-register --recursive \"./src/**/*.spec.js\" --require ignore-styles --report lcovonly -- && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "author": "oh-my-github",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "connect-history-api-fallback": "1.1.0",
     "isomorphic-fetch": "2.2.1",
@@ -81,10 +81,11 @@
     "yargs": "3.32.0"
   },
   "keywords:": [
-    "oh-my-github"
+    "oh-my-github",
+    "registry"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/oh-my-github/web-service"
+    "url": "https://github.com/oh-my-github/registry"
   }
 }
