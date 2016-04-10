@@ -7,6 +7,7 @@ import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group'
 import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator'
 import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title'
 
+import {white} from 'material-ui/lib/styles/colors';
 import IconButton from 'material-ui/lib/icon-button'
 import NavigationClose from 'material-ui/lib/svg-icons/navigation/close'
 import IconMenu from 'material-ui/lib/menus/icon-menu'
@@ -15,6 +16,8 @@ import SearchIcon from 'material-ui/lib/svg-icons/action/search'
 import MenuIcon from 'material-ui/lib/svg-icons/navigation/menu'
 import MenuItem from 'material-ui/lib/menus/menu-item'
 import LeftNav from 'material-ui/lib/left-nav';
+import FontIcon from 'material-ui/lib/font-icon';
+import ActionHome from 'material-ui/lib/svg-icons/action/home';
 
 
 import * as style from './style.js'
@@ -31,33 +34,28 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <Toolbar style={style.navbar}>
-        <ToolbarGroup firstChild float="left">
-          <IconButton
-            style={style.icon}
-            onClick={this.handleToggle}
-          >
-            <MenuIcon />
+        <ToolbarGroup firstChild>
+          <IconButton style={style.navbarMenu} onClick={this.handleToggle}>
+            <MenuIcon color={white}/>
           </IconButton>
-          <LeftNav
-            docked={false}
-            width={200}
-            open={this.state.open}
-            onRequestChange={(open) => this.setState({open})} >
+          <LeftNav docked={false} width={200} open={this.state.open}
+                   onRequestChange={(open) => this.setState({open})}>
             <MenuItem onTouchTap={this.handleClose}>
-              <Link to="/" style={style.text}>oh-my-github</Link>
+              <Link to="/" style={style.popupText}>Registry</Link>
             </MenuItem>
             <MenuItem onTouchTap={this.handleClose}>
-              <Link to="/about" style={style.text}>About</Link>
+              <Link to="/about" style={style.popupText}>About</Link>
             </MenuItem>
           </LeftNav>
-
-          <ToolbarTitle text={<IndexLink to="/" style={style.text}>oh-my-github</IndexLink>}
-                        style={style.title} />
         </ToolbarGroup>
-
+        <ToolbarGroup>
+          <FlatButton disabled label={<Link to="/" style={style.text}>Registry</Link>}
+                      style={style.linkButton} />
+        </ToolbarGroup>
         <ToolbarGroup float="right">
           <FlatButton disabled label={<Link to="/about" style={style.text}>About</Link>}
                       style={style.linkButton} />
+          <FontIcon className="fa fa-github" style={style.rightIcon} hoverColor={white}></FontIcon>
         </ToolbarGroup>
       </Toolbar>
     )

@@ -5,3 +5,4 @@ export const iconMenu= {
 export const iconMenuItem = {
   fontWeight: 300,
 }
+

@@ -12,6 +12,7 @@ import * as style from './style.js'
 //temp resource data to be deleted
 import { tempTableData } from '../../constants/TempTableData'
 
+
 export default class ProfileSearch extends React.Component {
   constructor(props) {
     super(props);
