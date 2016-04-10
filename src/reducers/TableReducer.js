@@ -1,32 +1,32 @@
 import ActionTypes from '../constants/ActionTypes'
 
-export function listProfileWithItems (data) {
-  //const foods = data.report.foods
-  //
-  //return foods.reduce((arr, food) => {
-  //  food.nutrients.forEach((nutrient) => {
-  //    nutrient.food = food.name
-  //  })
-  //  return arr.concat(food.nutrients)
-  //}, [])
+const INITIAL_STATE = {
+  isFetching: false,
+  profiles: [],
+  sortKey: '',
+  sortDesc: false,
 }
 
-function handleTableActions (state, action) {
+function handleTableActions (state = INITIAL_STATE, action) {
   switch (action.type) {
     case ActionTypes.REQUEST_PROFILE_DATA:
-      return { isFetching: true }
-    case ActionTypes.RECEIVE_PROFILE_DATA:
-      return {
+      return Object.assign({}, state, {
         isFetching: false,
-        data: listProfileWithItems(action.data) // when you need to modify data
-      }
+      })
+    case ActionTypes.RECEIVE_PROFILE_DATA:
+      return Object.assign({}, state, {
+        isFetching: false,
+        profiles: action.profiles,
+      })
     case ActionTypes.FILTER_PROFILE_DATA:
-      return { filterString: action.filterString.toLowerCase() }
+      return Object.assign({}, state, {
+         filterString: action.filterString.toLowerCase()
+        })
     case ActionTypes.SORT_PROFILE_DATA:
-      return {
+      return Object.assign({}, state, {
         sortKey: action.sortKey,
         sortDesc: state.sortKey === action.sortKey ? !state.sortDesc : false
-      }
+      })
     default:
       return state
   }

@@ -10,7 +10,8 @@ const apiProps = {
 }
 
 function shouldFetchData ({table}) {
-  return (!table.data || !table.isFetching)
+  //return (!table.data || !table.isFetching)
+  return true
 }
 
 function fetchData () {

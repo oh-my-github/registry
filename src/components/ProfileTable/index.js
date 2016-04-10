@@ -15,6 +15,14 @@ import ListItem from 'material-ui/lib/lists/list-item'
 import { tempTableData } from '../../constants/TempTableData'
 
 export default class ProfileTable extends React.Component {
+
+  static propTypes = {
+    fetchData: React.PropTypes.func.isRequired,
+    sortBy: React.PropTypes.func.isRequired,
+    filterBy: React.PropTypes.func.isRequired,
+
+  }
+
   constructor(props) {
     super(props);
 
@@ -27,6 +35,10 @@ export default class ProfileTable extends React.Component {
       adjustForCheckbox: false,
       displaySelectAll: false,
     };
+  }
+
+  componentWillMount() {
+    this.props.fetchData()
   }
 
   render() {
