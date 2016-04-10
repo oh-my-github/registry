@@ -13,7 +13,7 @@ const HTTP_HEADERS_JSON = {
   'Content-Type': 'application/json',
 }
 
-function handleJsonResponse(url, method, promise) {
+export function handleJsonResponse(url, method, promise) {
   return promise
     .then(response => {
       if ((method === HTTP_METHOD.POST && response.status !== 201) /** if post, status should === 201 */
@@ -23,7 +23,7 @@ function handleJsonResponse(url, method, promise) {
     })
 }
 
-function getJSONs(urls) {
+export function getJSONs(urls) {
   const promises = urls.map(url => {
     return getJSON(url)
       .catch(error => {
@@ -34,7 +34,7 @@ function getJSONs(urls) {
   return Promise.all(promises) /** return nested arrays */
 }
 
-function getJSON(url) {
+export function getJSON(url) {
   const method = HTTP_METHOD.GET
 
   return handleJsonResponse(url, method, fetch(url, {

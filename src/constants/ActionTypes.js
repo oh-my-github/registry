@@ -1,16 +1,11 @@
-import keymirror from 'keymirror'
-
 export default {
 
-  GET_PROFILES_LIST_URL: 'https://raw.githubusercontent.com/oh-my-github/web-service/develop/resource/profile/registry.json',
+  GET_PROFILES_LIST_URL: 'http://localhost:3000/resource/profile/registry.json',
 
-  ActionTypes: keymirror({
-    REQUEST_PROFILE_DATA: null,
-    RECEIVE_PROFILE_DATA: null,
-    FILTER_PROFILE_DATA: null,
-    SORT_PROFILE_DATA: null,
-
-    SET_ERROR_MESSAGE: null,
-    RESET_ERROR_MESSAGE: null,
-  }),
+  REQUEST_PROFILE_DATA: 'REQUEST_PROFILE_DATA',
+  RECEIVE_PROFILE_DATA: 'RECEIVE_PROFILE_DATA',
+  FILTER_PROFILE_DATA: 'FILTER_PROFILE_DATA',
+  SORT_PROFILE_DATA: 'SORT_PROFILE_DATA',
+  SET_ERROR_MESSAGE: 'SET_ERROR_MESSAGE',
+  RESET_ERROR_MESSAGE: 'RESET_ERROR_MESSAGE',
 }

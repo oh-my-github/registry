@@ -1,21 +1,22 @@
 import React, { PropTypes, } from 'react'
 import { connect, } from 'react-redux'
 import { bindActionCreators, } from 'redux'
-import * as actions from '../actions'
+import actions from '../actions/ProfileAction'
 import ProfileTable from '../components/ProfileTable'
 import ProfileSearch from '../components/ProfileSearch'
 
 class ProfilePage extends React.Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    appState: PropTypes.object.isRequired,
+    tableState: PropTypes.object.isRequired,
   }
 
   render() {
+    console.log(this.props.tableState)
     return (
       <div>
         <ProfileSearch />
-        <ProfileTable />
+        <ProfileTable {...this.props.actions} {...this.props.tableState} />
       </div>
     )
   }
@@ -23,7 +24,7 @@ class ProfilePage extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    appState: state.table,
+    tableState: state.table,
   }
 }
 
