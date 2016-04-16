@@ -56,33 +56,33 @@ const getLoaders = function (env) {
     {
       test: /(\.css)$/,
       include: path.join(__dirname, 'src'),
-      loaders: ['style', 'css?sourceMap&module&importLoaders=1', 'postcss']
+      loaders: ['style', 'css?sourceMap&module&importLoaders=1', 'postcss', ],
     },
     { /** globally used css (for <link> in index.html) */
     test: /(\.css)$/,
       include: [
-        path.join(__dirname, 'node_modules')
+        path.join(__dirname, 'node_modules'),
       ],
-      loaders: ['style', 'css?sourceMap&importLoaders=1', 'postcss']
+      loaders: ['style', 'css?sourceMap&importLoaders=1', 'postcss',],
     },
     {
       test: /\.woff(\?\S*)?$/,
-      loader: 'url-loader?limit=10000&minetype=application/font-woff'
+      loader: 'url-loader?limit=10000&minetype=application/font-woff',
     },
     {
       test: /\.woff2(\?\S*)?$/,
-      loader: 'url-loader?limit=10000&minetype=application/font-woff'
+      loader: 'url-loader?limit=10000&minetype=application/font-woff',
     },
     {
       test: /\.eot(\?\S*)?$/,
-      loader: 'url-loader'
+      loader: 'url-loader',
     }, {
       test: /\.ttf(\?\S*)?$/,
-      loader: 'url-loader'
+      loader: 'url-loader',
     },
     {
       test: /\.svg(\?\S*)?$/,
-      loader: 'url-loader'
+      loader: 'url-loader',
     },
   ]
 
@@ -91,25 +91,25 @@ const getLoaders = function (env) {
 
 function getPostcssPlugins(env) {
 
-  var browserList = ['last 10 version', '> 5%', 'ie >= 8'];
+  let browserList = ['last 10 version', '> 5%', 'ie >= 8',]
 
-  var plugins = [
+  let plugins = [
     require('postcss-url')({
-      copy: 'rebase'
+      copy: 'rebase',
     }),
     require('postcss-cssnext')({
-      browsers: ['last 2 version', '> 5%', 'ie >= 8']
+      browsers: ['last 2 version', '> 5%', 'ie >= 8',],
     }),
     require('postcss-reporter')({
-      clearMessages: true
+      clearMessages: true,
     }),
     require('autoprefixer')({
-      browsers: browserList
+      browsers: browserList,
     }),
-    require("postcss-import")()
-  ];
+    require('postcss-import')(),
+  ]
 
-  return plugins;
+  return plugins
 }
 
 function getConfig(env) {
