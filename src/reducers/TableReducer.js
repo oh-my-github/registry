@@ -20,12 +20,12 @@ function tableActions (state = INITIAL_STATE, action) {
       })
     case ActionTypes.FILTER_PROFILE_DATA:
       return Object.assign({}, state, {
-         filterString: action.filterString.toLowerCase()
+         filterString: action.filterString.toLowerCase(),
         })
     case ActionTypes.SORT_PROFILE_DATA:
       return Object.assign({}, state, {
         sortKey: action.sortKey,
-        sortDesc: state.sortKey === action.sortKey ? !state.sortDesc : false
+        sortDesc: state.sortKey === action.sortKey ? !state.sortDesc : false,
       })
     default:
       return state

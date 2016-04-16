@@ -13,7 +13,7 @@ export const tempTableData = [
     following: 4,
     followers: 2,
     updated_at: '2016-03-13T08:17:01Z',
-    url: 'https://github.com/njir'
+    url: 'https://github.com/njir',
   },
   {
     login: 'tocology',
@@ -21,7 +21,7 @@ export const tempTableData = [
     following: 1,
     followers: 4,
     updated_at: '2016-03-19T15:11:56Z',
-    url: 'https://github.com/tocology'
+    url: 'https://github.com/tocology',
   },
    {
     login: 'NohSeho',
@@ -29,7 +29,7 @@ export const tempTableData = [
     following: 29,
     followers: 16,
     updated_at: '2016-03-06T15:44:36',
-    url: 'https://github.com/NohSeho'
+    url: 'https://github.com/NohSeho',
   },
 ]
 

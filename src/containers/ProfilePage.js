@@ -12,11 +12,11 @@ class ProfilePage extends React.Component {
   }
 
   render() {
-    console.log(this.props.tableState)
+    //console.log(this.props.tableState)
     return (
       <div>
         <ProfileSearch />
-        <ProfileTable {...this.props.actions} {...this.props.tableState} />
+        <ProfileTable {...this.props.actions} {...this.props.tableState.profiles} />
       </div>
     )
   }

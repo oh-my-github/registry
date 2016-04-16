@@ -12,7 +12,7 @@ import Avatar from 'material-ui/lib/avatar'
 import TextField from 'material-ui/lib/text-field'
 import ListItem from 'material-ui/lib/lists/list-item'
 //temp resource data to be deleted
-import { tempTableData } from '../../constants/TempTableData'
+import { tempTableData, } from '../../constants/TempTableData'
 
 export default class ProfileTable extends React.Component {
 
@@ -20,11 +20,12 @@ export default class ProfileTable extends React.Component {
     fetchData: React.PropTypes.func.isRequired,
     sortBy: React.PropTypes.func.isRequired,
     filterBy: React.PropTypes.func.isRequired,
+    profiles: React.PropTypes.array.isRequired,
 
   }
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       fixedHeader: true,
@@ -34,7 +35,8 @@ export default class ProfileTable extends React.Component {
       displayRowCheckbox: false,
       adjustForCheckbox: false,
       displaySelectAll: false,
-    };
+      listItem: true,
+    }
   }
 
   componentWillMount() {
@@ -42,6 +44,15 @@ export default class ProfileTable extends React.Component {
   }
 
   render() {
+
+    //const { profiles, } = this.props
+    //
+    //const tableDOM = (profiles.length === 0) createSpin() : createTable
+    //
+    //return (
+    //<div>{tableDOM}</div>
+    //)
+
     return (
       <Table
         fixedHeader={this.state.fixedHeader}
@@ -67,18 +78,18 @@ export default class ProfileTable extends React.Component {
           {tempTableData.map( (row, index) => (
             <TableRow key={index}>
               <TableRowColumn>
-                <ListItem disabled={true} leftAvatar={ <Avatar src={row.avatar_url} /> }>
+                <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.avatar_url}/>}>
                   {row.login}
                 </ListItem>
               </TableRowColumn>
               <TableRowColumn>{row.following}</TableRowColumn>
               <TableRowColumn>{row.followers}</TableRowColumn>
-              <TableRowColumn><Time value ={row.updated_at} format="YYYY/MM/DD HH:mm:ss"></Time></TableRowColumn>
+              <TableRowColumn><Time value ={row.updated_at} format="YYYY/MM/DD HH:mm:ss"/></TableRowColumn>
               <TableRowColumn><a href={row.url}>{row.url}</a></TableRowColumn>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-    );
+    )
   }
 }

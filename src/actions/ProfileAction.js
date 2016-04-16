@@ -9,7 +9,7 @@ const apiProps = {
   },
 }
 
-function shouldFetchData ({table}) {
+function shouldFetchData ({ table, }) {
   //return (!table.data || !table.isFetching)
   return true
 }
@@ -36,5 +36,5 @@ function sortBy (sortKey) {
   }
 }
 
-export default { fetchData, filterBy, sortBy }
+export default { fetchData, filterBy, sortBy, }
 

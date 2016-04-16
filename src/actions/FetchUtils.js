@@ -23,7 +23,7 @@ function errorAction (error) {
 
 export default function fetchDispatch (apiProps) {
   return (dispatch) => {
-    dispatch({ type: apiProps.types.request })
+    dispatch({ type: apiProps.types.request, })
 
     API.getJSON(apiProps.url)
       .then(registries => {

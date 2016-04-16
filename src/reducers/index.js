@@ -4,7 +4,7 @@ import TableReducer from './TableReducer'
 
 // Updates error message to notify about the failed fetches.
 function errorMessage (state = {}, action) {
-  const { type, error } = action
+  const { type, error, } = action
 
   if (type === ActionTypes.RESET_ERROR_MESSAGE) {
     return null
