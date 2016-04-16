@@ -17,12 +17,11 @@ function errorAction (error) {
   return {
     type: ActionTypes.SET_ERROR_MESSAGE,
     error: true,
-    errorMessage: error.message
+    errorMessage: error.message,
   }
 }
 
 export default function fetchDispatch (apiProps) {
-
   return (dispatch) => {
     dispatch({ type: apiProps.types.request })
 

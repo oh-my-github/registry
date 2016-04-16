@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   sortDesc: false,
 }
 
-function handleTableActions (state = INITIAL_STATE, action) {
+function tableActions (state = INITIAL_STATE, action) {
   switch (action.type) {
     case ActionTypes.REQUEST_PROFILE_DATA:
       return Object.assign({}, state, {
@@ -32,8 +32,4 @@ function handleTableActions (state = INITIAL_STATE, action) {
   }
 }
 
-function tableReducer (state = {}, action) {
-  return Object.assign({}, state, handleTableActions(state, action))
-}
-
-export default tableReducer
+export default tableActions
