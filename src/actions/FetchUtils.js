@@ -28,7 +28,7 @@ export default function fetchDispatch (apiProps) {
     API.getJSON(apiProps.url)
       .then(registries => {
         const locations = registries.map(registry => {
-          return `http://localhost:3000/${registry.location}`
+          return `http://localhost:3002/${registry.location}`
         })
 
         API.getJSONs(locations)

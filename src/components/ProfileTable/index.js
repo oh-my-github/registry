@@ -74,17 +74,17 @@ export default class ProfileTable extends React.Component {
           displayRowCheckbox={this.state.displayRowCheckbox}
           displaySelectAll = {this.state.displaySelectAll}
         >
-          {tempTableData.map( (row, index) => (
+          {this.props.profiles.map( (row, index) => (
             <TableRow key={index}>
               <TableRowColumn>
-                <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.avatar_url}/>}>
-                  {row.login}
+                <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
+                  {row.user.login}
                 </ListItem>
               </TableRowColumn>
-              <TableRowColumn>{row.following}</TableRowColumn>
-              <TableRowColumn>{row.followers}</TableRowColumn>
-              <TableRowColumn><Time value ={row.updated_at} format="YYYY/MM/DD HH:mm:ss"/></TableRowColumn>
-              <TableRowColumn><a href={row.url}>{row.url}</a></TableRowColumn>
+              <TableRowColumn>{row.user.following}</TableRowColumn>
+              <TableRowColumn>{row.user.followers}</TableRowColumn>
+              <TableRowColumn><Time value ={row.user.updated_at} format="YYYY/MM/DD HH:mm:ss"/></TableRowColumn>
+              <TableRowColumn><a href={row.user.url}>{row.user.url}</a></TableRowColumn>
             </TableRow>
           ))}
         </TableBody>

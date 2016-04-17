@@ -16,7 +16,7 @@ class ProfilePage extends React.Component {
     return (
       <div>
         <ProfileSearch />
-        <ProfileTable {...this.props.actions} {...this.props.tableState.profiles} />
+        <ProfileTable {...this.props.actions} {...this.props.tableState} />
       </div>
     )
   }
