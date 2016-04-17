@@ -21,6 +21,7 @@ export default class ProfileTable extends React.Component {
 
     profiles: React.PropTypes.array.isRequired,
     sortKey: React.PropTypes.string.isRequired,
+    sortDesc: React.PropTypes.string.isRequired,
   }
 
   constructor(props) {
@@ -54,6 +55,26 @@ export default class ProfileTable extends React.Component {
     return this
   }
 
+  handleSort(columnKey){
+    switch (columnKey) {
+      case 1:
+        this.props.sortBy('login')
+        break
+      case 2:
+        this.props.sortBy('following')
+        break
+      case 3:
+        this.props.sortBy('followers')
+        break
+      case 4:
+        this.props.sortBy('update_at')
+        break
+      case 5:
+        this.props.sortBy('url')
+        break
+    }
+    this.sortData()
+  }
 
   render() {
 
@@ -75,7 +96,7 @@ export default class ProfileTable extends React.Component {
           displaySelectAll = {this.state.displaySelectAll}
           displayRowCheckBox={this.state.displayRowCheckbox}
         >
-          <TableRow onCellClick={(...clickEvent)=> console.log(clickEvent[2])}>
+          <TableRow onCellClick={(...clickEvent) => this.handleSort(clickEvent[2])}>
             <TableHeaderColumn key="login" tooltip="User ID">ID</TableHeaderColumn>
             <TableHeaderColumn key="following" tooltip="The following">Following</TableHeaderColumn>
             <TableHeaderColumn key="followers" tooltip="The followers">Followers</TableHeaderColumn>
