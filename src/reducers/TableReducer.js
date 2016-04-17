@@ -11,7 +11,7 @@ function tableActions (state = INITIAL_STATE, action) {
   switch (action.type) {
     case ActionTypes.REQUEST_PROFILE_DATA:
       return Object.assign({}, state, {
-        isFetching: false,
+        isFetching: true,
       })
     case ActionTypes.RECEIVE_PROFILE_DATA:
       return Object.assign({}, state, {
