@@ -21,7 +21,6 @@ export default class ProfileTable extends React.Component {
     sortBy: React.PropTypes.func.isRequired,
     filterBy: React.PropTypes.func.isRequired,
     profiles: React.PropTypes.array.isRequired,
-
   }
 
   constructor(props) {
