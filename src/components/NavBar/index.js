@@ -18,10 +18,7 @@ import MenuItem from 'material-ui/lib/menus/menu-item'
 import LeftNav from 'material-ui/lib/left-nav'
 import FontIcon from 'material-ui/lib/font-icon'
 import ActionHome from 'material-ui/lib/svg-icons/action/home'
-
-
 import * as style from './style.js'
-import { tempTableData, } from '../../constants/TempTableData'
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -45,7 +42,7 @@ export default class NavBar extends React.Component {
             <MenuIcon color={white}/>
           </IconButton>
           <LeftNav docked={false} width={200} open={this.state.open}
-                   onRequestChange={(open) => this.setState({open,})}>
+                   onRequestChange={this.handleClose}>
             <MenuItem onTouchTap={this.handleClose}>
               <Link to="/" style={style.popupText}>Registry</Link>
             </MenuItem>

@@ -3,8 +3,8 @@ import ActionTypes from '../constants/ActionTypes'
 const INITIAL_STATE = {
   isFetching: false,
   profiles: [],
-  sortKey: '',
-  sortDesc: false,
+  sortKey: 'followers',
+  sortDesc: true,
 }
 
 function tableActions (state = INITIAL_STATE, action) {

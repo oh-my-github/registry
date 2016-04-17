@@ -11,16 +11,16 @@ import TableBody from 'material-ui/lib/table/table-body'
 import Avatar from 'material-ui/lib/avatar'
 import TextField from 'material-ui/lib/text-field'
 import ListItem from 'material-ui/lib/lists/list-item'
-//temp resource data to be deleted
-import { tempTableData, } from '../../constants/TempTableData'
+import TableHeaderTypes from '../../constants/TableHeaderTypes'
 
 export default class ProfileTable extends React.Component {
-
   static propTypes = {
     fetchData: React.PropTypes.func.isRequired,
     sortBy: React.PropTypes.func.isRequired,
     filterBy: React.PropTypes.func.isRequired,
+
     profiles: React.PropTypes.array.isRequired,
+    sortKey: React.PropTypes.string.isRequired,
   }
 
   constructor(props) {
@@ -40,7 +40,20 @@ export default class ProfileTable extends React.Component {
 
   componentWillMount() {
     this.props.fetchData()
+    this.sortData()
   }
+
+  sortData () {
+    const {profiles, sortKey, sortDesc,} = this.props
+    const multiplier = sortDesc ? -1 : 1
+    profiles.sort((a, b) => {
+      const aVal = a.user[sortKey] || 0
+      const bVal = b.user[sortKey] || 0
+      return aVal > bVal ? multiplier : (aVal < bVal ? -multiplier : 0)
+    })
+    return this
+  }
+
 
   render() {
 
@@ -62,12 +75,12 @@ export default class ProfileTable extends React.Component {
           displaySelectAll = {this.state.displaySelectAll}
           displayRowCheckBox={this.state.displayRowCheckbox}
         >
-          <TableRow>
-            <TableHeaderColumn tooltip="ID">ID</TableHeaderColumn>
-            <TableHeaderColumn tooltip="Following">Following</TableHeaderColumn>
-            <TableHeaderColumn tooltip="Followers">Followers</TableHeaderColumn>
-            <TableHeaderColumn tooltip="Updated Date">Updated Date</TableHeaderColumn>
-            <TableHeaderColumn tooltip="URL">URL</TableHeaderColumn>
+          <TableRow onCellClick={(...clickEvent)=> console.log(clickEvent[2])}>
+            <TableHeaderColumn key="login" tooltip="User ID">ID</TableHeaderColumn>
+            <TableHeaderColumn key="following" tooltip="The following">Following</TableHeaderColumn>
+            <TableHeaderColumn key="followers" tooltip="The followers">Followers</TableHeaderColumn>
+            <TableHeaderColumn key="update_at" tooltip="Updated Date">Updated Date</TableHeaderColumn>
+            <TableHeaderColumn key="url" tooltip="Github URL">URL</TableHeaderColumn>
           </TableRow>
         </TableHeader>
         <TableBody
