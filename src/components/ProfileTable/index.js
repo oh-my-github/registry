@@ -63,9 +63,9 @@ export default class ProfileTable extends React.Component {
           displayRowCheckBox={this.state.displayRowCheckbox}
         >
           <TableRow>
-            <TableHeaderColumn tooltip="ID">ID</TableHeaderColumn>
-            <TableHeaderColumn tooltip="Following">Following</TableHeaderColumn>
-            <TableHeaderColumn tooltip="Followers">Followers</TableHeaderColumn>
+            <TableHeaderColumn tooltip="ID" onCellClick={() => console.log("click")}>ID</TableHeaderColumn>
+            <TableHeaderColumn tooltip="Following" onClick={() => console.log("click")}>Following</TableHeaderColumn>
+            <TableHeaderColumn tooltip="Followers" onClick={() => console.log("click")}>Followers</TableHeaderColumn>
             <TableHeaderColumn tooltip="Updated Date">Updated Date</TableHeaderColumn>
             <TableHeaderColumn tooltip="URL">URL</TableHeaderColumn>
           </TableRow>
