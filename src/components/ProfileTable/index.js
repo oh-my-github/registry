@@ -12,6 +12,7 @@ import Avatar from 'material-ui/lib/avatar'
 import TextField from 'material-ui/lib/text-field'
 import ListItem from 'material-ui/lib/lists/list-item'
 import RingLoader from 'halogen/RingLoader'
+import CircularProgress from 'material-ui/lib/circular-progress';
 import * as style from './style.js'
 
 export default class ProfileTable extends React.Component {
@@ -23,6 +24,7 @@ export default class ProfileTable extends React.Component {
     profiles: React.PropTypes.array.isRequired,
     sortKey: React.PropTypes.string.isRequired,
     sortDesc: React.PropTypes.string.isRequired,
+    filterString: React.PropTypes.string.isRequired,
     isFetching: React.PropTypes.bool.isRequired,
   }
 
@@ -46,8 +48,16 @@ export default class ProfileTable extends React.Component {
     this.sortData()
   }
 
+  filterData () {
+    const {profiles, filterString, } = this.props
+    const str = filterString.toLowerCase()
+    return str !== ''
+      ? profiles.filter( (arr) => arr.user.login.toLowerCase().indexOf(str) > -1 )
+      : profiles
+  }
+
   sortData () {
-    const {profiles, sortKey, sortDesc,} = this.props
+    const {profiles, sortKey, sortDesc, } = this.props
     const multiplier = sortDesc ? -1 : 1
     profiles.sort((a, b) => {
       const aVal = a.user[sortKey] || 0
@@ -78,7 +88,7 @@ export default class ProfileTable extends React.Component {
     this.sortData()
   }
 
-  showSpin(){
+  createSpin(){
     return(
       <TableBody displayRowCheckbox={this.state.displayRowCheckbox}
                  displaySelectAll = {this.state.displaySelectAll}
@@ -87,7 +97,7 @@ export default class ProfileTable extends React.Component {
           <TableRowColumn />
           <TableRowColumn />
           <TableRowColumn>
-            <RingLoader color="#2980b9" size="64px" margin="4px"/>
+            <RingLoader color={style.loader_color} size={style.loader_size} margin={style.loader_margin} />
           </TableRowColumn>
           <TableRowColumn />
           <TableRowColumn />
@@ -97,11 +107,13 @@ export default class ProfileTable extends React.Component {
   }
 
   createTable() {
+    const data = this.sortData().filterData()
     return(
       <TableBody displayRowCheckbox={this.state.displayRowCheckbox}
                  displaySelectAll = {this.state.displaySelectAll}
       >
-        {this.props.profiles.map( (row, index) => (
+        {data.length === 0 && <TableRowColumn><h4>No matching ID</h4></TableRowColumn>}
+        {data.map( (row, index) => (
           <TableRow key={index}>
             <TableRowColumn>
               <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
@@ -121,7 +133,7 @@ export default class ProfileTable extends React.Component {
 
   render() {
     const { isFetching, } = this.props
-    const tableDOM = isFetching? this.showSpin():this.createTable()
+    const showTableDOM = isFetching? this.createSpin():this.createTable()
 
     return (
       <Table fixedHeader={this.state.fixedHeader}
@@ -139,7 +151,7 @@ export default class ProfileTable extends React.Component {
             <TableHeaderColumn key="url" tooltip="Github URL">URL</TableHeaderColumn>
           </TableRow>
         </TableHeader>
-        {tableDOM}
+        {showTableDOM}
       </Table>
     )
   }

@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   profiles: [],
   sortKey: 'followers',
   sortDesc: true,
+  filterString: '',
 }
 
 function tableActions (state = INITIAL_STATE, action) {
@@ -20,7 +21,7 @@ function tableActions (state = INITIAL_STATE, action) {
       })
     case ActionTypes.FILTER_PROFILE_DATA:
       return Object.assign({}, state, {
-         filterString: action.filterString.toLowerCase(),
+         filterString: action.filterString,
         })
     case ActionTypes.SORT_PROFILE_DATA:
       return Object.assign({}, state, {
