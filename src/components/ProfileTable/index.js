@@ -11,7 +11,8 @@ import TableBody from 'material-ui/lib/table/table-body'
 import Avatar from 'material-ui/lib/avatar'
 import TextField from 'material-ui/lib/text-field'
 import ListItem from 'material-ui/lib/lists/list-item'
-import TableHeaderTypes from '../../constants/TableHeaderTypes'
+import RingLoader from 'halogen/RingLoader'
+import * as style from './style.js'
 
 export default class ProfileTable extends React.Component {
   static propTypes = {
@@ -22,6 +23,7 @@ export default class ProfileTable extends React.Component {
     profiles: React.PropTypes.array.isRequired,
     sortKey: React.PropTypes.string.isRequired,
     sortDesc: React.PropTypes.string.isRequired,
+    isFetching: React.PropTypes.bool.isRequired,
   }
 
   constructor(props) {
@@ -76,25 +78,58 @@ export default class ProfileTable extends React.Component {
     this.sortData()
   }
 
-  render() {
+  showSpin(){
+    return(
+      <TableBody displayRowCheckbox={this.state.displayRowCheckbox}
+                 displaySelectAll = {this.state.displaySelectAll}
+      >
+        <TableRow>
+          <TableRowColumn />
+          <TableRowColumn />
+          <TableRowColumn>
+            <RingLoader color="#2980b9" size="64px" margin="4px"/>
+          </TableRowColumn>
+          <TableRowColumn />
+          <TableRowColumn />
+        </TableRow>
+      </TableBody>
+    )
+  }
 
-    //const { profiles, } = this.props
-    //
-    //const tableDOM = (profiles.length === 0) createSpin() : createTable
-    //
-    //return (
-    //<div>{tableDOM}</div>
-    //)
+  createTable() {
+    return(
+      <TableBody displayRowCheckbox={this.state.displayRowCheckbox}
+                 displaySelectAll = {this.state.displaySelectAll}
+      >
+        {this.props.profiles.map( (row, index) => (
+          <TableRow key={index}>
+            <TableRowColumn>
+              <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
+                {row.user.login}
+              </ListItem>
+            </TableRowColumn>
+            <TableRowColumn>{row.user.following}</TableRowColumn>
+            <TableRowColumn>{row.user.followers}</TableRowColumn>
+            <TableRowColumn><Time value ={row.user.updated_at} format="YYYY/MM/DD HH:mm:ss"/></TableRowColumn>
+            <TableRowColumn><a href={row.user.url}>{row.user.url}</a></TableRowColumn>
+          </TableRow>
+        ))}
+
+      </TableBody>
+    )
+  }
+
+  render() {
+    const { isFetching, } = this.props
+    const tableDOM = isFetching? this.showSpin():this.createTable()
 
     return (
-      <Table
-        fixedHeader={this.state.fixedHeader}
-        fixedFooter={this.state.fixedFooter}
+      <Table fixedHeader={this.state.fixedHeader}
+             fixedFooter={this.state.fixedFooter}
       >
-        <TableHeader
-          adjustForCheckbox={this.state.adjustForCheckbox}
-          displaySelectAll = {this.state.displaySelectAll}
-          displayRowCheckBox={this.state.displayRowCheckbox}
+        <TableHeader adjustForCheckbox={this.state.adjustForCheckbox}
+                     displaySelectAll = {this.state.displaySelectAll}
+                     displayRowCheckBox={this.state.displayRowCheckbox}
         >
           <TableRow onCellClick={(...clickEvent) => this.handleSort(clickEvent[2])}>
             <TableHeaderColumn key="login" tooltip="User ID">ID</TableHeaderColumn>
@@ -104,24 +139,7 @@ export default class ProfileTable extends React.Component {
             <TableHeaderColumn key="url" tooltip="Github URL">URL</TableHeaderColumn>
           </TableRow>
         </TableHeader>
-        <TableBody
-          displayRowCheckbox={this.state.displayRowCheckbox}
-          displaySelectAll = {this.state.displaySelectAll}
-        >
-          {this.props.profiles.map( (row, index) => (
-            <TableRow key={index}>
-              <TableRowColumn>
-                <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
-                  {row.user.login}
-                </ListItem>
-              </TableRowColumn>
-              <TableRowColumn>{row.user.following}</TableRowColumn>
-              <TableRowColumn>{row.user.followers}</TableRowColumn>
-              <TableRowColumn><Time value ={row.user.updated_at} format="YYYY/MM/DD HH:mm:ss"/></TableRowColumn>
-              <TableRowColumn><a href={row.user.url}>{row.user.url}</a></TableRowColumn>
-            </TableRow>
-          ))}
-        </TableBody>
+        {tableDOM}
       </Table>
     )
   }
