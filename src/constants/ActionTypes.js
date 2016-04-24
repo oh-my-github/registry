@@ -1,5 +1,7 @@
+import * as Env from '../constants/env'
+
 export default {
-  GET_PROFILES_LIST_URL: 'http://localhost:3000/resource/profile/registry.json',
+  GET_PROFILES_LIST_URL: `${Env.PROFILE_HOST}/resource/profile/registry.json`,
 
   REQUEST_PROFILE_DATA: 'REQUEST_PROFILE_DATA',
   RECEIVE_PROFILE_DATA: 'RECEIVE_PROFILE_DATA',

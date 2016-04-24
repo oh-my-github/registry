@@ -7,7 +7,6 @@ import webpackConfigBuilder from '../webpack.config'
 
 const webpackConfig = webpackConfigBuilder('development')
 const bundler = webpack(webpackConfig)
-
 browserSync({
   server: {
     baseDir: ['src', 'resource',],

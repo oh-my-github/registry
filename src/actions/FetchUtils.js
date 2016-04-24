@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch'
 import * as API from './APIUtils'
 import ActionTypes from '../constants/ActionTypes'
+import * as Env from '../constants/env'
 
 function handleResponse (response) {
   if (response.status >= 200 && response.status < 300) {
@@ -28,7 +29,7 @@ export default function fetchDispatch (apiProps) {
     API.getJSON(apiProps.url)
       .then(registries => {
         const locations = registries.map(registry => {
-          return `http://localhost:3000/${registry.location}`
+          return `${Env.PROFILE_HOST}/${registry.location}`
         })
 
         API.getJSONs(locations)

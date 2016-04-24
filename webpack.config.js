@@ -10,6 +10,8 @@ const getPlugins = function (env) {
   const GLOBALS = {
     'process.env.NODE_ENV': JSON.stringify(env),
     __DEV__: env === developmentEnvironment,
+    'process.env.PROFILE_HOST': (env === developmentEnvironment) ?
+      JSON.stringify('http://localhost:3000') : JSON.stringify('http://oh-my-github.github.io/registry')
   }
 
   const plugins = [
@@ -19,7 +21,6 @@ const getPlugins = function (env) {
 
   switch (env) {
     case productionEnvironment:
-      plugins.push(new ExtractTextPlugin('styles.css'))
       plugins.push(new webpack.optimize.DedupePlugin())
       plugins.push(new webpack.optimize.UglifyJsPlugin())
       break
@@ -120,7 +121,7 @@ function getConfig(env) {
     entry: getEntry(env),
     target: env === testEnvironment ? 'node' : 'web',
     output: {
-      path: __dirname + '/dist',
+      path: __dirname + './',
       publicPath: '',
       filename: 'bundle.js',
     },
