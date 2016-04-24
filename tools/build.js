@@ -39,5 +39,6 @@ webpack(webpackConfig).run((err, stats) => {
   console.log('Your app has been compiled in production mode and written to /dist. It\'s ready to roll!'.green.bold)
   /*eslint-enable no-console */
 
+  
   return 0
 })

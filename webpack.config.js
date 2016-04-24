@@ -121,7 +121,7 @@ function getConfig(env) {
     entry: getEntry(env),
     target: env === testEnvironment ? 'node' : 'web',
     output: {
-      path: __dirname + './',
+      path: __dirname + '/dist',
       publicPath: '',
       filename: 'bundle.js',
     },
