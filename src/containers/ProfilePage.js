@@ -14,9 +14,11 @@ class ProfilePage extends React.Component {
   render() {
     //console.log(this.props.tableState)
     return (
-      <div>
-        <ProfileSearch {...this.props.actions} {...this.props.tableState} />
-        <ProfileTable {...this.props.actions} {...this.props.tableState} />
+      <div className="row">
+        <div className="col m12 l8 offset-l2">
+          <ProfileSearch {...this.props.actions} {...this.props.tableState} />
+          <ProfileTable {...this.props.actions} {...this.props.tableState} />
+        </div>
       </div>
     )
   }

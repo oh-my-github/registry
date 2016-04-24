@@ -12,8 +12,10 @@ import Avatar from 'material-ui/lib/avatar'
 import TextField from 'material-ui/lib/text-field'
 import ListItem from 'material-ui/lib/lists/list-item'
 import RingLoader from 'halogen/RingLoader'
-import CircularProgress from 'material-ui/lib/circular-progress';
+import moment from 'moment'
+import CircularProgress from 'material-ui/lib/circular-progress'
 import * as style from './style.js'
+
 
 export default class ProfileTable extends React.Component {
   static propTypes = {
@@ -26,6 +28,10 @@ export default class ProfileTable extends React.Component {
     sortDesc: React.PropTypes.string.isRequired,
     filterString: React.PropTypes.string.isRequired,
     isFetching: React.PropTypes.bool.isRequired,
+  }
+
+  static getUserProfileUrl(userLogin) {
+    return `https://${userLogin}.github.io/oh-my-github`
   }
 
   constructor(props) {
@@ -108,24 +114,31 @@ export default class ProfileTable extends React.Component {
 
   createTable() {
     const data = this.sortData().filterData()
+
     return(
       <TableBody displayRowCheckbox={this.state.displayRowCheckbox}
                  displaySelectAll = {this.state.displaySelectAll}
       >
         {data.length === 0 && <TableRowColumn><h4>No matching ID</h4></TableRowColumn>}
-        {data.map( (row, index) => (
-          <TableRow key={index}>
-            <TableRowColumn>
-              <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
-                {row.user.login}
-              </ListItem>
-            </TableRowColumn>
-            <TableRowColumn>{row.user.following}</TableRowColumn>
-            <TableRowColumn>{row.user.followers}</TableRowColumn>
-            <TableRowColumn><Time value ={row.user.updated_at} format="YYYY/MM/DD HH:mm:ss"/></TableRowColumn>
-            <TableRowColumn><a href={row.user.url}>{row.user.url}</a></TableRowColumn>
-          </TableRow>
-        ))}
+        {data.map((row, index) => {
+          const userProfileURL = ProfileTable.getUserProfileUrl(row.user.login)
+
+          return (
+            <TableRow key={index}>
+              <TableRowColumn>
+                <a href={`https://github.com/${row.user.login}`} target="_blank">
+                <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
+                  {row.user.login}
+                </ListItem>
+                  </a>
+              </TableRowColumn>
+              <TableRowColumn style={{width: '80px'}}>{row.user.following}</TableRowColumn>
+              <TableRowColumn style={{width: '80px'}}>{row.user.followers}</TableRowColumn>
+              <TableRowColumn style={{width: '150px'}}>{moment(row.user.updated_at).fromNow()}</TableRowColumn>
+              <TableRowColumn><a href={userProfileURL} target="_blank">{userProfileURL}</a></TableRowColumn>
+            </TableRow>
+          )
+        })}
 
       </TableBody>
     )
@@ -145,10 +158,10 @@ export default class ProfileTable extends React.Component {
         >
           <TableRow onCellClick={(...clickEvent) => this.handleSort(clickEvent[2])}>
             <TableHeaderColumn key="login" tooltip="User ID">ID</TableHeaderColumn>
-            <TableHeaderColumn key="following" tooltip="The following">Following</TableHeaderColumn>
-            <TableHeaderColumn key="followers" tooltip="The followers">Followers</TableHeaderColumn>
-            <TableHeaderColumn key="update_at" tooltip="Updated Date">Updated Date</TableHeaderColumn>
-            <TableHeaderColumn key="url" tooltip="Github URL">URL</TableHeaderColumn>
+            <TableHeaderColumn key="following" tooltip="The following" style={{width: '80px'}}>Following</TableHeaderColumn>
+            <TableHeaderColumn key="followers" tooltip="The followers" style={{width: '80px'}}>Followers</TableHeaderColumn>
+            <TableHeaderColumn key="update_at" tooltip="Updated Date" style={{width: '150px'}}>Updated Date</TableHeaderColumn>
+            <TableHeaderColumn key="url" tooltip="oh-my-github URL">URL</TableHeaderColumn>
           </TableRow>
         </TableHeader>
         {showTableDOM}
