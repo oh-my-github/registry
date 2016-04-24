@@ -44,7 +44,7 @@ export default class NavBar extends React.Component {
           <LeftNav docked={false} width={200} open={this.state.open}
                    onRequestChange={this.handleClose}>
             <MenuItem onTouchTap={this.handleClose}>
-              <Link to="/" style={style.popupText}>Registry</Link>
+              <Link to="/registry" style={style.popupText}>Registry</Link>
             </MenuItem>
             <MenuItem onTouchTap={this.handleClose}>
               <Link to="/about" style={style.popupText}>About</Link>
@@ -52,7 +52,7 @@ export default class NavBar extends React.Component {
           </LeftNav>
         </ToolbarGroup>
         <ToolbarGroup>
-          <FlatButton disabled label={<Link to="/" style={style.text}>Registry</Link>}
+          <FlatButton disabled label={<Link to="/registry" style={style.text}>Registry</Link>}
                       style={style.linkButton} />
         </ToolbarGroup>
         <ToolbarGroup float="right">
