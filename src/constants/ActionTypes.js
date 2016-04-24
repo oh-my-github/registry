@@ -1,5 +1,4 @@
 export default {
-
   GET_PROFILES_LIST_URL: 'http://localhost:3000/resource/profile/registry.json',
 
   REQUEST_PROFILE_DATA: 'REQUEST_PROFILE_DATA',
