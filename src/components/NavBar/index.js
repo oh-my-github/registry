@@ -43,12 +43,12 @@ export default class NavBar extends React.Component {
           </IconButton>
           <LeftNav docked={false} width={200} open={this.state.open}
                    onRequestChange={this.handleClose}>
-            <MenuItem onTouchTap={this.handleClose}>
-              <Link to="/registry" style={style.popupText}>Registry</Link>
-            </MenuItem>
-            <MenuItem onTouchTap={this.handleClose}>
-              <Link to="/about" style={style.popupText}>About</Link>
-            </MenuItem>
+            <Link to="/registry" style={style.popupText}>
+              <MenuItem onTouchTap={this.handleClose}>Registry</MenuItem>
+            </Link>
+            <Link to="/about" style={style.popupText}>
+              <MenuItem onTouchTap={this.handleClose}>About</MenuItem>
+            </Link>
           </LeftNav>
         </ToolbarGroup>
         <ToolbarGroup>
