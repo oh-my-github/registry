@@ -12,3 +12,6 @@ Please set up packages first.
 > npm install
 > npm start -s
 ```
+
+## Demo
+<http://oh-my-github.github.io/registry>
