@@ -13,5 +13,13 @@ Please set up packages first.
 > npm start -s
 ```
 
+### Deploy
+
+Before deploying pages, you need to install [gh-pages](https://github.com/tschaub/gh-pages).
+
+```console
+> npm install -g gh-pages
+```
+
 ## Demo
 <http://oh-my-github.github.io/registry>
