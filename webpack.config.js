@@ -11,7 +11,7 @@ const getPlugins = function (env) {
     'process.env.NODE_ENV': JSON.stringify(env),
     __DEV__: env === developmentEnvironment,
     'process.env.PROFILE_HOST': (env === developmentEnvironment) ?
-      JSON.stringify('http://localhost:3000') : JSON.stringify('http://oh-my-github.github.io/registry')
+      JSON.stringify('http://localhost:3000') : JSON.stringify('http://oh-my-github.github.io/registry'),
   }
 
   const plugins = [

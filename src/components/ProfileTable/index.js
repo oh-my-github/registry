@@ -85,7 +85,7 @@ export default class ProfileTable extends React.Component {
         this.props.sortBy('followers')
         break
       case 4:
-        this.props.sortBy('update_at')
+        this.props.sortBy('updated_at')
         break
       case 5:
         this.props.sortBy('url')
@@ -132,9 +132,9 @@ export default class ProfileTable extends React.Component {
                 </ListItem>
                   </a>
               </TableRowColumn>
-              <TableRowColumn style={{width: '80px'}}>{row.user.following}</TableRowColumn>
-              <TableRowColumn style={{width: '80px'}}>{row.user.followers}</TableRowColumn>
-              <TableRowColumn style={{width: '150px'}}>{moment(row.user.updated_at).fromNow()}</TableRowColumn>
+              <TableRowColumn style={{width: '80px', }}>{row.user.following}</TableRowColumn>
+              <TableRowColumn style={{width: '80px', }}>{row.user.followers}</TableRowColumn>
+              <TableRowColumn style={{width: '150px', }}>{moment(row.user.updated_at).fromNow()}</TableRowColumn>
               <TableRowColumn><a href={userProfileURL} target="_blank">{userProfileURL}</a></TableRowColumn>
             </TableRow>
           )
@@ -158,10 +158,10 @@ export default class ProfileTable extends React.Component {
         >
           <TableRow onCellClick={(...clickEvent) => this.handleSort(clickEvent[2])}>
             <TableHeaderColumn key="login" tooltip="User ID">ID</TableHeaderColumn>
-            <TableHeaderColumn key="following" tooltip="The following" style={{width: '80px'}}>Following</TableHeaderColumn>
-            <TableHeaderColumn key="followers" tooltip="The followers" style={{width: '80px'}}>Followers</TableHeaderColumn>
-            <TableHeaderColumn key="update_at" tooltip="Updated Date" style={{width: '150px'}}>Updated Date</TableHeaderColumn>
-            <TableHeaderColumn key="url" tooltip="oh-my-github URL">URL</TableHeaderColumn>
+            <TableHeaderColumn key="following" tooltip="The following" style={{width: '80px', }}>Following</TableHeaderColumn>
+            <TableHeaderColumn key="followers" tooltip="The followers" style={{width: '80px', }}>Followers</TableHeaderColumn>
+            <TableHeaderColumn key="updated_at" tooltip="Updated Date" style={{width: '150px', }}>Updated Date</TableHeaderColumn>
+            <TableHeaderColumn key="url" tooltip="oh-my-github URL">oh-my-github URL</TableHeaderColumn>
           </TableRow>
         </TableHeader>
         {showTableDOM}

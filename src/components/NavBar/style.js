@@ -40,3 +40,7 @@ export const iconMenu= {
 export const iconMenuItem = {
   fontWeight: 300,
 }
+
+export const rightIconLink = {
+  paddingTop: 100,
+}
