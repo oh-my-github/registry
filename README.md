@@ -24,6 +24,7 @@ Before deploying pages, you need to install [gh-pages](https://github.com/tschau
 To deploy,
 
 ```console
+> npm run build
 > npm run deploy
 ```
 
