@@ -122,7 +122,7 @@ function getConfig(env) {
     target: env === testEnvironment ? 'node' : 'web',
     output: {
       path: __dirname + '/dist',
-      publicPath: '',
+      publicPath: '/oh-my-github/registry',
       filename: 'bundle.js',
     },
     plugins: getPlugins(env),
