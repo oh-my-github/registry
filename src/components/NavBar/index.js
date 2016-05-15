@@ -38,27 +38,11 @@ export default class NavBar extends React.Component {
     return (
       <Toolbar style={style.navbar}>
         <ToolbarGroup firstChild>
-          <IconButton style={style.navbarMenu} onClick={this.handleToggle}>
-            <MenuIcon color={white}/>
-          </IconButton>
-          <LeftNav docked={false} width={200} open={this.state.open}
-                   onRequestChange={this.handleClose}>
-            <Link to="/registry" style={style.popupText}>
-              <MenuItem onTouchTap={this.handleClose}>Registry</MenuItem>
-            </Link>
-            <Link to="/about" style={style.popupText}>
-              <MenuItem onTouchTap={this.handleClose}>About</MenuItem>
-            </Link>
-          </LeftNav>
-        </ToolbarGroup>
-        <ToolbarGroup>
+          <FontIcon className="fa fa-github" style={style.rightIcon} hoverColor={white} />
           <FlatButton disabled label={<Link to="/registry" style={style.text}>Registry</Link>}
                       style={style.linkButton} />
-        </ToolbarGroup>
-        <ToolbarGroup float="right">
           <FlatButton disabled label={<Link to="/about" style={style.text}>About</Link>}
                       style={style.linkButton} />
-          <FontIcon className="fa fa-github" style={style.rightIcon} hoverColor={white}/>
         </ToolbarGroup>
       </Toolbar>
     )

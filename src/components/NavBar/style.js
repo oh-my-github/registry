@@ -19,6 +19,7 @@ export const navbarMenu= {
 
 export const rightIcon= {
   color: '#FEFEFE',
+  marginRight: 10,
 }
 
 export const title = {
