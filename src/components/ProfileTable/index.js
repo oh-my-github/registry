@@ -1,7 +1,5 @@
 import React, { PropTypes, } from 'react'
 import { Link, IndexLink, } from 'react-router'
-import Time from 'react-time'
-//material-ui
 import Table from 'material-ui/lib/table/table'
 import TableHeaderColumn from 'material-ui/lib/table/table-header-column'
 import TableRow from 'material-ui/lib/table/table-row'
@@ -9,20 +7,18 @@ import TableHeader from 'material-ui/lib/table/table-header'
 import TableRowColumn from 'material-ui/lib/table/table-row-column'
 import TableBody from 'material-ui/lib/table/table-body'
 import Avatar from 'material-ui/lib/avatar'
-import TextField from 'material-ui/lib/text-field'
 import ListItem from 'material-ui/lib/lists/list-item'
 import RingLoader from 'halogen/RingLoader'
 import moment from 'moment'
-import CircularProgress from 'material-ui/lib/circular-progress'
 import * as style from './style.js'
-
 
 export default class ProfileTable extends React.Component {
   static propTypes = {
+    // function
     fetchData: React.PropTypes.func.isRequired,
     sortBy: React.PropTypes.func.isRequired,
     filterBy: React.PropTypes.func.isRequired,
-
+    // variable
     profiles: React.PropTypes.array.isRequired,
     sortKey: React.PropTypes.string.isRequired,
     sortDesc: React.PropTypes.string.isRequired,
@@ -30,14 +26,14 @@ export default class ProfileTable extends React.Component {
     isFetching: React.PropTypes.bool.isRequired,
   }
 
-  static getUserProfileUrl(userLogin) {
+  static getUserProfileUrl = (userLogin) => {
     return `https://${userLogin}.github.io/oh-my-github`
   }
 
   constructor(props) {
     super(props)
-
     this.state = {
+      // to determine state of Material UI
       fixedHeader: true,
       fixedFooter: true,
       stripedRows: false,
@@ -54,7 +50,7 @@ export default class ProfileTable extends React.Component {
     this.sortData()
   }
 
-  filterData () {
+  filterData = () => {
     const {profiles, filterString, } = this.props
     const str = filterString.toLowerCase()
     return str !== ''
@@ -62,7 +58,7 @@ export default class ProfileTable extends React.Component {
       : profiles
   }
 
-  sortData () {
+  sortData = () => {
     const {profiles, sortKey, sortDesc, } = this.props
     const multiplier = sortDesc ? -1 : 1
     profiles.sort((a, b) => {
@@ -73,28 +69,13 @@ export default class ProfileTable extends React.Component {
     return this
   }
 
-  handleSort(columnKey){
-    switch (columnKey) {
-      case 1:
-        this.props.sortBy('login')
-        break
-      case 2:
-        this.props.sortBy('following')
-        break
-      case 3:
-        this.props.sortBy('followers')
-        break
-      case 4:
-        this.props.sortBy('updated_at')
-        break
-      case 5:
-        this.props.sortBy('url')
-        break
-    }
+  handleSort = (columnKey) => {
+    let columnName = ['login', 'following', 'followers', 'updated_at', 'url', ]
+    this.props.sortBy(columnName[columnKey-1])
     this.sortData()
   }
 
-  createSpin(){
+  createSpin() {
     return(
       <TableBody displayRowCheckbox={this.state.displayRowCheckbox}
                  displaySelectAll = {this.state.displaySelectAll}
@@ -127,10 +108,10 @@ export default class ProfileTable extends React.Component {
             <TableRow key={index}>
               <TableRowColumn>
                 <a href={`https://github.com/${row.user.login}`} target="_blank">
-                <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
-                  {row.user.login}
-                </ListItem>
-                  </a>
+                  <ListItem disabled={this.listItem} leftAvatar={<Avatar src={row.user.avatar_url}/>}>
+                    {row.user.login}
+                  </ListItem>
+                </a>
               </TableRowColumn>
               <TableRowColumn style={{width: '80px', }}>{row.user.following}</TableRowColumn>
               <TableRowColumn style={{width: '80px', }}>{row.user.followers}</TableRowColumn>

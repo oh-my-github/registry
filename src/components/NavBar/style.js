@@ -8,40 +8,13 @@ export const text = {
   color: '#FEFEFE',
 }
 
-export const popupText = {
-  fontSize: 15,
-  fontWeight: 300,
-}
-
-export const navbarMenu= {
-  marginTop: 3,
-}
-
 export const rightIcon= {
   color: '#FEFEFE',
   marginRight: 10,
-}
-
-export const title = {
-  marginLeft: 20,
-  marginRight: 20,
-  fontWeight: 200,
 }
 
 export const linkButton = {
   marginLeft: 0,
   marginRight: 0,
   fontWeight: 300,
-}
-
-export const iconMenu= {
-  marginTop: 3,
-}
-
-export const iconMenuItem = {
-  fontWeight: 300,
-}
-
-export const rightIconLink = {
-  paddingTop: 100,
 }

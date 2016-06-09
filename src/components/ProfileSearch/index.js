@@ -1,12 +1,8 @@
 import React, { PropTypes, } from 'react'
 import { Link, IndexLink, } from 'react-router'
-//material-ui
-import Toolbar from 'material-ui/lib/toolbar/toolbar'
-import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group'
 import TextField from 'material-ui/lib/text-field'
 import SearchIcon from 'material-ui/lib/svg-icons/action/search'
 import IconButton from 'material-ui/lib/icon-button'
-import * as style from './style.js'
 
 export default class ProfileSearch extends React.Component {
   static propTypes = {
@@ -18,7 +14,7 @@ export default class ProfileSearch extends React.Component {
     super(props)
   }
 
-  handleFilterStringChange (event) {
+  handleFilterStringChange = (event) => {
     event.preventDefault()
     this.props.filterBy(event.target.value)
   }
@@ -27,12 +23,11 @@ export default class ProfileSearch extends React.Component {
     const { filterString, } = this.props
     return (
       <div>
-        <IconButton style={style.icon}>
+        <IconButton>
           <SearchIcon />
         </IconButton>
         <TextField hintText="Type User ID" multiLine={false}
-                   value={filterString} onChange={this.handleFilterStringChange.bind(this)}
-        />
+                   value={filterString} onChange={this.handleFilterStringChange.bind(this)}/>
       </div>
     )
   }
