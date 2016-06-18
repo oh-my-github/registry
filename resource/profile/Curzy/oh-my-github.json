@@ -1,0 +1,508 @@
+{
+  "_$meta": {
+    "ignored_repositories": [],
+    "schema_version": 1,
+    "schema_created_at": "2016-03-15T19:56:13.739Z",
+    "schema_collected_ats": [
+      "2016-03-15T19:56:13.739Z",
+      "2016-03-15T19:56:34.763Z"
+    ],
+    "agent": "cli-generator",
+    "github_user": "Curzy",
+    "github_repository": "oh-my-github"
+  },
+  "activities": [
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3766589095",
+      "type": "CreateEvent",
+      "created_at": "2016-03-15T19:16:54Z",
+      "actor": "Curzy",
+      "repo": "Curzy/oh-my-github"
+    },
+    {
+      "payload": {
+        "push_id": 987375362,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "7de4396db2919f8873a9326bb31332f43d74044f",
+        "before": "1fedf778874b248019780b417126f2153c4cb40f",
+        "commit_shas": [
+          "7de4396db2919f8873a9326bb31332f43d74044f"
+        ]
+      },
+      "event_id": "3671404159",
+      "type": "PushEvent",
+      "created_at": "2016-02-22T07:08:53Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 986138263,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "1fedf778874b248019780b417126f2153c4cb40f",
+        "before": "95b42496811a98fe0affb6d89282d2b95d9c92d6",
+        "commit_shas": [
+          "1fedf778874b248019780b417126f2153c4cb40f"
+        ]
+      },
+      "event_id": "3668473001",
+      "type": "PushEvent",
+      "created_at": "2016-02-20T16:25:45Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 986117958,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "95b42496811a98fe0affb6d89282d2b95d9c92d6",
+        "before": "8e2b8b523f614dfbebbb70d7341cd5a1fed5dd3d",
+        "commit_shas": [
+          "95b42496811a98fe0affb6d89282d2b95d9c92d6"
+        ]
+      },
+      "event_id": "3668424933",
+      "type": "PushEvent",
+      "created_at": "2016-02-20T15:48:38Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 985947034,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "8e2b8b523f614dfbebbb70d7341cd5a1fed5dd3d",
+        "before": "62f798aa09fef22440d9d980597b9da357ed55e4",
+        "commit_shas": [
+          "8e2b8b523f614dfbebbb70d7341cd5a1fed5dd3d"
+        ]
+      },
+      "event_id": "3668037501",
+      "type": "PushEvent",
+      "created_at": "2016-02-20T09:43:45Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3667920267",
+      "type": "CreateEvent",
+      "created_at": "2016-02-20T07:37:28Z",
+      "actor": "Curzy",
+      "repo": "Curzy/Curzy.github.io"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3667918367",
+      "type": "CreateEvent",
+      "created_at": "2016-02-20T07:35:22Z",
+      "actor": "Curzy",
+      "repo": "Curzy/Curzy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 985893592,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "62f798aa09fef22440d9d980597b9da357ed55e4",
+        "before": "fef4f021ab07fe1be8e78b9bb372fa516fdeb468",
+        "commit_shas": [
+          "62f798aa09fef22440d9d980597b9da357ed55e4"
+        ]
+      },
+      "event_id": "3667916216",
+      "type": "PushEvent",
+      "created_at": "2016-02-20T07:33:06Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 980741591,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "fef4f021ab07fe1be8e78b9bb372fa516fdeb468",
+        "before": "ad43aa8dbeb92826005f617accadfaa71cad715f",
+        "commit_shas": [
+          "fef4f021ab07fe1be8e78b9bb372fa516fdeb468"
+        ]
+      },
+      "event_id": "3653512183",
+      "type": "PushEvent",
+      "created_at": "2016-02-17T08:04:07Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 980587531,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "ad43aa8dbeb92826005f617accadfaa71cad715f",
+        "before": "c327f407ef03d6af0798611963cdb25e5ae96791",
+        "commit_shas": [
+          "ad43aa8dbeb92826005f617accadfaa71cad715f"
+        ]
+      },
+      "event_id": "3653103941",
+      "type": "PushEvent",
+      "created_at": "2016-02-17T05:02:00Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 971141731,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "c327f407ef03d6af0798611963cdb25e5ae96791",
+        "before": "654ebb17665e3db9d8c17a6bdf24a3fb2cbae7a6",
+        "commit_shas": [
+          "c327f407ef03d6af0798611963cdb25e5ae96791"
+        ]
+      },
+      "event_id": "3627159081",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T06:57:03Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 965777362,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "654ebb17665e3db9d8c17a6bdf24a3fb2cbae7a6",
+        "before": "e4127b9826eb0097615e6c7842f2976735d35cfa",
+        "commit_shas": [
+          "654ebb17665e3db9d8c17a6bdf24a3fb2cbae7a6"
+        ]
+      },
+      "event_id": "3612469993",
+      "type": "PushEvent",
+      "created_at": "2016-02-05T16:26:32Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 965668513,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "e4127b9826eb0097615e6c7842f2976735d35cfa",
+        "before": "bde4bf8a8c860d69d476016a87c1a7e5e7c8fe31",
+        "commit_shas": [
+          "e4127b9826eb0097615e6c7842f2976735d35cfa"
+        ]
+      },
+      "event_id": "3612162340",
+      "type": "PushEvent",
+      "created_at": "2016-02-05T15:20:43Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 961510235,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "bde4bf8a8c860d69d476016a87c1a7e5e7c8fe31",
+        "before": "7864573a1c094403e1a60928ba599b68ecc31c53",
+        "commit_shas": [
+          "bde4bf8a8c860d69d476016a87c1a7e5e7c8fe31"
+        ]
+      },
+      "event_id": "3600587149",
+      "type": "PushEvent",
+      "created_at": "2016-02-03T06:54:58Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 961300446,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "7864573a1c094403e1a60928ba599b68ecc31c53",
+        "before": "f6080ef41a21fa0ca877c92b9e753e2d9c7be94d",
+        "commit_shas": [
+          "7864573a1c094403e1a60928ba599b68ecc31c53"
+        ]
+      },
+      "event_id": "3600011060",
+      "type": "PushEvent",
+      "created_at": "2016-02-03T02:22:01Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "push_id": 960719901,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "f6080ef41a21fa0ca877c92b9e753e2d9c7be94d",
+        "before": "51b4e678000346d9615b6829ce509124eb2a80b2",
+        "commit_shas": [
+          "f6080ef41a21fa0ca877c92b9e753e2d9c7be94d"
+        ]
+      },
+      "event_id": "3598291720",
+      "type": "PushEvent",
+      "created_at": "2016-02-02T18:51:48Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3597553698",
+      "type": "CreateEvent",
+      "created_at": "2016-02-02T16:18:24Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3597552701",
+      "type": "CreateEvent",
+      "created_at": "2016-02-02T16:18:14Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3597475204",
+      "type": "CreateEvent",
+      "created_at": "2016-02-02T16:03:03Z",
+      "actor": "Curzy",
+      "repo": "Curzy/MonthlyRentalFeeMetroMapSeoul"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Curzy.github.io",
+      "description": "",
+      "full_name": "Curzy/Curzy.github.io",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-02-20T07:35:21Z",
+      "updated_at": "2016-02-20T07:37:30Z",
+      "pushed_at": "2016-02-20T07:37:28Z",
+      "url": "https://github.com/Curzy/Curzy.github.io"
+    },
+    {
+      "name": "MonthlyRentalFeeMetroMapSeoul",
+      "description": "",
+      "full_name": "Curzy/MonthlyRentalFeeMetroMapSeoul",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 1,
+      "watchers_count": 1,
+      "language": "Python",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-02-02T16:18:13Z",
+      "updated_at": "2016-02-05T16:31:54Z",
+      "pushed_at": "2016-02-22T07:08:53Z",
+      "url": "https://github.com/Curzy/MonthlyRentalFeeMetroMapSeoul"
+    },
+    {
+      "name": "oh-my-github",
+      "description": "",
+      "full_name": "Curzy/oh-my-github",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-03-15T19:16:53Z",
+      "updated_at": "2016-03-15T19:16:53Z",
+      "pushed_at": "2016-03-15T19:16:54Z",
+      "url": "https://github.com/Curzy/oh-my-github"
+    },
+    {
+      "name": "Samsung-SW-study",
+      "description": "연수",
+      "full_name": "Curzy/Samsung-SW-study",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2014-01-06T07:26:02Z",
+      "updated_at": "2014-01-06T07:26:02Z",
+      "pushed_at": "2014-01-06T07:26:02Z",
+      "url": "https://github.com/Curzy/Samsung-SW-study"
+    },
+    {
+      "name": "step-by-step-frontend",
+      "description": "step by step learning about frontend",
+      "full_name": "Curzy/step-by-step-frontend",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "JavaScript",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-06-22T08:08:24Z",
+      "updated_at": "2015-06-22T08:08:24Z",
+      "pushed_at": "2015-06-22T08:41:14Z",
+      "url": "https://github.com/Curzy/step-by-step-frontend"
+    },
+    {
+      "name": "Test",
+      "description": "",
+      "full_name": "Curzy/Test",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-02-12T08:49:30Z",
+      "updated_at": "2015-02-12T08:49:30Z",
+      "pushed_at": "2015-02-12T12:14:04Z",
+      "url": "https://github.com/Curzy/Test"
+    }
+  ],
+  "languages": [
+    {
+      "owner": "Curzy",
+      "repo_name": "Curzy.github.io",
+      "url": "http://github.com/Curzy/Curzy.github.io",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "owner": "Curzy",
+      "repo_name": "MonthlyRentalFeeMetroMapSeoul",
+      "url": "http://github.com/Curzy/MonthlyRentalFeeMetroMapSeoul",
+      "languages": [
+        {
+          "name": "Python",
+          "line": 4615
+        },
+        {
+          "name": "HTML",
+          "line": 113
+        }
+      ]
+    },
+    {
+      "owner": "Curzy",
+      "repo_name": "oh-my-github",
+      "url": "http://github.com/Curzy/oh-my-github"
+    },
+    {
+      "owner": "Curzy",
+      "repo_name": "Samsung-SW-study",
+      "url": "http://github.com/Curzy/Samsung-SW-study"
+    },
+    {
+      "owner": "Curzy",
+      "repo_name": "step-by-step-frontend",
+      "url": "http://github.com/Curzy/step-by-step-frontend",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "line": 5089
+        },
+        {
+          "name": "HTML",
+          "line": 165
+        }
+      ]
+    },
+    {
+      "owner": "Curzy",
+      "repo_name": "Test",
+      "url": "http://github.com/Curzy/Test"
+    }
+  ],
+  "user": {
+    "login": "Curzy",
+    "type": "User",
+    "name": "Minseok Choi",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3931792?v=3",
+    "company": null,
+    "blog": null,
+    "location": null,
+    "email": "cms9597@gmail.com",
+    "hireable": true,
+    "following": 12,
+    "followers": 2,
+    "public_repos": 6,
+    "public_gists": 0,
+    "created_at": "2013-03-21T14:02:43Z",
+    "updated_at": "2016-02-05T18:18:07Z",
+    "url": "https://github.com/Curzy"
+  }
+}

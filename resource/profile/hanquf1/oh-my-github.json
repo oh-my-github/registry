@@ -1,0 +1,671 @@
+{
+  "_$meta": {
+    "ignored_repositories": [],
+    "schema_version": 1,
+    "schema_created_at": "2016-04-27T06:33:13.587Z",
+    "schema_collected_ats": [
+      "2016-04-27T06:33:13.587Z",
+      "2016-04-27T06:34:48.832Z"
+    ],
+    "agent": "cli-generator",
+    "github_user": "hanquf1",
+    "github_repository": "oh-my-github"
+  },
+  "activities": [
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3940705684",
+      "type": "CreateEvent",
+      "created_at": "2016-04-27T02:40:06Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/oh-my-github"
+    },
+    {
+      "payload": {
+        "push_id": 1038165818,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "c90459a841f7cb2780409a11dfc510c72b520784",
+        "before": "6a3eb5ae499d4cb2c6ea7618c68239a9fbfcc3e3",
+        "commit_shas": [
+          "c90459a841f7cb2780409a11dfc510c72b520784"
+        ]
+      },
+      "event_id": "3810762849",
+      "type": "PushEvent",
+      "created_at": "2016-03-26T10:11:23Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/pystagram"
+    },
+    {
+      "payload": {
+        "push_id": 1038140770,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "6a3eb5ae499d4cb2c6ea7618c68239a9fbfcc3e3",
+        "before": "cb9ba2571ceaa6f0e7715e5b2d5698658b4fee0e",
+        "commit_shas": [
+          "6a3eb5ae499d4cb2c6ea7618c68239a9fbfcc3e3"
+        ]
+      },
+      "event_id": "3810705656",
+      "type": "PushEvent",
+      "created_at": "2016-03-26T09:06:39Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/pystagram"
+    },
+    {
+      "payload": {
+        "push_id": 1038140424,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "cb9ba2571ceaa6f0e7715e5b2d5698658b4fee0e",
+        "before": "2e4ef42dc0325a904d5e21664d5f564d059c18bb",
+        "commit_shas": [
+          "cb9ba2571ceaa6f0e7715e5b2d5698658b4fee0e"
+        ]
+      },
+      "event_id": "3810704923",
+      "type": "PushEvent",
+      "created_at": "2016-03-26T09:05:42Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/pystagram"
+    },
+    {
+      "payload": {
+        "push_id": 1038136864,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "2e4ef42dc0325a904d5e21664d5f564d059c18bb",
+        "before": "12bf12dd76e1b43c25f26c4dbf6e68e1e5e65d70",
+        "commit_shas": [
+          "2e4ef42dc0325a904d5e21664d5f564d059c18bb"
+        ]
+      },
+      "event_id": "3810697106",
+      "type": "PushEvent",
+      "created_at": "2016-03-26T08:56:16Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/pystagram"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3809756273",
+      "type": "CreateEvent",
+      "created_at": "2016-03-25T21:25:18Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/pystagram"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3809741789",
+      "type": "CreateEvent",
+      "created_at": "2016-03-25T21:20:57Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/pystagram"
+    },
+    {
+      "payload": {
+        "action": "started"
+      },
+      "event_id": "3792960702",
+      "type": "WatchEvent",
+      "created_at": "2016-03-22T12:01:10Z",
+      "actor": "hanquf1",
+      "repo": "SimeonC/sc-date-time"
+    },
+    {
+      "payload": {
+        "push_id": 1025810800,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "c5de12c33b399d2e241de00266ed6d0e129af5dc",
+        "before": "6f0c467ed7e897b94c6fc0c6d21498b89aa9c48b",
+        "commit_shas": [
+          "c5de12c33b399d2e241de00266ed6d0e129af5dc"
+        ]
+      },
+      "event_id": "3776976408",
+      "type": "PushEvent",
+      "created_at": "2016-03-17T18:23:31Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "forkee_id": 53721150,
+        "forkee_name": "s5-pystagram",
+        "forkee_full_name": "hanquf1/s5-pystagram",
+        "forkee_url": "https://github.com/hanquf1/s5-pystagram",
+        "forkee_language": null
+      },
+      "event_id": "3754882404",
+      "type": "ForkEvent",
+      "created_at": "2016-03-12T08:22:59Z",
+      "actor": "hanquf1",
+      "repo": "fc-wsd/s5-pystagram"
+    },
+    {
+      "payload": {
+        "push_id": 1004708806,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "6f0c467ed7e897b94c6fc0c6d21498b89aa9c48b",
+        "before": "8ce6361774ec105d07f7f65cdcfc62e7532fe169",
+        "commit_shas": [
+          "6f0c467ed7e897b94c6fc0c6d21498b89aa9c48b"
+        ]
+      },
+      "event_id": "3719357781",
+      "type": "PushEvent",
+      "created_at": "2016-03-03T19:47:59Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "push_id": 995542849,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "8ce6361774ec105d07f7f65cdcfc62e7532fe169",
+        "before": "1b1e3163ca3c77f2253414f6c2b5a9700b974a46",
+        "commit_shas": [
+          "8ce6361774ec105d07f7f65cdcfc62e7532fe169"
+        ]
+      },
+      "event_id": "3694266798",
+      "type": "PushEvent",
+      "created_at": "2016-02-26T15:50:13Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "push_id": 993607569,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "1b1e3163ca3c77f2253414f6c2b5a9700b974a46",
+        "before": "50522afbb4684ab18350f4f9804e4916be4710b2",
+        "commit_shas": [
+          "1b1e3163ca3c77f2253414f6c2b5a9700b974a46"
+        ]
+      },
+      "event_id": "3688906970",
+      "type": "PushEvent",
+      "created_at": "2016-02-25T14:44:55Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "push_id": 993605822,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "50522afbb4684ab18350f4f9804e4916be4710b2",
+        "before": "5144967597bd1116511dc660a94d2ea2e7c56e73",
+        "commit_shas": [
+          "50522afbb4684ab18350f4f9804e4916be4710b2"
+        ]
+      },
+      "event_id": "3688902150",
+      "type": "PushEvent",
+      "created_at": "2016-02-25T14:43:54Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "push_id": 993594715,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "5144967597bd1116511dc660a94d2ea2e7c56e73",
+        "before": "19833c56e78bb2c21a34153ba1631ed17725308c",
+        "commit_shas": [
+          "5144967597bd1116511dc660a94d2ea2e7c56e73"
+        ]
+      },
+      "event_id": "3688870517",
+      "type": "PushEvent",
+      "created_at": "2016-02-25T14:37:29Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "push_id": 993585957,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "19833c56e78bb2c21a34153ba1631ed17725308c",
+        "before": "f4ae4afed8d2b5fd630ef5f64efa77487eb3c93f",
+        "commit_shas": [
+          "19833c56e78bb2c21a34153ba1631ed17725308c"
+        ]
+      },
+      "event_id": "3688846750",
+      "type": "PushEvent",
+      "created_at": "2016-02-25T14:32:23Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3688798619",
+      "type": "CreateEvent",
+      "created_at": "2016-02-25T14:21:59Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3688771806",
+      "type": "CreateEvent",
+      "created_at": "2016-02-25T14:16:05Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/instablog"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3688740141",
+      "type": "CreateEvent",
+      "created_at": "2016-02-25T14:09:04Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/factcamp_python"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3688731165",
+      "type": "CreateEvent",
+      "created_at": "2016-02-25T14:07:04Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/pastCamp_python"
+    },
+    {
+      "payload": {
+        "action": "opened",
+        "number": 3,
+        "pull_request_id": 59525195,
+        "pull_request_title": "장한별_출석부 만들기",
+        "pull_request_url": "https://api.github.com/repos/fc-wsd/s5-attendance/pulls/3",
+        "pull_request_merged": false,
+        "pull_request_commits": 1,
+        "pull_request_additions": 128,
+        "pull_request_deletions": 0,
+        "pull_request_changed_files": 2
+      },
+      "event_id": "3650691560",
+      "type": "PullRequestEvent",
+      "created_at": "2016-02-16T17:32:25Z",
+      "actor": "hanquf1",
+      "repo": "fc-wsd/s5-attendance"
+    },
+    {
+      "payload": {
+        "push_id": 979761460,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "921799ededc103dfebce4455e165fa30956c0efe",
+        "before": "4e3a09a0285154c87acc7aa6d0de8e985945f97d",
+        "commit_shas": [
+          "921799ededc103dfebce4455e165fa30956c0efe"
+        ]
+      },
+      "event_id": "3650690544",
+      "type": "PushEvent",
+      "created_at": "2016-02-16T17:32:12Z",
+      "actor": "hanquf1",
+      "repo": "hanquf1/s5-attendance"
+    },
+    {
+      "payload": {
+        "forkee_id": 51854557,
+        "forkee_name": "s5-attendance",
+        "forkee_full_name": "hanquf1/s5-attendance",
+        "forkee_url": "https://github.com/hanquf1/s5-attendance",
+        "forkee_language": null
+      },
+      "event_id": "3650670862",
+      "type": "ForkEvent",
+      "created_at": "2016-02-16T17:28:02Z",
+      "actor": "hanquf1",
+      "repo": "fc-wsd/s5-attendance"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "calculator",
+      "description": "",
+      "full_name": "hanquf1/calculator",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 2,
+      "default_branch": "develop",
+      "created_at": "2015-06-29T06:56:25Z",
+      "updated_at": "2015-07-07T05:26:19Z",
+      "pushed_at": "2015-07-30T07:45:02Z",
+      "url": "https://github.com/hanquf1/calculator"
+    },
+    {
+      "name": "github_test",
+      "description": "",
+      "full_name": "hanquf1/github_test",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 1,
+      "default_branch": "master",
+      "created_at": "2015-08-04T05:14:59Z",
+      "updated_at": "2015-08-04T05:46:56Z",
+      "pushed_at": "2015-08-04T05:46:56Z",
+      "url": "https://github.com/hanquf1/github_test"
+    },
+    {
+      "name": "instablog",
+      "description": "",
+      "full_name": "hanquf1/instablog",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Python",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-02-25T14:16:05Z",
+      "updated_at": "2016-02-25T14:44:55Z",
+      "pushed_at": "2016-03-17T18:23:31Z",
+      "url": "https://github.com/hanquf1/instablog"
+    },
+    {
+      "name": "oh-my-github",
+      "description": "",
+      "full_name": "hanquf1/oh-my-github",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-04-27T02:40:06Z",
+      "updated_at": "2016-04-27T02:40:06Z",
+      "pushed_at": "2016-04-27T02:40:06Z",
+      "url": "https://github.com/hanquf1/oh-my-github"
+    },
+    {
+      "name": "pystagram",
+      "description": "",
+      "full_name": "hanquf1/pystagram",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Python",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-03-25T21:20:56Z",
+      "updated_at": "2016-03-25T21:25:19Z",
+      "pushed_at": "2016-03-26T10:11:22Z",
+      "url": "https://github.com/hanquf1/pystagram"
+    },
+    {
+      "name": "s5-attendance",
+      "description": "",
+      "full_name": "hanquf1/s5-attendance",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Python",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-02-16T17:28:02Z",
+      "updated_at": "2016-02-16T17:32:12Z",
+      "pushed_at": "2016-02-16T17:32:12Z",
+      "url": "https://github.com/hanquf1/s5-attendance"
+    },
+    {
+      "name": "s5-pystagram",
+      "description": "",
+      "full_name": "hanquf1/s5-pystagram",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Python",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-03-12T08:22:59Z",
+      "updated_at": "2016-03-12T08:23:00Z",
+      "pushed_at": "2016-03-12T08:16:21Z",
+      "url": "https://github.com/hanquf1/s5-pystagram"
+    },
+    {
+      "name": "styleguide",
+      "description": "Style guides for Google-originated open-source projects",
+      "full_name": "hanquf1/styleguide",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "gh-pages",
+      "created_at": "2015-07-15T10:26:02Z",
+      "updated_at": "2015-07-15T10:26:02Z",
+      "pushed_at": "2015-06-08T16:56:52Z",
+      "url": "https://github.com/hanquf1/styleguide"
+    }
+  ],
+  "languages": [
+    {
+      "owner": "hanquf1",
+      "repo_name": "calculator",
+      "url": "http://github.com/hanquf1/calculator",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 163
+        }
+      ]
+    },
+    {
+      "owner": "hanquf1",
+      "repo_name": "github_test",
+      "url": "http://github.com/hanquf1/github_test",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 73
+        }
+      ]
+    },
+    {
+      "owner": "hanquf1",
+      "repo_name": "instablog",
+      "url": "http://github.com/hanquf1/instablog",
+      "languages": [
+        {
+          "name": "Python",
+          "line": 32243
+        },
+        {
+          "name": "HTML",
+          "line": 3708
+        }
+      ]
+    },
+    {
+      "owner": "hanquf1",
+      "repo_name": "oh-my-github",
+      "url": "http://github.com/hanquf1/oh-my-github"
+    },
+    {
+      "owner": "hanquf1",
+      "repo_name": "pystagram",
+      "url": "http://github.com/hanquf1/pystagram",
+      "languages": [
+        {
+          "name": "Python",
+          "line": 21869
+        },
+        {
+          "name": "HTML",
+          "line": 3425
+        },
+        {
+          "name": "JavaScript",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "owner": "hanquf1",
+      "repo_name": "s5-attendance",
+      "url": "http://github.com/hanquf1/s5-attendance",
+      "languages": [
+        {
+          "name": "Python",
+          "line": 8078
+        },
+        {
+          "name": "Jupyter Notebook",
+          "line": 5140
+        }
+      ]
+    },
+    {
+      "owner": "hanquf1",
+      "repo_name": "s5-pystagram",
+      "url": "http://github.com/hanquf1/s5-pystagram",
+      "languages": [
+        {
+          "name": "Python",
+          "line": 10775
+        },
+        {
+          "name": "HTML",
+          "line": 763
+        },
+        {
+          "name": "JavaScript",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "owner": "hanquf1",
+      "repo_name": "styleguide",
+      "url": "http://github.com/hanquf1/styleguide",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 402832
+        },
+        {
+          "name": "Python",
+          "line": 222019
+        },
+        {
+          "name": "XSLT",
+          "line": 38592
+        },
+        {
+          "name": "CSS",
+          "line": 11507
+        },
+        {
+          "name": "JavaScript",
+          "line": 8603
+        },
+        {
+          "name": "Emacs Lisp",
+          "line": 6198
+        },
+        {
+          "name": "VimL",
+          "line": 1032
+        },
+        {
+          "name": "C",
+          "line": 42
+        }
+      ]
+    }
+  ],
+  "user": {
+    "login": "hanquf1",
+    "type": "User",
+    "name": null,
+    "avatar_url": "https://avatars.githubusercontent.com/u/12962933?v=3",
+    "company": null,
+    "blog": null,
+    "location": null,
+    "email": "han-quf@hanmail.net",
+    "hireable": null,
+    "following": 0,
+    "followers": 0,
+    "public_repos": 8,
+    "public_gists": 0,
+    "created_at": "2015-06-19T06:40:15Z",
+    "updated_at": "2016-04-27T02:42:03Z",
+    "url": "https://github.com/hanquf1"
+  }
+}
