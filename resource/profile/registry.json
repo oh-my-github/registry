@@ -4,5 +4,16 @@
   { "name": "ChoDuk", "location": "resource/profile/ChoDuk/oh-my-github.json" },
   { "name": "nyybb", "location": "resource/profile/nyybb/oh-my-github.json" },
   { "name": "njir", "location": "resource/profile/njir/oh-my-github.json" },
-  { "name": "tocology", "location": "resource/profile/tocology/oh-my-github.json" }
+  { "name": "tocology", "location": "resource/profile/tocology/oh-my-github.json" },
+  { "name": "Curzy", "location": "resource/profile/Curzy/oh-my-github.json" },
+  { "name": "mojosoeun", "location": "resource/profile/mojosoeun/oh-my-github.json" },
+  { "name": "DevStarSJ", "location": "resource/profile/DevStarSJ/oh-my-github.json" },
+  { "name": "jojoldu", "location": "resource/profile/jojoldu/oh-my-github.json" },
+  { "name": "dudmy", "location": "resource/profile/dudmy/oh-my-github.json" },
+  { "name": "hanquf1", "location": "resource/profile/hanquf1/oh-my-github.json" },
+  { "name": "SongYunSeop", "location": "resource/profile/SongYunSeop/oh-my-github.json" },
+  { "name": "devxoul", "location": "resource/profile/devxoul/oh-my-github.json" },
+  { "name": "blurblah", "location": "resource/profile/blurblah/oh-my-github.json" },
+  { "name": "milooy", "location": "resource/profile/milooy/oh-my-github.json" },
+  { "name": "olgierd-on-fire", "location": "resource/profile/olgierd-on-fire/oh-my-github.json" }
 ]
