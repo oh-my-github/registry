@@ -38,8 +38,8 @@ export default class AvatarCard extends React.Component {
   renderCardText = (user) => {
     let contents = {
       '1ambda' : 'Junior Data Engineer at Data Infrastructure Team - SK planet',
-      'tocology' : 'IT Solution Assistant Researcher at Samsung SDS',
-      'njir' : 'General Imaging Software Engineer at GE Healthcare',
+      'tocology' : 'Developer - Coupang',
+      'njir' : 'Software Engineer at GE Healthcare',
     }
 
     return(
