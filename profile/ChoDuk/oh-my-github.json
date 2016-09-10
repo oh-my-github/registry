@@ -1,0 +1,461 @@
+{
+  "_$meta": {
+    "ignored_repositories": [],
+    "schema_version": 1,
+    "schema_created_at": "2016-02-23T11:45:37.052Z",
+    "schema_collected_ats": [
+      "2016-02-23T11:45:37.052Z",
+      "2016-02-23T11:45:42.815Z"
+    ],
+    "agent": "cli-generator",
+    "github_user": "choduk",
+    "github_repository": "oh-my-github"
+  },
+  "activities": [
+    {
+      "payload": {
+        "push_id": 944179189,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "3789640e47c1cddbb4e256c7832f7ef7a4108938",
+        "before": "e94f0216771c211f71ec69357d10dca26e22dfe2",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/3789640e47c1cddbb4e256c7832f7ef7a4108938"
+        ]
+      },
+      "event_id": "3552736018",
+      "type": "PushEvent",
+      "created_at": "2016-01-21T11:46:41Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 933049001,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "e94f0216771c211f71ec69357d10dca26e22dfe2",
+        "before": "e9fc150be05d9dd15ea976fae6aa7d226a15a287",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/e94f0216771c211f71ec69357d10dca26e22dfe2"
+        ]
+      },
+      "event_id": "3522472512",
+      "type": "PushEvent",
+      "created_at": "2016-01-13T09:47:07Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 933042661,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "e9fc150be05d9dd15ea976fae6aa7d226a15a287",
+        "before": "377378f0009207edb7c191b0d27e0e4f3c26f252",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/e9fc150be05d9dd15ea976fae6aa7d226a15a287"
+        ]
+      },
+      "event_id": "3522455827",
+      "type": "PushEvent",
+      "created_at": "2016-01-13T09:42:11Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "action": "started"
+      },
+      "event_id": "3470133381",
+      "type": "WatchEvent",
+      "created_at": "2015-12-23T04:51:47Z",
+      "actor": "ChoDuk",
+      "repo": "jspm/jspm-cli"
+    },
+    {
+      "payload": {
+        "push_id": 912258067,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "377378f0009207edb7c191b0d27e0e4f3c26f252",
+        "before": "9e1a50c9929c81f8cb77899c805e3ee8a5cf982b",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/377378f0009207edb7c191b0d27e0e4f3c26f252"
+        ]
+      },
+      "event_id": "3467835743",
+      "type": "PushEvent",
+      "created_at": "2015-12-22T13:58:54Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "action": "started"
+      },
+      "event_id": "3442936971",
+      "type": "WatchEvent",
+      "created_at": "2015-12-15T01:16:52Z",
+      "actor": "ChoDuk",
+      "repo": "reactor/reactor"
+    },
+    {
+      "payload": {
+        "push_id": 901175765,
+        "size": 2,
+        "distinct_size": 2,
+        "ref": "refs/heads/master",
+        "head": "9e1a50c9929c81f8cb77899c805e3ee8a5cf982b",
+        "before": "78ad266005532337bbf09a8dcc9a0f2e3dc2a9d3",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/58c6212c2ffea7a5c20f36534e20eabc72b31a94",
+          "https://github.com/oh-my-github/generator/commit/9e1a50c9929c81f8cb77899c805e3ee8a5cf982b"
+        ]
+      },
+      "event_id": "3437795928",
+      "type": "PushEvent",
+      "created_at": "2015-12-13T14:20:29Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 901172180,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "78ad266005532337bbf09a8dcc9a0f2e3dc2a9d3",
+        "before": "b466ce3bc9306e3b34111289ce2e555f6f9740e7",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/78ad266005532337bbf09a8dcc9a0f2e3dc2a9d3"
+        ]
+      },
+      "event_id": "3437787860",
+      "type": "PushEvent",
+      "created_at": "2015-12-13T14:11:59Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 899209140,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "b466ce3bc9306e3b34111289ce2e555f6f9740e7",
+        "before": "89f98b71d0d0b06747814d4a5aa1b13897120abd",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/b466ce3bc9306e3b34111289ce2e555f6f9740e7"
+        ]
+      },
+      "event_id": "3432773800",
+      "type": "PushEvent",
+      "created_at": "2015-12-11T08:34:45Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 898873045,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "89f98b71d0d0b06747814d4a5aa1b13897120abd",
+        "before": "c5c6e6e42d993901c4cf86287ea6ef117e3426a1",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/89f98b71d0d0b06747814d4a5aa1b13897120abd"
+        ]
+      },
+      "event_id": "3431859590",
+      "type": "PushEvent",
+      "created_at": "2015-12-11T00:34:59Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 897701835,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "c5c6e6e42d993901c4cf86287ea6ef117e3426a1",
+        "before": "2098f091b5e637e960de0f62d531caf244980bfd",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/c5c6e6e42d993901c4cf86287ea6ef117e3426a1"
+        ]
+      },
+      "event_id": "3428554041",
+      "type": "PushEvent",
+      "created_at": "2015-12-10T10:06:57Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 897698598,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "2098f091b5e637e960de0f62d531caf244980bfd",
+        "before": "47c3993ba72c32ca8e6908e981d90209d1f068a7",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/2098f091b5e637e960de0f62d531caf244980bfd"
+        ]
+      },
+      "event_id": "3428545331",
+      "type": "PushEvent",
+      "created_at": "2015-12-10T10:04:29Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    },
+    {
+      "payload": {
+        "push_id": 897695637,
+        "size": 2,
+        "distinct_size": 2,
+        "ref": "refs/heads/master",
+        "head": "47c3993ba72c32ca8e6908e981d90209d1f068a7",
+        "before": "9ba9714635df7cfca88a7b41dc70e2357c0887cd",
+        "commit_urls": [
+          "https://github.com/oh-my-github/generator/commit/b5a7e82b1e27dafde7fb2cb9e04289903c96ac74",
+          "https://github.com/oh-my-github/generator/commit/47c3993ba72c32ca8e6908e981d90209d1f068a7"
+        ]
+      },
+      "event_id": "3428537135",
+      "type": "PushEvent",
+      "created_at": "2015-12-10T10:02:08Z",
+      "actor": "ChoDuk",
+      "repo": "SKP4/I_Scala_You"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "choduk.github.io",
+      "description": "",
+      "full_name": "ChoDuk/choduk.github.io",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-07-04T15:18:36Z",
+      "updated_at": "2015-07-04T15:30:51Z",
+      "pushed_at": "2015-07-04T15:30:50Z",
+      "url": "https://github.com/ChoDuk/choduk.github.io"
+    },
+    {
+      "name": "dotfiles",
+      "description": "",
+      "full_name": "ChoDuk/dotfiles",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-07-27T03:31:00Z",
+      "updated_at": "2015-07-27T03:31:00Z",
+      "pushed_at": "2015-07-27T03:34:58Z",
+      "url": "https://github.com/ChoDuk/dotfiles"
+    },
+    {
+      "name": "gradle-tutorial",
+      "description": "Gradle tutorial",
+      "full_name": "ChoDuk/gradle-tutorial",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-11-18T16:20:09Z",
+      "updated_at": "2015-11-18T16:20:10Z",
+      "pushed_at": "2014-06-02T02:20:49Z",
+      "url": "https://github.com/ChoDuk/gradle-tutorial"
+    },
+    {
+      "name": "gs-crud-with-vaadin",
+      "description": "Creating CRUD UI with Vaadin :: Use Vaadin and Spring Data JPA to build a dynamic UI",
+      "full_name": "ChoDuk/gs-crud-with-vaadin",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-11-09T02:04:52Z",
+      "updated_at": "2015-11-09T02:04:53Z",
+      "pushed_at": "2015-10-16T13:43:38Z",
+      "url": "https://github.com/ChoDuk/gs-crud-with-vaadin"
+    },
+    {
+      "name": "jpabook",
+      "description": "",
+      "full_name": "ChoDuk/jpabook",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-11-03T06:09:45Z",
+      "updated_at": "2015-11-03T06:09:46Z",
+      "pushed_at": "2015-08-09T23:54:16Z",
+      "url": "https://github.com/ChoDuk/jpabook"
+    },
+    {
+      "name": "learn_springsecurity",
+      "description": "스프링 시큐리티 공부",
+      "full_name": "ChoDuk/learn_springsecurity",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-11-18T16:21:00Z",
+      "updated_at": "2015-11-18T16:21:01Z",
+      "pushed_at": "2015-09-29T02:00:44Z",
+      "url": "https://github.com/ChoDuk/learn_springsecurity"
+    },
+    {
+      "name": "translate-spring-boot-reference",
+      "description": "Spring Boot(1.2.0.RELEASE) Reference Document 번역",
+      "full_name": "ChoDuk/translate-spring-boot-reference",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-11-18T16:16:34Z",
+      "updated_at": "2015-11-18T16:16:35Z",
+      "pushed_at": "2015-11-09T10:19:56Z",
+      "url": "https://github.com/ChoDuk/translate-spring-boot-reference"
+    }
+  ],
+  "languages": [
+    {
+      "owner": "choduk",
+      "repo_name": "choduk.github.io",
+      "url": "http://github.com/choduk/choduk.github.io",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 132
+        }
+      ]
+    },
+    {
+      "owner": "choduk",
+      "repo_name": "dotfiles",
+      "url": "http://github.com/choduk/dotfiles"
+    },
+    {
+      "owner": "choduk",
+      "repo_name": "gradle-tutorial",
+      "url": "http://github.com/choduk/gradle-tutorial",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 2439
+        }
+      ]
+    },
+    {
+      "owner": "choduk",
+      "repo_name": "gs-crud-with-vaadin",
+      "url": "http://github.com/choduk/gs-crud-with-vaadin",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 11707
+        },
+        {
+          "name": "Shell",
+          "line": 372
+        }
+      ]
+    },
+    {
+      "owner": "choduk",
+      "repo_name": "jpabook",
+      "url": "http://github.com/choduk/jpabook",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 189410
+        },
+        {
+          "name": "JavaScript",
+          "line": 161842
+        },
+        {
+          "name": "CSS",
+          "line": 2822
+        },
+        {
+          "name": "Shell",
+          "line": 1179
+        }
+      ]
+    },
+    {
+      "owner": "choduk",
+      "repo_name": "learn_springsecurity",
+      "url": "http://github.com/choduk/learn_springsecurity",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 52073
+        }
+      ]
+    },
+    {
+      "owner": "choduk",
+      "repo_name": "translate-spring-boot-reference",
+      "url": "http://github.com/choduk/translate-spring-boot-reference",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 1011985
+        },
+        {
+          "name": "CSS",
+          "line": 4817
+        }
+      ]
+    }
+  ],
+  "user": {
+    "login": "ChoDuk",
+    "type": "User",
+    "name": "Duk",
+    "avatar_url": "https://avatars.githubusercontent.com/u/7099266?v=3",
+    "company": null,
+    "blog": null,
+    "location": "Republic of Korea",
+    "email": "choduk88@gmail.com",
+    "hireable": null,
+    "following": 11,
+    "followers": 6,
+    "public_repos": 7,
+    "public_gists": 0,
+    "created_at": "2014-03-29T08:39:25Z",
+    "updated_at": "2016-02-23T11:44:39Z",
+    "url": "https://github.com/ChoDuk"
+  }
+}

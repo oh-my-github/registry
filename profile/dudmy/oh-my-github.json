@@ -1,0 +1,1249 @@
+{
+  "_$meta": {
+    "ignored_repositories": [],
+    "schema_version": 1,
+    "schema_created_at": "2016-03-22T17:46:57.673Z",
+    "schema_collected_ats": [
+      "2016-03-22T17:46:57.673Z",
+      "2016-03-22T17:47:45.451Z"
+    ],
+    "agent": "cli-generator",
+    "github_user": "dudmy",
+    "github_repository": "oh-my-github"
+  },
+  "activities": [
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "my github profile",
+        "pusher_type": "user"
+      },
+      "event_id": "3794540929",
+      "type": "CreateEvent",
+      "created_at": "2016-03-22T17:13:59Z",
+      "actor": "dudmy",
+      "repo": "dudmy/oh-my-github"
+    },
+    {
+      "payload": {
+        "push_id": 1022863890,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "56524fb79281246666edd6f9c752631d0ff4a900",
+        "before": "9ae11b5dfcc0dd1dd99144a3376deed8fa2542a0",
+        "commit_shas": [
+          "56524fb79281246666edd6f9c752631d0ff4a900"
+        ]
+      },
+      "event_id": "3768790324",
+      "type": "PushEvent",
+      "created_at": "2016-03-16T07:33:47Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 1019677489,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "9ae11b5dfcc0dd1dd99144a3376deed8fa2542a0",
+        "before": "79be1fecf983f0ea9fb3feec8a3d03b8108db5c1",
+        "commit_shas": [
+          "9ae11b5dfcc0dd1dd99144a3376deed8fa2542a0"
+        ]
+      },
+      "event_id": "3759725007",
+      "type": "PushEvent",
+      "created_at": "2016-03-14T14:26:54Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 1017805054,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "79be1fecf983f0ea9fb3feec8a3d03b8108db5c1",
+        "before": "61c5ba89ebecb899822000596b324eb799ad0397",
+        "commit_shas": [
+          "79be1fecf983f0ea9fb3feec8a3d03b8108db5c1"
+        ]
+      },
+      "event_id": "3755181214",
+      "type": "PushEvent",
+      "created_at": "2016-03-12T13:34:30Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 1017803596,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "61c5ba89ebecb899822000596b324eb799ad0397",
+        "before": "8006197ef4c9a70e4975634a9bbe5a0a9e367742",
+        "commit_shas": [
+          "61c5ba89ebecb899822000596b324eb799ad0397"
+        ]
+      },
+      "event_id": "3755177898",
+      "type": "PushEvent",
+      "created_at": "2016-03-12T13:31:20Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 1016501291,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "8006197ef4c9a70e4975634a9bbe5a0a9e367742",
+        "before": "526fa4ce9e8a357f819efbefd2d5e7b148536d75",
+        "commit_shas": [
+          "8006197ef4c9a70e4975634a9bbe5a0a9e367742"
+        ]
+      },
+      "event_id": "3751601861",
+      "type": "PushEvent",
+      "created_at": "2016-03-11T13:03:00Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 1016118277,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "17386aa9e47b5a5fe21b5decd19bb8b1eb5c0257",
+        "before": "56adf6b7ed5a5614ed6b1d01195f776bbaa8f748",
+        "commit_shas": [
+          "17386aa9e47b5a5fe21b5decd19bb8b1eb5c0257"
+        ]
+      },
+      "event_id": "3750587093",
+      "type": "PushEvent",
+      "created_at": "2016-03-11T07:56:30Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 1012462319,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "56adf6b7ed5a5614ed6b1d01195f776bbaa8f748",
+        "before": "c7de715721df73772060290f3fc0ea93c0e51b60",
+        "commit_shas": [
+          "56adf6b7ed5a5614ed6b1d01195f776bbaa8f748"
+        ]
+      },
+      "event_id": "3740296843",
+      "type": "PushEvent",
+      "created_at": "2016-03-09T10:02:18Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3740272234",
+      "type": "CreateEvent",
+      "created_at": "2016-03-09T09:56:09Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3740272128",
+      "type": "CreateEvent",
+      "created_at": "2016-03-09T09:56:08Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 986558385,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "526fa4ce9e8a357f819efbefd2d5e7b148536d75",
+        "before": "6fbbd089ec072231fcf1fb4737bc5e1df506dfe3",
+        "commit_shas": [
+          "526fa4ce9e8a357f819efbefd2d5e7b148536d75"
+        ]
+      },
+      "event_id": "3669431891",
+      "type": "PushEvent",
+      "created_at": "2016-02-21T07:17:31Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 986550632,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "6fbbd089ec072231fcf1fb4737bc5e1df506dfe3",
+        "before": "1229d8960c124e3227b0219e08ea4972ddfc2890",
+        "commit_shas": [
+          "6fbbd089ec072231fcf1fb4737bc5e1df506dfe3"
+        ]
+      },
+      "event_id": "3669414527",
+      "type": "PushEvent",
+      "created_at": "2016-02-21T06:58:58Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 976604044,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "30e733034943de893ded58c023147ac07179740b",
+        "before": "e04f07061564c5da0b0d2e52d01634d2e76c2b3a",
+        "commit_shas": [
+          "30e733034943de893ded58c023147ac07179740b"
+        ]
+      },
+      "event_id": "3642263987",
+      "type": "PushEvent",
+      "created_at": "2016-02-14T06:52:09Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 976559542,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "e04f07061564c5da0b0d2e52d01634d2e76c2b3a",
+        "before": "b4d8edea87553c67a4a736ad0302b2136ee92e61",
+        "commit_shas": [
+          "e04f07061564c5da0b0d2e52d01634d2e76c2b3a"
+        ]
+      },
+      "event_id": "3642171124",
+      "type": "PushEvent",
+      "created_at": "2016-02-14T04:54:31Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 976555956,
+        "size": 2,
+        "distinct_size": 2,
+        "ref": "refs/heads/master",
+        "head": "b4d8edea87553c67a4a736ad0302b2136ee92e61",
+        "before": "70890f705a80234a3485a8fdfc1a386de51d271f",
+        "commit_shas": [
+          "652e2d5d2a178c608d13570dccf3aa57455ac1ef",
+          "b4d8edea87553c67a4a736ad0302b2136ee92e61"
+        ]
+      },
+      "event_id": "3642163444",
+      "type": "PushEvent",
+      "created_at": "2016-02-14T04:43:11Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 976170246,
+        "size": 3,
+        "distinct_size": 3,
+        "ref": "refs/heads/master",
+        "head": "70890f705a80234a3485a8fdfc1a386de51d271f",
+        "before": "87ce263914ceae5683cd602392a009cdc0e8c715",
+        "commit_shas": [
+          "eeefb3f07c8fa35db7b2de41de490b57e10ecd41",
+          "4cf2e50677bc579aa98dd2ae11ee497d0d88f1b1",
+          "70890f705a80234a3485a8fdfc1a386de51d271f"
+        ]
+      },
+      "event_id": "3641286433",
+      "type": "PushEvent",
+      "created_at": "2016-02-13T14:30:18Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 976059931,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "87ce263914ceae5683cd602392a009cdc0e8c715",
+        "before": "7cba80d16fa1837a823a9ec4f7080453d1398677",
+        "commit_shas": [
+          "87ce263914ceae5683cd602392a009cdc0e8c715"
+        ]
+      },
+      "event_id": "3641026069",
+      "type": "PushEvent",
+      "created_at": "2016-02-13T09:31:54Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 976051683,
+        "size": 2,
+        "distinct_size": 2,
+        "ref": "refs/heads/master",
+        "head": "7cba80d16fa1837a823a9ec4f7080453d1398677",
+        "before": "8428c2f3f3eed4d1b9a8e543c45e6dc32c01a408",
+        "commit_shas": [
+          "3d85e74572199b0ac28a615802ccc2e9d6d717f0",
+          "7cba80d16fa1837a823a9ec4f7080453d1398677"
+        ]
+      },
+      "event_id": "3641007213",
+      "type": "PushEvent",
+      "created_at": "2016-02-13T09:09:10Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 974783741,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "8428c2f3f3eed4d1b9a8e543c45e6dc32c01a408",
+        "before": "a23a25b999936315c793a111bcf98ed9e7d358fe",
+        "commit_shas": [
+          "8428c2f3f3eed4d1b9a8e543c45e6dc32c01a408"
+        ]
+      },
+      "event_id": "3637449446",
+      "type": "PushEvent",
+      "created_at": "2016-02-12T10:56:54Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 974629004,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "a23a25b999936315c793a111bcf98ed9e7d358fe",
+        "before": "cb7ac69717a9b3a169c1cf57ed340f459a074fb9",
+        "commit_shas": [
+          "a23a25b999936315c793a111bcf98ed9e7d358fe"
+        ]
+      },
+      "event_id": "3637018550",
+      "type": "PushEvent",
+      "created_at": "2016-02-12T08:37:48Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 973536550,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "cb7ac69717a9b3a169c1cf57ed340f459a074fb9",
+        "before": "31d5d290832f7c4eb6d203b64adc0409f00ab183",
+        "commit_shas": [
+          "cb7ac69717a9b3a169c1cf57ed340f459a074fb9"
+        ]
+      },
+      "event_id": "3633874709",
+      "type": "PushEvent",
+      "created_at": "2016-02-11T16:05:32Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 972011318,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "31d5d290832f7c4eb6d203b64adc0409f00ab183",
+        "before": "88af30f291eccaccdd60462478c236a22c9f3fbc",
+        "commit_shas": [
+          "31d5d290832f7c4eb6d203b64adc0409f00ab183"
+        ]
+      },
+      "event_id": "3629604994",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T17:47:44Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 971569415,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "88af30f291eccaccdd60462478c236a22c9f3fbc",
+        "before": "be6cf25d3f509d7f0c2ddfda4f15725ede302060",
+        "commit_shas": [
+          "88af30f291eccaccdd60462478c236a22c9f3fbc"
+        ]
+      },
+      "event_id": "3628337032",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T13:22:34Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 971546945,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "be6cf25d3f509d7f0c2ddfda4f15725ede302060",
+        "before": "c0abd18d610d5d56dcddf43ed3c9c1c7a8f7201d",
+        "commit_shas": [
+          "be6cf25d3f509d7f0c2ddfda4f15725ede302060"
+        ]
+      },
+      "event_id": "3628278845",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T13:05:38Z",
+      "actor": "dudmy",
+      "repo": "dudmy/assignment"
+    },
+    {
+      "payload": {
+        "push_id": 960574355,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "f83cfb161a8d8f984f90233532c19e74cfdcbd2c",
+        "before": "431a0ae2830d8e06f6dd8f676a9fd3c062e82803",
+        "commit_shas": [
+          "f83cfb161a8d8f984f90233532c19e74cfdcbd2c"
+        ]
+      },
+      "event_id": "3597866771",
+      "type": "PushEvent",
+      "created_at": "2016-02-02T17:18:50Z",
+      "actor": "dudmy",
+      "repo": "dudmy/portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 960431750,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "431a0ae2830d8e06f6dd8f676a9fd3c062e82803",
+        "before": "5026cfa8cf406d4b1c3f2df34ebc39f1a492ddf1",
+        "commit_shas": [
+          "431a0ae2830d8e06f6dd8f676a9fd3c062e82803"
+        ]
+      },
+      "event_id": "3597445562",
+      "type": "PushEvent",
+      "created_at": "2016-02-02T15:57:19Z",
+      "actor": "dudmy",
+      "repo": "dudmy/portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 960427041,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "1229d8960c124e3227b0219e08ea4972ddfc2890",
+        "before": "038e782b53909810aaedb934ebb636fd3b1deae6",
+        "commit_shas": [
+          "1229d8960c124e3227b0219e08ea4972ddfc2890"
+        ]
+      },
+      "event_id": "3597432025",
+      "type": "PushEvent",
+      "created_at": "2016-02-02T15:54:42Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 960425059,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "5026cfa8cf406d4b1c3f2df34ebc39f1a492ddf1",
+        "before": "4c53a3a1aea485539b5ee0d446ba7046b500d2f9",
+        "commit_shas": [
+          "5026cfa8cf406d4b1c3f2df34ebc39f1a492ddf1"
+        ]
+      },
+      "event_id": "3597426281",
+      "type": "PushEvent",
+      "created_at": "2016-02-02T15:53:35Z",
+      "actor": "dudmy",
+      "repo": "dudmy/portfolio"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3596081055",
+      "type": "CreateEvent",
+      "created_at": "2016-02-02T10:12:19Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Assignment"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3596081011",
+      "type": "CreateEvent",
+      "created_at": "2016-02-02T10:12:19Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Assignment"
+    },
+    {
+      "payload": {
+        "action": "opened",
+        "number": 2,
+        "pull_request_id": 57617297,
+        "pull_request_title": "티누림 App Server 누락된 코드",
+        "pull_request_url": "https://api.github.com/repos/noorim/tnoorim-app/pulls/2",
+        "pull_request_merged": false,
+        "pull_request_commits": 1,
+        "pull_request_additions": 0,
+        "pull_request_deletions": 12037,
+        "pull_request_changed_files": 1973
+      },
+      "event_id": "3583374456",
+      "type": "PullRequestEvent",
+      "created_at": "2016-01-29T08:05:19Z",
+      "actor": "dudmy",
+      "repo": "noorim/tnoorim-app"
+    },
+    {
+      "payload": {
+        "push_id": 955190269,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "3ff02e009a5857e9fe44c95f9259b4559f8b77b6",
+        "before": "39653f5e4304146cdf2a2a691d1088ea011ed695",
+        "commit_shas": [
+          "3ff02e009a5857e9fe44c95f9259b4559f8b77b6"
+        ]
+      },
+      "event_id": "3583355557",
+      "type": "PushEvent",
+      "created_at": "2016-01-29T07:57:26Z",
+      "actor": "dudmy",
+      "repo": "dudmy/tnoorim-app"
+    },
+    {
+      "payload": {
+        "action": "opened",
+        "number": 1,
+        "pull_request_id": 57616282,
+        "pull_request_title": "티누림 App & Server 소스코드 추가",
+        "pull_request_url": "https://api.github.com/repos/noorim/tnoorim-app/pulls/1",
+        "pull_request_merged": false,
+        "pull_request_commits": 2,
+        "pull_request_additions": 9595,
+        "pull_request_deletions": 0,
+        "pull_request_changed_files": 3722
+      },
+      "event_id": "3583338199",
+      "type": "PullRequestEvent",
+      "created_at": "2016-01-29T07:50:17Z",
+      "actor": "dudmy",
+      "repo": "noorim/tnoorim-app"
+    },
+    {
+      "payload": {
+        "push_id": 955183329,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "39653f5e4304146cdf2a2a691d1088ea011ed695",
+        "before": "f33bdba053e50edad07fa8794b0b26a679485d3f",
+        "commit_shas": [
+          "39653f5e4304146cdf2a2a691d1088ea011ed695"
+        ]
+      },
+      "event_id": "3583336096",
+      "type": "PushEvent",
+      "created_at": "2016-01-29T07:49:20Z",
+      "actor": "dudmy",
+      "repo": "dudmy/tnoorim-app"
+    },
+    {
+      "payload": {
+        "push_id": 955178583,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "f33bdba053e50edad07fa8794b0b26a679485d3f",
+        "before": "2309f89ad61c7a5daff3488ac8443dfc6b44525a",
+        "commit_shas": [
+          "f33bdba053e50edad07fa8794b0b26a679485d3f"
+        ]
+      },
+      "event_id": "3583323885",
+      "type": "PushEvent",
+      "created_at": "2016-01-29T07:43:43Z",
+      "actor": "dudmy",
+      "repo": "dudmy/tnoorim-app"
+    },
+    {
+      "payload": {
+        "forkee_id": 50646390,
+        "forkee_name": "tnoorim-app",
+        "forkee_full_name": "dudmy/tnoorim-app",
+        "forkee_url": "https://github.com/dudmy/tnoorim-app",
+        "forkee_language": null
+      },
+      "event_id": "3583300694",
+      "type": "ForkEvent",
+      "created_at": "2016-01-29T07:33:25Z",
+      "actor": "dudmy",
+      "repo": "noorim/tnoorim-app"
+    },
+    {
+      "payload": {
+        "push_id": 953675116,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "4c53a3a1aea485539b5ee0d446ba7046b500d2f9",
+        "before": "79ca10e6512a291766fe8887ad02785c780f51f2",
+        "commit_shas": [
+          "4c53a3a1aea485539b5ee0d446ba7046b500d2f9"
+        ]
+      },
+      "event_id": "3579022187",
+      "type": "PushEvent",
+      "created_at": "2016-01-28T11:11:02Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 953674073,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "79ca10e6512a291766fe8887ad02785c780f51f2",
+        "before": "eafd39262995b008506ff9808109a0c2a7748f2b",
+        "commit_shas": [
+          "79ca10e6512a291766fe8887ad02785c780f51f2"
+        ]
+      },
+      "event_id": "3579019187",
+      "type": "PushEvent",
+      "created_at": "2016-01-28T11:10:15Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 953300271,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "eafd39262995b008506ff9808109a0c2a7748f2b",
+        "before": "4de747d60c8db428f48287bb2ec915ddcbed8379",
+        "commit_shas": [
+          "eafd39262995b008506ff9808109a0c2a7748f2b"
+        ]
+      },
+      "event_id": "3578010095",
+      "type": "PushEvent",
+      "created_at": "2016-01-28T05:22:27Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 950869919,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "038e782b53909810aaedb934ebb636fd3b1deae6",
+        "before": "2563351b6589ce67cdc9041b69e3ba53d935484a",
+        "commit_shas": [
+          "038e782b53909810aaedb934ebb636fd3b1deae6"
+        ]
+      },
+      "event_id": "3571062977",
+      "type": "PushEvent",
+      "created_at": "2016-01-26T18:12:32Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 950869077,
+        "size": 2,
+        "distinct_size": 2,
+        "ref": "refs/heads/gh-pages",
+        "head": "4de747d60c8db428f48287bb2ec915ddcbed8379",
+        "before": "eab82e2634f440390770693ddc5428ae6a749d3d",
+        "commit_shas": [
+          "674ba7023e67c8d61079ff6cd3072861318b884f",
+          "4de747d60c8db428f48287bb2ec915ddcbed8379"
+        ]
+      },
+      "event_id": "3571060561",
+      "type": "PushEvent",
+      "created_at": "2016-01-26T18:11:57Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 939426363,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "be36704ffcd6af72ab9f90788cdd964ea7dd74a3",
+        "before": "ee97f1fa832b27d822960cb0203851664b373547",
+        "commit_shas": [
+          "be36704ffcd6af72ab9f90788cdd964ea7dd74a3"
+        ]
+      },
+      "event_id": "3539482255",
+      "type": "PushEvent",
+      "created_at": "2016-01-18T15:00:47Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Study"
+    },
+    {
+      "payload": {
+        "push_id": 934438882,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "ee97f1fa832b27d822960cb0203851664b373547",
+        "before": "d36f742928be8b1e635c54a1d3277e1dcbf8b397",
+        "commit_shas": [
+          "ee97f1fa832b27d822960cb0203851664b373547"
+        ]
+      },
+      "event_id": "3526382390",
+      "type": "PushEvent",
+      "created_at": "2016-01-14T04:31:55Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Study"
+    },
+    {
+      "payload": {
+        "push_id": 931799851,
+        "size": 2,
+        "distinct_size": 2,
+        "ref": "refs/heads/gh-pages",
+        "head": "eab82e2634f440390770693ddc5428ae6a749d3d",
+        "before": "41a80630cac08562bd075b8b6eb376d7ed75e1da",
+        "commit_shas": [
+          "9256c1a1c1ebf591adc7d230b897c22550521097",
+          "eab82e2634f440390770693ddc5428ae6a749d3d"
+        ]
+      },
+      "event_id": "3518909820",
+      "type": "PushEvent",
+      "created_at": "2016-01-12T14:59:43Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 928642802,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "41a80630cac08562bd075b8b6eb376d7ed75e1da",
+        "before": "81b5232c145e91826dc8ddfb52196f4301e1e603",
+        "commit_shas": [
+          "41a80630cac08562bd075b8b6eb376d7ed75e1da"
+        ]
+      },
+      "event_id": "3510616431",
+      "type": "PushEvent",
+      "created_at": "2016-01-09T16:38:42Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 928641880,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "2563351b6589ce67cdc9041b69e3ba53d935484a",
+        "before": "24091958e30448c914b4c0903f68eaf45de8c05c",
+        "commit_shas": [
+          "2563351b6589ce67cdc9041b69e3ba53d935484a"
+        ]
+      },
+      "event_id": "3510614286",
+      "type": "PushEvent",
+      "created_at": "2016-01-09T16:36:39Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 928636942,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "81b5232c145e91826dc8ddfb52196f4301e1e603",
+        "before": "e3d1d9ca9a3a34beae97e6152d6b46e8faa40337",
+        "commit_shas": [
+          "81b5232c145e91826dc8ddfb52196f4301e1e603"
+        ]
+      },
+      "event_id": "3510603243",
+      "type": "PushEvent",
+      "created_at": "2016-01-09T16:25:43Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "ref": "gh-pages",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "포트폴리오 페이지",
+        "pusher_type": "user"
+      },
+      "event_id": "3510599061",
+      "type": "CreateEvent",
+      "created_at": "2016-01-09T16:21:24Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "포트폴리오 페이지",
+        "pusher_type": "user"
+      },
+      "event_id": "3510598430",
+      "type": "CreateEvent",
+      "created_at": "2016-01-09T16:20:49Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "포트폴리오 페이지",
+        "pusher_type": "user"
+      },
+      "event_id": "3510598428",
+      "type": "CreateEvent",
+      "created_at": "2016-01-09T16:20:48Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Portfolio"
+    },
+    {
+      "payload": {
+        "push_id": 927726898,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "24091958e30448c914b4c0903f68eaf45de8c05c",
+        "before": "cd92816c987bdef97318d1fa7dddde10bb7000ac",
+        "commit_shas": [
+          "24091958e30448c914b4c0903f68eaf45de8c05c"
+        ]
+      },
+      "event_id": "3508115702",
+      "type": "PushEvent",
+      "created_at": "2016-01-08T16:25:46Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 922512982,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "cd92816c987bdef97318d1fa7dddde10bb7000ac",
+        "before": "73f6635eefd82761cabb3eb26974ebea6ed99777",
+        "commit_shas": [
+          "cd92816c987bdef97318d1fa7dddde10bb7000ac"
+        ]
+      },
+      "event_id": "3493671210",
+      "type": "PushEvent",
+      "created_at": "2016-01-05T04:22:59Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 913168515,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "73f6635eefd82761cabb3eb26974ebea6ed99777",
+        "before": "d99f35d05b0c8d8f2ca16f66593cf42ef3040fbf",
+        "commit_shas": [
+          "73f6635eefd82761cabb3eb26974ebea6ed99777"
+        ]
+      },
+      "event_id": "3470331195",
+      "type": "PushEvent",
+      "created_at": "2015-12-23T07:21:04Z",
+      "actor": "dudmy",
+      "repo": "dudmy/dudmy.github.io"
+    },
+    {
+      "payload": {
+        "push_id": 913140322,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "d36f742928be8b1e635c54a1d3277e1dcbf8b397",
+        "before": "b685e4e3eaba4d57921e672a6cd78850b968847f",
+        "commit_shas": [
+          "d36f742928be8b1e635c54a1d3277e1dcbf8b397"
+        ]
+      },
+      "event_id": "3470260485",
+      "type": "PushEvent",
+      "created_at": "2015-12-23T06:36:08Z",
+      "actor": "dudmy",
+      "repo": "dudmy/Study"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "assignment",
+      "description": "",
+      "full_name": "dudmy/assignment",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-03-09T09:56:07Z",
+      "updated_at": "2016-03-11T07:56:31Z",
+      "pushed_at": "2016-03-11T07:56:29Z",
+      "url": "https://github.com/dudmy/assignment"
+    },
+    {
+      "name": "CheckitLife",
+      "description": "Personal Shelf Life Management App",
+      "full_name": "dudmy/CheckitLife",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-08-10T10:44:56Z",
+      "updated_at": "2016-02-03T16:32:16Z",
+      "pushed_at": "2015-08-21T08:13:15Z",
+      "url": "https://github.com/dudmy/CheckitLife"
+    },
+    {
+      "name": "dudmy.github.io",
+      "description": "Resume Page",
+      "full_name": "dudmy/dudmy.github.io",
+      "fork": false,
+      "forks_count": 2,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "CSS",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-08-08T07:24:26Z",
+      "updated_at": "2016-03-14T14:26:54Z",
+      "pushed_at": "2016-03-16T07:33:47Z",
+      "url": "https://github.com/dudmy/dudmy.github.io"
+    },
+    {
+      "name": "HSU2015SW",
+      "description": "한성대학교 멀티미디어공학과 소프트웨어공학 2015년 수업",
+      "full_name": "dudmy/HSU2015SW",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-03-16T16:41:48Z",
+      "updated_at": "2015-03-07T16:08:49Z",
+      "pushed_at": "2015-05-07T12:13:53Z",
+      "url": "https://github.com/dudmy/HSU2015SW"
+    },
+    {
+      "name": "LibOutcomesWebTest",
+      "description": "",
+      "full_name": "dudmy/LibOutcomesWebTest",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-11-09T14:24:36Z",
+      "updated_at": "2016-02-03T16:32:51Z",
+      "pushed_at": "2015-11-18T05:32:01Z",
+      "url": "https://github.com/dudmy/LibOutcomesWebTest"
+    },
+    {
+      "name": "oh-my-github",
+      "description": "my github profile",
+      "full_name": "dudmy/oh-my-github",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-03-22T17:13:59Z",
+      "updated_at": "2016-03-22T17:13:59Z",
+      "pushed_at": "2016-03-22T17:13:59Z",
+      "url": "https://github.com/dudmy/oh-my-github"
+    },
+    {
+      "name": "portfolio",
+      "description": "",
+      "full_name": "dudmy/portfolio",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "gh-pages",
+      "created_at": "2016-01-09T16:20:48Z",
+      "updated_at": "2016-02-02T15:52:02Z",
+      "pushed_at": "2016-02-02T17:18:50Z",
+      "url": "https://github.com/dudmy/portfolio"
+    },
+    {
+      "name": "Softcone",
+      "description": "2015 HSU 소프트웨어공학 텀 프로젝트",
+      "full_name": "dudmy/Softcone",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "gh-pages",
+      "created_at": "2015-05-02T10:46:14Z",
+      "updated_at": "2016-02-03T16:33:26Z",
+      "pushed_at": "2015-12-17T16:22:37Z",
+      "url": "https://github.com/dudmy/Softcone"
+    },
+    {
+      "name": "study",
+      "description": "Record what I have studied",
+      "full_name": "dudmy/study",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-09-15T08:38:17Z",
+      "updated_at": "2016-02-03T16:31:38Z",
+      "pushed_at": "2016-01-18T15:00:46Z",
+      "url": "https://github.com/dudmy/study"
+    }
+  ],
+  "languages": [
+    {
+      "owner": "dudmy",
+      "repo_name": "assignment",
+      "url": "http://github.com/dudmy/assignment",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 25928
+        }
+      ]
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "CheckitLife",
+      "url": "http://github.com/dudmy/CheckitLife",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 19563
+        }
+      ]
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "dudmy.github.io",
+      "url": "http://github.com/dudmy/dudmy.github.io",
+      "languages": [
+        {
+          "name": "CSS",
+          "line": 21028
+        },
+        {
+          "name": "HTML",
+          "line": 3739
+        }
+      ]
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "HSU2015SW",
+      "url": "http://github.com/dudmy/HSU2015SW"
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "LibOutcomesWebTest",
+      "url": "http://github.com/dudmy/LibOutcomesWebTest",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 345398
+        },
+        {
+          "name": "CSS",
+          "line": 151912
+        },
+        {
+          "name": "JavaScript",
+          "line": 55770
+        }
+      ]
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "oh-my-github",
+      "url": "http://github.com/dudmy/oh-my-github"
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "portfolio",
+      "url": "http://github.com/dudmy/portfolio",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 6826
+        },
+        {
+          "name": "CSS",
+          "line": 5807
+        }
+      ]
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "Softcone",
+      "url": "http://github.com/dudmy/Softcone",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 1563799
+        },
+        {
+          "name": "JavaScript",
+          "line": 53863
+        },
+        {
+          "name": "CSS",
+          "line": 20028
+        },
+        {
+          "name": "HTML",
+          "line": 10556
+        }
+      ]
+    },
+    {
+      "owner": "dudmy",
+      "repo_name": "study",
+      "url": "http://github.com/dudmy/study",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 77349
+        },
+        {
+          "name": "Python",
+          "line": 14169
+        },
+        {
+          "name": "JavaScript",
+          "line": 7883
+        }
+      ]
+    }
+  ],
+  "user": {
+    "login": "dudmy",
+    "type": "User",
+    "name": "Yujin Jung",
+    "avatar_url": "https://avatars.githubusercontent.com/u/11506458?v=3",
+    "company": null,
+    "blog": "http://dudmy.net",
+    "location": "Seoul, Korea",
+    "email": "dudmy@dudmy.net",
+    "hireable": null,
+    "following": 3,
+    "followers": 3,
+    "public_repos": 9,
+    "public_gists": 0,
+    "created_at": "2015-03-16T16:40:57Z",
+    "updated_at": "2016-03-18T02:17:48Z",
+    "url": "https://github.com/dudmy"
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "_$meta": {
+    "ignored_repositories": [],
+    "schema_version": 1,
+    "schema_created_at": "2016-03-09T08:58:48.695Z",
+    "schema_collected_ats": [
+      "2016-03-09T08:58:48.695Z",
+      "2016-03-09T08:59:26.448Z"
+    ],
+    "agent": "cli-generator",
+    "github_user": "nyybb",
+    "github_repository": "oh-my-github"
+  },
+  "activities": [
+    {
+      "payload": {
+        "action": "started"
+      },
+      "event_id": "3721388169",
+      "type": "WatchEvent",
+      "created_at": "2016-03-04T06:39:29Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/oh-my-github"
+    },
+    {
+      "payload": {
+        "action": "started"
+      },
+      "event_id": "3721388025",
+      "type": "WatchEvent",
+      "created_at": "2016-03-04T06:39:26Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/viewer"
+    },
+    {
+      "payload": {
+        "action": "opened",
+        "number": 18,
+        "pull_request_id": 60291800,
+        "pull_request_title": "fix: MainTab background coloring",
+        "pull_request_url": "https://api.github.com/repos/oh-my-github/yo-omg-basic/pulls/18",
+        "pull_request_merged": false,
+        "pull_request_commits": 1,
+        "pull_request_additions": 5,
+        "pull_request_deletions": 2,
+        "pull_request_changed_files": 1
+      },
+      "event_id": "3676429282",
+      "type": "PullRequestEvent",
+      "created_at": "2016-02-23T05:55:01Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/yo-omg-basic"
+    },
+    {
+      "payload": {
+        "ref": "issue-002",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3676427643",
+      "type": "CreateEvent",
+      "created_at": "2016-02-23T05:54:13Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/yo-omg-basic"
+    },
+    {
+      "payload": {
+        "push_id": 971407325,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "f08a1d6bc181e5ff6775bf6b801ff10b5bb652bd",
+        "before": "69614cf7a67dbb76b6159d948da9b2e42325e4ce",
+        "commit_shas": [
+          "f08a1d6bc181e5ff6775bf6b801ff10b5bb652bd"
+        ]
+      },
+      "event_id": "3627897989",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T11:11:24Z",
+      "actor": "nyybb",
+      "repo": "nyybb/nybBlog"
+    },
+    {
+      "payload": {
+        "action": "opened",
+        "number": 7,
+        "pull_request_id": 57606177,
+        "pull_request_title": "fix: MainTab background coloring",
+        "pull_request_url": "https://api.github.com/repos/oh-my-github/yo-omg-basic/pulls/7",
+        "pull_request_merged": false,
+        "pull_request_commits": 1,
+        "pull_request_additions": 13,
+        "pull_request_deletions": 7,
+        "pull_request_changed_files": 1
+      },
+      "event_id": "3582986106",
+      "type": "PullRequestEvent",
+      "created_at": "2016-01-29T04:53:10Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/yo-omg-basic"
+    },
+    {
+      "payload": {
+        "ref": "issue-001",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3582980214",
+      "type": "CreateEvent",
+      "created_at": "2016-01-29T04:49:51Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/yo-omg-basic"
+    },
+    {
+      "payload": {
+        "push_id": 938694889,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "caff1ab7a53f9b2b4f5646ae76f62090b8042f6e",
+        "before": "51dd3e4e8b8e0a24cd57ee9507aa847951837741",
+        "commit_shas": [
+          "caff1ab7a53f9b2b4f5646ae76f62090b8042f6e"
+        ]
+      },
+      "event_id": "3537555358",
+      "type": "PushEvent",
+      "created_at": "2016-01-18T02:22:41Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/yo-omg-basic"
+    },
+    {
+      "payload": {
+        "push_id": 938687825,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "51dd3e4e8b8e0a24cd57ee9507aa847951837741",
+        "before": "21f892202c6424eb6284c1a36df9ddb69d036df0",
+        "commit_shas": [
+          "51dd3e4e8b8e0a24cd57ee9507aa847951837741"
+        ]
+      },
+      "event_id": "3537537870",
+      "type": "PushEvent",
+      "created_at": "2016-01-18T02:10:05Z",
+      "actor": "nyybb",
+      "repo": "oh-my-github/yo-omg-basic"
+    },
+    {
+      "payload": {
+        "push_id": 933404163,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "69614cf7a67dbb76b6159d948da9b2e42325e4ce",
+        "before": "5252c9119a8d432b765fdb0cd670b91cf97b4414",
+        "commit_shas": [
+          "69614cf7a67dbb76b6159d948da9b2e42325e4ce"
+        ]
+      },
+      "event_id": "3523420012",
+      "type": "PushEvent",
+      "created_at": "2016-01-13T14:25:19Z",
+      "actor": "nyybb",
+      "repo": "nyybb/nybBlog"
+    },
+    {
+      "payload": {
+        "push_id": 933085112,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "5252c9119a8d432b765fdb0cd670b91cf97b4414",
+        "before": "42be3666b6650370ab8242228ed2f66fadf0228d",
+        "commit_shas": [
+          "5252c9119a8d432b765fdb0cd670b91cf97b4414"
+        ]
+      },
+      "event_id": "3522568634",
+      "type": "PushEvent",
+      "created_at": "2016-01-13T10:14:36Z",
+      "actor": "nyybb",
+      "repo": "nyybb/nybBlog"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3521617119",
+      "type": "CreateEvent",
+      "created_at": "2016-01-13T03:15:14Z",
+      "actor": "nyybb",
+      "repo": "nyybb/oh-my-github-yo-omg-basic"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3521617118",
+      "type": "CreateEvent",
+      "created_at": "2016-01-13T03:15:14Z",
+      "actor": "nyybb",
+      "repo": "nyybb/oh-my-github-yo-omg-basic"
+    },
+    {
+      "payload": {
+        "push_id": 932608243,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "42be3666b6650370ab8242228ed2f66fadf0228d",
+        "before": "3c8014c505fbb64117629bceeefe9d25ed5b7105",
+        "commit_shas": [
+          "42be3666b6650370ab8242228ed2f66fadf0228d"
+        ]
+      },
+      "event_id": "3521281267",
+      "type": "PushEvent",
+      "created_at": "2016-01-13T00:53:02Z",
+      "actor": "nyybb",
+      "repo": "nyybb/nybBlog"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3519143840",
+      "type": "CreateEvent",
+      "created_at": "2016-01-12T15:50:16Z",
+      "actor": "nyybb",
+      "repo": "nyybb/nybBlog"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "3513657343",
+      "type": "CreateEvent",
+      "created_at": "2016-01-11T11:40:49Z",
+      "actor": "nyybb",
+      "repo": "nyybb/nybBlog"
+    },
+    {
+      "payload": {
+        "push_id": 916275622,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "8940e2369e9d6338486a3f6850b1e6bef72369b9",
+        "before": "24e891c30ec89e129ce843278299e5e6de9256a1",
+        "commit_shas": [
+          "8940e2369e9d6338486a3f6850b1e6bef72369b9"
+        ]
+      },
+      "event_id": "3477827804",
+      "type": "PushEvent",
+      "created_at": "2015-12-28T06:19:23Z",
+      "actor": "nyybb",
+      "repo": "nyybb/plind"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "final-test",
+      "description": "git 교육 최종 실습을 위한 repository",
+      "full_name": "nyybb/final-test",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-02-28T08:55:11Z",
+      "updated_at": "2015-05-18T08:44:33Z",
+      "pushed_at": "2015-02-27T19:29:59Z",
+      "url": "https://github.com/nyybb/final-test"
+    },
+    {
+      "name": "helloworld",
+      "description": "",
+      "full_name": "nyybb/helloworld",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-02-28T07:20:54Z",
+      "updated_at": "2015-02-28T07:20:54Z",
+      "pushed_at": "2015-02-28T07:52:27Z",
+      "url": "https://github.com/nyybb/helloworld"
+    },
+    {
+      "name": "nybBlog",
+      "description": "",
+      "full_name": "nyybb/nybBlog",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-01-11T11:40:49Z",
+      "updated_at": "2016-01-12T15:50:17Z",
+      "pushed_at": "2016-02-10T11:11:23Z",
+      "url": "https://github.com/nyybb/nybBlog"
+    },
+    {
+      "name": "plind",
+      "description": "ng-skp4",
+      "full_name": "nyybb/plind",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "CSS",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-10-29T07:14:01Z",
+      "updated_at": "2015-11-26T05:11:04Z",
+      "pushed_at": "2015-12-28T06:19:23Z",
+      "url": "https://github.com/nyybb/plind"
+    },
+    {
+      "name": "point-management",
+      "description": "",
+      "full_name": "nyybb/point-management",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-02-16T01:44:31Z",
+      "updated_at": "2015-02-16T04:38:55Z",
+      "pushed_at": "2015-02-16T04:38:55Z",
+      "url": "https://github.com/nyybb/point-management"
+    },
+    {
+      "name": "react-flux-cart",
+      "description": "Code for the tutorial by @kenwheeler: Create a Shopping Cart Using React.js and Flux",
+      "full_name": "nyybb/react-flux-cart",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "JavaScript",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-10-05T08:20:38Z",
+      "updated_at": "2015-10-05T08:20:38Z",
+      "pushed_at": "2015-06-09T15:24:45Z",
+      "url": "https://github.com/nyybb/react-flux-cart"
+    },
+    {
+      "name": "SKP_proj_express-test",
+      "description": "",
+      "full_name": "nyybb/SKP_proj_express-test",
+      "fork": true,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-03-13T02:30:10Z",
+      "updated_at": "2015-03-13T02:30:12Z",
+      "pushed_at": "2015-03-12T08:30:28Z",
+      "url": "https://github.com/nyybb/SKP_proj_express-test"
+    }
+  ],
+  "languages": [
+    {
+      "owner": "nyybb",
+      "repo_name": "final-test",
+      "url": "http://github.com/nyybb/final-test"
+    },
+    {
+      "owner": "nyybb",
+      "repo_name": "helloworld",
+      "url": "http://github.com/nyybb/helloworld"
+    },
+    {
+      "owner": "nyybb",
+      "repo_name": "nybBlog",
+      "url": "http://github.com/nyybb/nybBlog",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 3126
+        },
+        {
+          "name": "JavaScript",
+          "line": 2992
+        },
+        {
+          "name": "CSS",
+          "line": 2423
+        }
+      ]
+    },
+    {
+      "owner": "nyybb",
+      "repo_name": "plind",
+      "url": "http://github.com/nyybb/plind",
+      "languages": [
+        {
+          "name": "CSS",
+          "line": 4088
+        },
+        {
+          "name": "JavaScript",
+          "line": 3016
+        },
+        {
+          "name": "HTML",
+          "line": 2544
+        }
+      ]
+    },
+    {
+      "owner": "nyybb",
+      "repo_name": "point-management",
+      "url": "http://github.com/nyybb/point-management",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 1523
+        }
+      ]
+    },
+    {
+      "owner": "nyybb",
+      "repo_name": "react-flux-cart",
+      "url": "http://github.com/nyybb/react-flux-cart",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "line": 1756023
+        },
+        {
+          "name": "CSS",
+          "line": 3858
+        },
+        {
+          "name": "HTML",
+          "line": 321
+        }
+      ]
+    },
+    {
+      "owner": "nyybb",
+      "repo_name": "SKP_proj_express-test",
+      "url": "http://github.com/nyybb/SKP_proj_express-test",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 18904
+        },
+        {
+          "name": "JavaScript",
+          "line": 9682
+        },
+        {
+          "name": "CSS",
+          "line": 3859
+        }
+      ]
+    }
+  ],
+  "user": {
+    "login": "nyybb",
+    "type": "User",
+    "name": null,
+    "avatar_url": "https://avatars.githubusercontent.com/u/11022697?v=3",
+    "company": null,
+    "blog": null,
+    "location": null,
+    "email": null,
+    "hireable": null,
+    "following": 0,
+    "followers": 2,
+    "public_repos": 7,
+    "public_gists": 0,
+    "created_at": "2015-02-16T01:34:20Z",
+    "updated_at": "2016-01-13T02:40:42Z",
+    "url": "https://github.com/nyybb"
+  }
+}

@@ -1,0 +1,679 @@
+{
+  "_$meta": {
+    "ignored_repositories": [],
+    "schema_version": 1,
+    "schema_created_at": "2016-06-13T06:39:10.226Z",
+    "schema_collected_ats": [
+      "2016-06-13T06:39:10.226Z",
+      "2016-06-13T06:40:34.845Z",
+      "2016-06-17T01:40:03.688Z"
+    ],
+    "agent": "cli-generator",
+    "github_user": "SongYunSeop",
+    "github_repository": "oh-my-github"
+  },
+  "activities": [
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "4136034854",
+      "type": "CreateEvent",
+      "created_at": "2016-06-13T04:37:09Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/SongYunSeop.github.io"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "oh-my-github--^",
+        "pusher_type": "user"
+      },
+      "event_id": "4135967801",
+      "type": "CreateEvent",
+      "created_at": "2016-06-13T03:52:37Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/oh-my-github"
+    },
+    {
+      "payload": {
+        "action": "started"
+      },
+      "event_id": "4028057685",
+      "type": "WatchEvent",
+      "created_at": "2016-05-18T03:22:58Z",
+      "actor": "SongYunSeop",
+      "repo": "sqlectron/sqlectron-gui"
+    },
+    {
+      "payload": {
+        "action": "started"
+      },
+      "event_id": "3632161392",
+      "type": "WatchEvent",
+      "created_at": "2016-02-11T08:13:14Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 971713706,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "6e88ce6d2ca8afff90b38ab79b8c67b652b6086f",
+        "before": "0eb6532231ad895e7af274f28b5130e53534548c",
+        "commit_shas": [
+          "6e88ce6d2ca8afff90b38ab79b8c67b652b6086f"
+        ]
+      },
+      "event_id": "3628731210",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T14:57:14Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 971668919,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "0eb6532231ad895e7af274f28b5130e53534548c",
+        "before": "741446b20f01730e7affb68bb94abfca1a1a8a88",
+        "commit_shas": [
+          "0eb6532231ad895e7af274f28b5130e53534548c"
+        ]
+      },
+      "event_id": "3628607375",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T14:30:21Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 970964244,
+        "size": 2,
+        "distinct_size": 2,
+        "ref": "refs/heads/master",
+        "head": "741446b20f01730e7affb68bb94abfca1a1a8a88",
+        "before": "7a4d7884892c1108632267d2ea08559ac8652931",
+        "commit_shas": [
+          "39072851c8681b7c6e28182eb238e85980309750",
+          "741446b20f01730e7affb68bb94abfca1a1a8a88"
+        ]
+      },
+      "event_id": "3626679470",
+      "type": "PushEvent",
+      "created_at": "2016-02-10T02:29:58Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 967195150,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "7a4d7884892c1108632267d2ea08559ac8652931",
+        "before": "028b25fedcb9f21631e1b736331e0409f2ddffb4",
+        "commit_shas": [
+          "7a4d7884892c1108632267d2ea08559ac8652931"
+        ]
+      },
+      "event_id": "3616208408",
+      "type": "PushEvent",
+      "created_at": "2016-02-07T09:39:43Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 967167413,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "028b25fedcb9f21631e1b736331e0409f2ddffb4",
+        "before": "2f53ce12a7232860e86885c3187d682f8877806e",
+        "commit_shas": [
+          "028b25fedcb9f21631e1b736331e0409f2ddffb4"
+        ]
+      },
+      "event_id": "3616141082",
+      "type": "PushEvent",
+      "created_at": "2016-02-07T08:10:14Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 967164767,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "2f53ce12a7232860e86885c3187d682f8877806e",
+        "before": "c1648b38e8392ffd189d0b7d5bcef4e663830c19",
+        "commit_shas": [
+          "2f53ce12a7232860e86885c3187d682f8877806e"
+        ]
+      },
+      "event_id": "3616135147",
+      "type": "PushEvent",
+      "created_at": "2016-02-07T08:01:42Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 962169462,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "c1648b38e8392ffd189d0b7d5bcef4e663830c19",
+        "before": "4137c2a75f45f0e0fb261032ae8de9ac83da2af4",
+        "commit_shas": [
+          "c1648b38e8392ffd189d0b7d5bcef4e663830c19"
+        ]
+      },
+      "event_id": "3602368360",
+      "type": "PushEvent",
+      "created_at": "2016-02-03T15:26:12Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 962102117,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "4137c2a75f45f0e0fb261032ae8de9ac83da2af4",
+        "before": "f68a8ec41badf0e079cfef24396c9ffa60f36caa",
+        "commit_shas": [
+          "4137c2a75f45f0e0fb261032ae8de9ac83da2af4"
+        ]
+      },
+      "event_id": "3602182780",
+      "type": "PushEvent",
+      "created_at": "2016-02-03T14:47:15Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 962076621,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "f68a8ec41badf0e079cfef24396c9ffa60f36caa",
+        "before": "03fcb00ec53c09cecb2b11c9858bd801e4e6d075",
+        "commit_shas": [
+          "f68a8ec41badf0e079cfef24396c9ffa60f36caa"
+        ]
+      },
+      "event_id": "3602114920",
+      "type": "PushEvent",
+      "created_at": "2016-02-03T14:31:53Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/sigma-node"
+    },
+    {
+      "payload": {
+        "push_id": 1162988592,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "4e243382711b1918b51f8ac1bdfd8ce205f7194e",
+        "before": "1abba93faca785066b385899dfc2264e8fc703e8",
+        "commit_shas": [
+          "4e243382711b1918b51f8ac1bdfd8ce205f7194e"
+        ]
+      },
+      "event_id": "4158271173",
+      "type": "PushEvent",
+      "created_at": "2016-06-17T01:26:06Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/2dalman"
+    },
+    {
+      "payload": {
+        "push_id": 1161523318,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/master",
+        "head": "1abba93faca785066b385899dfc2264e8fc703e8",
+        "before": "44a49cec41f76e3f67b85decc7c7ad0673331af6",
+        "commit_shas": [
+          "1abba93faca785066b385899dfc2264e8fc703e8"
+        ]
+      },
+      "event_id": "4153810540",
+      "type": "PushEvent",
+      "created_at": "2016-06-16T09:11:39Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/2dalman"
+    },
+    {
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "master_branch": "master",
+        "description": "just 2 months",
+        "pusher_type": "user"
+      },
+      "event_id": "4153794461",
+      "type": "CreateEvent",
+      "created_at": "2016-06-16T09:08:10Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/2dalman"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "just 2 months",
+        "pusher_type": "user"
+      },
+      "event_id": "4153794405",
+      "type": "CreateEvent",
+      "created_at": "2016-06-16T09:08:10Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/2dalman"
+    },
+    {
+      "payload": {
+        "push_id": 1156194653,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/gh-pages",
+        "head": "11ca0c417f55b6a45609ccb2ad4b8191e19d1856",
+        "before": "e64ff6619ff57302c9d178e1ac61452e38ca51b8",
+        "commit_shas": [
+          "11ca0c417f55b6a45609ccb2ad4b8191e19d1856"
+        ]
+      },
+      "event_id": "4137984789",
+      "type": "PushEvent",
+      "created_at": "2016-06-13T14:07:08Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/oh-my-github"
+    },
+    {
+      "payload": {
+        "ref": "gh-pages",
+        "ref_type": "branch",
+        "master_branch": "gh-pages",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "4137745686",
+      "type": "CreateEvent",
+      "created_at": "2016-06-13T13:18:52Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/oh-my-github"
+    },
+    {
+      "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": "",
+        "pusher_type": "user"
+      },
+      "event_id": "4136306555",
+      "type": "CreateEvent",
+      "created_at": "2016-06-13T06:57:32Z",
+      "actor": "SongYunSeop",
+      "repo": "SongYunSeop/oh-my-github"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "2dalman",
+      "description": "just 2 months",
+      "full_name": "SongYunSeop/2dalman",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "JavaScript",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-06-16T09:08:10Z",
+      "updated_at": "2016-06-16T09:11:40Z",
+      "pushed_at": "2016-06-17T01:26:06Z",
+      "url": "https://github.com/SongYunSeop/2dalman"
+    },
+    {
+      "name": "coderbyte",
+      "description": "git remote add origin https://github.com/SongYunSeop/Codebyte.git git push -u origin master",
+      "full_name": "SongYunSeop/coderbyte",
+      "fork": false,
+      "forks_count": 1,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Ruby",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-07-29T01:43:46Z",
+      "updated_at": "2015-07-29T01:44:53Z",
+      "pushed_at": "2015-08-01T03:05:26Z",
+      "url": "https://github.com/SongYunSeop/coderbyte"
+    },
+    {
+      "name": "futsalmatch",
+      "description": "",
+      "full_name": "SongYunSeop/futsalmatch",
+      "fork": false,
+      "forks_count": 1,
+      "stargazers_count": 1,
+      "watchers_count": 1,
+      "language": "CSS",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-09-18T09:27:07Z",
+      "updated_at": "2016-02-01T04:52:17Z",
+      "pushed_at": "2015-09-19T09:37:07Z",
+      "url": "https://github.com/SongYunSeop/futsalmatch"
+    },
+    {
+      "name": "mhmetal",
+      "description": "",
+      "full_name": "SongYunSeop/mhmetal",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Java",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-09-09T09:34:15Z",
+      "updated_at": "2016-01-26T15:22:24Z",
+      "pushed_at": "2016-02-14T11:47:28Z",
+      "url": "https://github.com/SongYunSeop/mhmetal"
+    },
+    {
+      "name": "motw-test",
+      "description": "",
+      "full_name": "SongYunSeop/motw-test",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-09-11T04:29:14Z",
+      "updated_at": "2015-09-11T04:51:08Z",
+      "pushed_at": "2015-09-11T05:23:19Z",
+      "url": "https://github.com/SongYunSeop/motw-test"
+    },
+    {
+      "name": "oh-my-github",
+      "description": "oh-my-github--^",
+      "full_name": "SongYunSeop/oh-my-github",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "JavaScript",
+      "open_issues_count": 0,
+      "default_branch": "gh-pages",
+      "created_at": "2016-06-13T06:57:32Z",
+      "updated_at": "2016-06-13T14:07:09Z",
+      "pushed_at": "2016-06-13T14:07:08Z",
+      "url": "https://github.com/SongYunSeop/oh-my-github"
+    },
+    {
+      "name": "sigma-node",
+      "description": "",
+      "full_name": "SongYunSeop/sigma-node",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 1,
+      "watchers_count": 1,
+      "language": "HTML",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2016-01-31T09:36:16Z",
+      "updated_at": "2016-02-11T08:13:14Z",
+      "pushed_at": "2016-02-10T14:57:14Z",
+      "url": "https://github.com/SongYunSeop/sigma-node"
+    },
+    {
+      "name": "soodaa",
+      "description": "soodaa server develop",
+      "full_name": "SongYunSeop/soodaa",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "JavaScript",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-05-20T03:29:29Z",
+      "updated_at": "2015-05-26T04:51:03Z",
+      "pushed_at": "2015-09-16T04:11:23Z",
+      "url": "https://github.com/SongYunSeop/soodaa"
+    },
+    {
+      "name": "TAC_blog",
+      "description": "T아카데미 블로그",
+      "full_name": "SongYunSeop/TAC_blog",
+      "fork": false,
+      "forks_count": 0,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "JavaScript",
+      "open_issues_count": 0,
+      "default_branch": "master",
+      "created_at": "2015-05-23T16:24:46Z",
+      "updated_at": "2015-05-23T16:30:21Z",
+      "pushed_at": "2015-05-23T16:30:19Z",
+      "url": "https://github.com/SongYunSeop/TAC_blog"
+    }
+  ],
+  "languages": [
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "2dalman",
+      "url": "http://github.com/SongYunSeop/2dalman",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "line": 3439
+        },
+        {
+          "name": "HTML",
+          "line": 909
+        },
+        {
+          "name": "CSS",
+          "line": 194
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "coderbyte",
+      "url": "http://github.com/SongYunSeop/coderbyte",
+      "languages": [
+        {
+          "name": "Ruby",
+          "line": 3387
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "futsalmatch",
+      "url": "http://github.com/SongYunSeop/futsalmatch",
+      "languages": [
+        {
+          "name": "CSS",
+          "line": 2633172
+        },
+        {
+          "name": "Ruby",
+          "line": 32908
+        },
+        {
+          "name": "HTML",
+          "line": 27450
+        },
+        {
+          "name": "JavaScript",
+          "line": 15576
+        },
+        {
+          "name": "CoffeeScript",
+          "line": 422
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "mhmetal",
+      "url": "http://github.com/SongYunSeop/mhmetal",
+      "languages": [
+        {
+          "name": "Java",
+          "line": 2068934
+        },
+        {
+          "name": "JavaScript",
+          "line": 372807
+        },
+        {
+          "name": "HTML",
+          "line": 209956
+        },
+        {
+          "name": "CSS",
+          "line": 156122
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "motw-test",
+      "url": "http://github.com/SongYunSeop/motw-test",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 63895
+        },
+        {
+          "name": "CSS",
+          "line": 2434
+        },
+        {
+          "name": "JavaScript",
+          "line": 1176
+        },
+        {
+          "name": "Shell",
+          "line": 924
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "oh-my-github",
+      "url": "http://github.com/SongYunSeop/oh-my-github",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "line": 73504
+        },
+        {
+          "name": "CSS",
+          "line": 3391
+        },
+        {
+          "name": "HTML",
+          "line": 2125
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "sigma-node",
+      "url": "http://github.com/SongYunSeop/sigma-node",
+      "languages": [
+        {
+          "name": "HTML",
+          "line": 14865
+        },
+        {
+          "name": "JavaScript",
+          "line": 10863
+        },
+        {
+          "name": "CSS",
+          "line": 1481
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "soodaa",
+      "url": "http://github.com/SongYunSeop/soodaa",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "line": 416095
+        },
+        {
+          "name": "CSS",
+          "line": 7383
+        },
+        {
+          "name": "HTML",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "owner": "SongYunSeop",
+      "repo_name": "TAC_blog",
+      "url": "http://github.com/SongYunSeop/TAC_blog",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "line": 39706
+        },
+        {
+          "name": "CSS",
+          "line": 14347
+        }
+      ]
+    }
+  ],
+  "user": {
+    "login": "SongYunSeop",
+    "type": "User",
+    "name": null,
+    "avatar_url": "https://avatars.githubusercontent.com/u/11675853?v=3",
+    "company": null,
+    "blog": null,
+    "location": null,
+    "email": "dbstjq91@gmail.com",
+    "hireable": null,
+    "following": 6,
+    "followers": 1,
+    "public_repos": 9,
+    "public_gists": 0,
+    "created_at": "2015-03-27T06:11:21Z",
+    "updated_at": "2016-06-16T09:07:23Z",
+    "url": "https://github.com/SongYunSeop"
+  }
+}
